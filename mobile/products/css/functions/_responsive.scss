@@ -1,0 +1,67 @@
+// адаптивные стили через vw
+@function vw($value, $base: $laptop) {
+	@return $value / $base * 100vw;
+}
+
+// обычные пиксельные стили
+@function px($value, $base: $laptop) {
+	@return $value * ($laptop * 1px) / $base;
+}
+
+// vh - для адаптации стилей под высоту страницы
+@function vh($value, $base: $desktop-vh) {
+	@return $value / $base * 100vh;
+}
+
+// vmin - для мобильных устройств
+@function vm($value, $base: $mobile) {
+	@return $value / $base * 100vmin;
+}
+
+// vmin - для планшетных устройств
+@function vt($value, $base: $tablet) {
+	@return $value / $base * 100vmin;
+}
+
+@function rem($size) {
+	@return $size / 16px * 1rem;
+}
+
+// @use "sass:math";
+
+// $default-min-bp: 320px;
+// $default-max-bp: 960px;
+
+// @function round($number, $decimals: 0) {
+// 	$n: 1;
+// 	@if $decimals > 0 {
+// 		@for $i from 1 through $decimals {
+// 			$n: $n * 10;
+// 		}
+// 	}
+// 	@return math.div(math.round($number * $n), $n);
+// }
+
+// @function px-to-rem($px) {
+// 	$rems: math.div($px, 16px) * 1rem;
+// 	@return $rems;
+// }
+
+// @function fluid(
+// 	$min-size,
+// 	$max-size,
+// 	$min-breakpoint: $default-min-bp,
+// 	$max-breakpoint: $default-max-bp,
+// 	$unit: vw
+// ) {
+// 	$slope: math.div($max-size - $min-size, $max-breakpoint - $min-breakpoint);
+// 	$slope-to-unit: round($slope * 100, 2);
+// 	$intercept-rem: round(px-to-rem($min-size - $slope * $min-breakpoint), 2);
+// 	$min-size-rem: round(px-to-rem($min-size), 2);
+// 	$max-size-rem: round(px-to-rem($max-size), 2);
+// 	@return clamp(
+// 		#{$min-size-rem},
+// 		#{$slope-to-unit}#{$unit} + #{$intercept-rem},
+// 		#{$max-size-rem}
+// 	);
+// }
