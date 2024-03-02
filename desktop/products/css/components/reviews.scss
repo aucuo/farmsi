@@ -9,7 +9,6 @@
         position: relative;
         color: var(--secondary-color);
         margin: 32px 0;
-        cursor: pointer;
 
         &::before {
             z-index: -1;
@@ -27,18 +26,19 @@
             color: var(--text-dark);
         }
 
-        &.is-active .reviews__dropdown-icon {
-            path {
-                fill: var(--text-dark);
-            }
-        }
-
         &-text {
             width: fit-content;
             display: flex;
             align-items: center;
             background-color: #fff;
             padding-right: 12px;
+            cursor: pointer;
+
+            &.is-active .reviews__dropdown-icon {
+                path {
+                    fill: var(--text-dark);
+                }
+            }
         }
     }
 
@@ -46,6 +46,7 @@
         z-index: 4;
         display: none;
         position: absolute;
+        top: 100%;
         padding: 12px;
         border-radius: 16px;
         min-width: 360px;
