@@ -1,0 +1,29 @@
+.pharmacy-slider__slide{
+    width: 156px;
+}
+
+.pharmacy-block{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    height: 78px;
+
+    border-radius: 16px;
+    border: 1px solid #F2F2F5;
+
+    overflow: hidden;
+
+    box-sizing: border-box;
+}
+
+.pharmacy-block__image{
+    width: 100%;
+    height: 100%;
+
+    object-fit: contain;
+}
+
+.pharmacy-slider:not(:last-child){
+    margin: 0 0 22px 0;
+}

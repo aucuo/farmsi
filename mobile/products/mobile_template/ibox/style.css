@@ -1,0 +1,15 @@
+.ibox__image{
+    width: 100%;
+    object-fit: contain;
+
+    height:clamp(143px,40vw, 300px);
+}
+
+.ibox__title{
+    margin: 16px 0 8px 0;
+}
+
+.ibox__subtitle{
+    color:#444952;
+    line-height: 24px;
+}

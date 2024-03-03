@@ -1,0 +1,317 @@
+/*general styles for all pages*/
+@import "/mobile/products/mobile_template/general/general.css";
+@import "/mobile/products/mobile_template/general/swiper.css";
+/*header footer styles*/
+@import "/mobile/products/mobile_template/header_footer/header.css";
+@import "/mobile/products/mobile_template/header_footer/footer.css";
+@import "/mobile/products/mobile_template/nav/style.css";
+@import "/mobile/products/mobile_template/scroll-up/style.css";
+@import "/mobile/products/mobile_template/toast/style.css";
+/*tabs style*/
+@import "/mobile/products/mobile_template/tabs/style.css";
+/*banner styles*/
+@import "/mobile/products/mobile_template/banners/style.css";
+/*hero styles*/
+@import "/mobile/products/mobile_template/hero/style.css";
+/*product styles*/
+@import "/mobile/products/mobile_template/product/style.css";
+/*rating styles*/
+@import "/mobile/products/mobile_template/rating/style.css";
+/*card adding styles*/
+@import "/mobile/products/mobile_template/card-adding/style.css";
+/*tooltip styles*/
+@import "/mobile/products/mobile_template/tooltip/style.css";
+/*search styles*/
+@import "/mobile/products/mobile_template/search/style.css";
+/*category styles*/
+@import "/mobile/products/mobile_template/category/style.css";
+/*pharmacy styles*/
+@import "/mobile/products/mobile_template/pharmacy/style.css";
+/*news styles*/
+@import "/mobile/products/mobile_template/news/style.css";
+/*info styles*/
+@import "/mobile/products/mobile_template/info/style.css";
+/*ibox styles*/
+@import "/mobile/products/mobile_template/ibox/style.css";
+/*article styles*/
+@import "/mobile/products/mobile_template/article/style.css";
+/*ui styles*/
+@import "/mobile/products/mobile_template/ui-section/style.css";
+/*information styles*/
+@import "/mobile/products/mobile_template/information/style.css";
+/*find styles*/
+@import "/mobile/products/mobile_template/find/style.css";
+
+@import "/mobile/products/mobile_template/booking/style.css";
+
+@import "/mobile/products/mobile_template/adv/adv.css";
+
+@import '../../../node_modules/bootstrap/scss/bootstrap';
+@import "../../variables";
+@import "../mixins/helpers";
+@import "../breadcrumbs";
+@import "../product-cart";
+@import "../instructions";
+@import "../map";
+@import "../slider";
+@import "../pricelist";
+@import "../reviews";
+@import "../pagination";
+@import "../faqs";
+@import "../cities";
+
+// IMPORTS END
+
+body {
+    font-family: "Roboto Flex", sans-serif !important;
+}
+
+ul,
+ol,
+li {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    font-size: 14px;
+}
+
+.ordered-list {
+    list-style-type: decimal;
+    padding-left: 0;
+
+    li {
+        list-style-type: decimal;
+        margin-left: 20px;
+        color: var(--text-dark);
+    }
+}
+
+.unordered-list {
+    margin-left: 6px;
+    list-style: none; // Убираем стандартные маркеры
+
+    li {
+        position: relative;
+        color: var(--secondary-color);
+        padding-left: 14px; // Увеличиваем отступ для текста, чтобы сделать место для кастомного маркера
+        margin-left: 0; // Убираем дополнительный отступ слева
+        line-height: 22px;
+
+        &::before {
+            content: '•'; // Кастомный маркер
+            color: var(--secondary-color); // Цвет маркера, можно настроить
+            position: absolute;
+            left: 0; // Расположение маркера слева от текста
+        }
+
+        &:not(:last-child) {
+            margin-bottom: 4px;
+        }
+    }
+}
+
+a {
+    color: #000;
+    text-decoration: none;
+}
+
+.title {
+    margin: 0;
+    font-weight: 700;
+    font-size: 32px;
+    line-height: 44px;
+    letter-spacing: -0.02em;
+
+    &:not(:last-child) {
+        margin-bottom: 24px;
+    }
+}
+
+.subtitle {
+    margin: 0;
+    font-weight: 700;
+    font-size: 22px;
+    line-height: 22px;
+    letter-spacing: -2%;
+
+    &:not(:last-child) {
+        margin-bottom: 36px;
+    }
+}
+
+.advertising {
+    &:hover {
+        .advertising__block {
+            opacity: 1;
+            visibility: visible;
+            transition: all 300ms;
+        }
+    }
+
+    &__text {
+        background: hsla(0, 0%, 100%, .8);
+        border-radius: 99px;
+        color: #444952;
+        cursor: pointer;
+        font-size: .75rem;
+        line-height: 1.375rem;
+        padding: 3px 12px;
+        width: 66px;
+        height: 22px;
+        box-sizing: border-box;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    &__block {
+        position: absolute;
+        right: 0;
+        top: calc(100% + 4px);
+        bottom: unset;
+        padding: 20px 24px 24px;
+        min-width: 360px;
+        background-color: #fff;
+        box-shadow: var(--box-shadow);
+        border-radius: 24px 24px 16px 24px;
+        opacity: 0;
+        visibility: hidden;
+        transition: all 300ms;
+        z-index: 2;
+
+        &::after {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: calc(100% + 20px);
+        }
+    }
+
+    &__title {
+        margin-bottom: 8px;
+        font-weight: 600;
+        font-size: 20px;
+        line-height: 24px;
+        color: #000;
+    }
+
+    &__subtitle {
+        font-weight: 400;
+        font-size: 16px;
+        line-height: 20px;
+        color: #444952;
+
+        &:not(:last-child) {
+            margin-bottom: 12px;
+        }
+    }
+
+    &__link {
+        position: relative;
+        margin: 0;
+        display: inline-flex;
+        align-items: center;
+        font-weight: 600;
+        font-size: 14px;
+        line-height: 20px;
+        color: var(--primary-color);
+        z-index: 2;
+
+        &:not(:last-child) {
+            margin-bottom: 12px;
+        }
+
+        &:hover {
+            color: var(--primary-hover-color);
+        }
+
+        &--complete {
+            display: none;
+        }
+    }
+
+    &__icon {
+        display: inline-block;
+        margin-right: 6px;
+        width: 20px;
+        height: 20px;
+        flex: 0 0 20px;
+        background-position: center;
+        background-repeat: no-repeat;
+
+        &--earth {
+            background-image: url("../images/icons/Earth.svg");
+        }
+
+        &--copy {
+            background-image: url("../images/icons/copy.svg");
+        }
+
+        &--checked {
+            background-image: url("../images/icons/check.svg");
+        }
+    }
+}
+
+.information {
+    &:not(:last-child) {
+        margin-bottom: 56px;
+    }
+
+    &__block {
+        padding: 32px;
+        font-weight: 400;
+        font-size: 14px;
+        line-height: 24px;
+        color: var(--text-dark);
+        background-color: var(--bg-light);
+        border-radius: 32px;
+    }
+}
+
+.find-section {
+    &__title {
+        &:not(:last-child) {
+            margin-bottom: 20px;
+        }
+    }
+
+    &__item {
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+        -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+        gap: 4px;
+        justify-content: space-between;
+
+        @media (min-width: 1200px) and (max-width: 1400px) {
+            gap: 0;
+        }
+    }
+
+    &__link {
+        display: inline-block;
+        padding: 4px 5px;
+        min-width: 32px;
+        font-weight: 500;
+        font-size: 1.125rem;
+        line-height: 1.5rem;
+        text-align: center;
+        color: var(--secondary-color) !important;
+        border-radius: 8px;
+        text-transform: uppercase;
+        transition: all 300ms;
+
+        &:hover {
+            background-color: var(--bg-light);
+            transition: all 300ms;
+        }
+    }
+
+    &__last {
+        margin-left: 32px;
+    }
+}

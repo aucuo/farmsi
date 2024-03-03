@@ -1,0 +1,14 @@
+.information{
+    margin: 32px 0;
+}
+
+.information__block{
+    padding: 16px;
+    border-radius: 12px;
+
+    background-color: #F7F7FA;
+
+    font-size: 14px;
+    line-height: 18px;
+    color:#444952;
+}

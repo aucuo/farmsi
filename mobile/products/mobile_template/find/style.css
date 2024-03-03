@@ -1,0 +1,53 @@
+.find-section__title{
+    font-size: 18px;
+    line-height: 24px;
+    font-weight: 600;
+    color:#000;
+
+    letter-spacing: -0.36px;
+
+    margin: 0 0 16px 0;
+}
+
+.find-section__item{
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+@media screen and (max-width: 400px) {
+    .find-section__item{
+        gap: 2px;
+    }
+}
+
+.find-section__link{
+    display: flex;
+    align-items: flex-end;
+    justify-content: center;
+
+    text-transform: uppercase;
+
+    font-size: 18px;
+    font-weight: 500;
+    color:#78808F;
+
+    padding: 4px 8px;
+
+    width: 32px;
+    height: 32px;
+
+    border-radius: 6px;
+}
+
+.find-section__footer{
+    display: flex;
+    align-items: center;
+    gap: 16px;
+}
+
+.find-section__last{
+    width: max-content;
+
+    margin-left: 16px;
+}

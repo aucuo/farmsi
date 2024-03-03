@@ -1,0 +1,82 @@
+.pricelist {
+    &__item {
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        padding-top: 20px;
+        padding-bottom: 24px;
+
+        &:not(:last-child) {
+            border-bottom: 1px solid #F2F2F5;
+        }
+    }
+
+    &__bottom {
+        display: flex;
+        justify-content: space-between;
+    }
+
+    &__price {
+        align-self: center;
+        min-width: 195px;
+        font-weight: 600;
+        font-size: 16px;
+    }
+
+    &__url {
+        display: block;
+        font-size: 14px;
+        line-height: 16px;
+        height: 16px;
+        font-weight: 600;
+        margin-top: 2px;
+
+        img {
+            margin-right: 4px;
+        }
+    }
+
+    &__button {
+        background-color: var(--bg-light);
+        border-radius: 100px;
+        font-weight: 600;
+        padding: 14px 24px;
+        font-size: 16px;
+
+        &:active {
+            background-color: var(--border-color);
+        }
+    }
+
+    &__company {
+        display: flex;
+        margin-bottom: 12px;
+    }
+
+    &__logo {
+        border: 1px solid #F2F2F5;
+        border-radius: 12px;
+        width: 40px;
+        height: 40px;
+        margin-right: 12px;
+    }
+
+    &__name {
+        align-self: center;
+        font-weight: 600;
+        font-size: 20px;
+        line-height: 24px;
+        letter-spacing: -2%;
+    }
+
+    &__address {
+        font-size: 16px;
+        margin-bottom: 8px;
+    }
+
+    &__schedule {
+        font-size: 16px;
+        color: var(--secondary-color);
+        margin-bottom: 16px;
+    }
+}

@@ -1,0 +1,56 @@
+
+.scroll-up {
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    align-items: center;
+    background-color: #fff;
+    border-radius: 50%;
+    bottom: 76px;
+    -webkit-box-shadow: var(--box-shadow);
+    box-shadow: var(--box-shadow);
+    cursor: pointer;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    height: 48px;
+    width: 48px;
+    justify-content: center;
+    position: fixed;
+    right: 16px;
+    z-index: 30;
+}
+
+.scroll-up--hidden {
+    opacity: 0;
+    visibility: hidden
+}
+
+.scroll-up--hidden, .scroll-up--hidden.is-active {
+    -webkit-transition: all .3s;
+    -o-transition: all .3s;
+    transition: all .3s
+}
+
+.scroll-up--hidden.is-active {
+    opacity: 1;
+    visibility: visible
+}
+
+.has-hover .scroll-up:not([disabled]):hover .scroll-up__icon {
+    stroke: var(--primary-color)
+}
+
+.scroll-up__icon {
+    -webkit-box-flex: 0;
+    stroke: var(--icon-default);
+    stroke-width: 2px;
+    -ms-flex: 0 0 24px;
+    flex: 0 0 24px;
+    height: 24px;
+    -webkit-transition: all .3s;
+    -o-transition: all .3s;
+    transition: all .3s;
+    width: 24px
+}

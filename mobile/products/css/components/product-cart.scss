@@ -1,0 +1,116 @@
+.products {
+    &__buttons {
+        margin-bottom: 26px;
+        
+        .button {
+            padding: 14px 24px;
+            border-radius: 99px;
+            background-color: var(--bg-light);
+            font-weight: 500;
+
+            &:active {
+                background-color: var(--border-color);
+                color: #000;
+            }
+
+            &-share {
+                padding: 14px;
+                margin-left: 8px;
+            }
+        }
+
+        &--wrapper {
+            position: relative;
+            display: flex;
+        }
+    }
+
+    &__dropdown {
+        box-shadow: 0px 12px 28px 0px #0000000F;
+        border: none;
+        min-width: 360px;
+        padding: 24px;
+    }
+
+    .dropdown-menu {
+        left: 0;
+        right: 0;
+        top: calc(100% + 8px);
+
+        &__title {
+            font-weight: 600;
+            font-size: 20px;
+            line-height: 24px;
+            margin-bottom: 16px;
+        }
+
+        &__text {
+            color: var(--secondary-color);
+            font-size: 14px;
+            line-height: 20px;
+            margin-bottom: 8px;
+        }
+
+        &__variant--socials {
+            margin-top: 16px;
+            margin-bottom: 25px;
+        }
+
+        &__socials {
+            display: flex;
+        }
+
+        &__social {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: 32px;
+            height: 32px;
+            border-radius: 100px;
+
+            &:not(:last-child) {
+                margin-right: 6px;
+            }
+        }
+
+        &__link {
+            display: flex;
+            padding: 12px;
+            border-radius: 10px;
+            background-color: var(--bg-light);
+            cursor: pointer;
+            transition: 200ms;
+
+            @include hover() {
+                background-color: var(--border-color);
+            }
+
+            &--icon {
+                margin-right: 6px;
+            }
+
+            &--url {
+                color: var(--primary-color);
+                font-weight: 600;
+                font-size: 14px;
+                white-space: nowrap;
+                overflow: hidden;
+                text-overflow: ellipsis;
+            }
+        }
+    }
+
+    .button-more {
+        background-color: var(--bg-light);
+        border-radius: 100px;
+        padding: 12px 28px;
+        font-weight: 600;
+        line-height: 24px;
+        margin: 32px auto;
+
+        @include hover() {
+            background-color: var(--border-color);
+            color: #000;
+        }
+    }
+}
