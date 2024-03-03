@@ -52,6 +52,10 @@ a {
     text-decoration: none;
 }
 
+.container {
+    padding: 0 16px;
+}
+
 .title {
     margin: 0;
     font-weight: 700;
@@ -70,10 +74,9 @@ a {
     font-size: 22px;
     line-height: 28px;
     letter-spacing: -0.02em;
-    margin-bottom: 26px;
 
     &:not(:last-child) {
-        margin-bottom: 36px;
+        margin-bottom: 26px;
     }
 }
 

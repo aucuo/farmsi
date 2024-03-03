@@ -63,68 +63,6 @@
 @import "../reviews";
 
 // IMPORTS END
-
-.information {
-    &:not(:last-child) {
-        margin-bottom: 56px;
-    }
-
-    &__block {
-        padding: 32px;
-        font-weight: 400;
-        font-size: 14px;
-        line-height: 24px;
-        color: var(--text-dark);
-        background-color: var(--bg-light);
-        border-radius: 32px;
-    }
-}
-
-.find-section {
-    &__title {
-        &:not(:last-child) {
-            margin-bottom: 20px;
-        }
-    }
-
-    &__item {
-        display: -webkit-box;
-        display: -ms-flexbox;
-        display: flex;
-        -ms-flex-wrap: wrap;
-        flex-wrap: wrap;
-        gap: 4px;
-        justify-content: space-between;
-
-        @media (min-width: 1200px) and (max-width: 1400px) {
-            gap: 0;
-        }
-    }
-
-    &__link {
-        display: inline-block;
-        padding: 4px 5px;
-        min-width: 32px;
-        font-weight: 500;
-        font-size: 1.125rem;
-        line-height: 1.5rem;
-        text-align: center;
-        color: var(--secondary-color) !important;
-        border-radius: 8px;
-        text-transform: uppercase;
-        transition: all 300ms;
-
-        &:hover {
-            background-color: var(--bg-light);
-            transition: all 300ms;
-        }
-    }
-
-    &__last {
-        margin-left: 32px;
-    }
-}
-
 .photo-slider {
     &__slide {
         border: 1px solid #F2F2F5;
@@ -133,7 +71,7 @@
         &:not(:last-child) {
             margin-right: 8px;
         }
-        
+
         img {
             object-fit: contain;
         }
