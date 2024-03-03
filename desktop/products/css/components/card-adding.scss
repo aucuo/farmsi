@@ -40,7 +40,7 @@
 			background-color: var(--icon-default);
 		}
 
-		@include hover {
+		&:hover {
 			background-color: var(--bg-light);
 
 			&::after,

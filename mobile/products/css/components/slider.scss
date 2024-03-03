@@ -1,52 +1,17 @@
 .slider {
+    display: flex;
+    flex-wrap: nowrap;
     position: relative;
+    overflow-y: scroll;
+    scroll-snap-type: x mandatory;
+    padding-bottom: 20px;
 
-    .swiper-wrapper {
-        box-sizing: border-box;
+    &__slide {
+        scroll-snap-align: start;
     }
-
-    .swiper-slide {
-        height: auto;
-    }
-
-    &__navigation {
-
-        &--prev,
-        &--next {
-            top: 50%;
-            transform: translateY(-50%);
-        }
-    }
-
-    &-block {
-        display: block;
-        border: 1px solid var(--border-color);
-        border-radius: var(--default-radius);
-        overflow: hidden;
-        max-width: 196px;
-        height: 98px;
-        transition: all 300ms;
-
-        @include hover {
-            border-color: transparent;
-            box-shadow: var(--box-shadow);
-            border-radius: var(--default-radius);
-            transition: all 300ms;
-        }
-
-        &__image {
-            display: block;
-            width: 100%;
-            height: 100%;
-            object-fit: contain;
-            object-position: center;
-            line-height: 98px;
-            text-align: center;
-        }
-    }
-
+    
     &__button {
-        margin-top: 36px;
+        margin-top: 22px;
 
         .button {
             width: 100%;
@@ -57,7 +22,7 @@
             font-weight: 600;
             border-radius: 99px;
 
-            &:hover {
+            &:active {
                 background-color: var(--border-color);
                 color: #000;
             }

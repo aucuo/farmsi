@@ -367,15 +367,9 @@
             $("body, html").scrollTop(0)
         })), $(".js-add-cart").on("click", (function (e) {
             var t = $(e.currentTarget), n = $(".toast");
-            t.hide(), t.parent().find(".js-add-block").show();
+            
             var o = t.closest(".product-cart").find("img").data("src");
             n.find("img").attr("src", o)
-        })), $(".js-add-plus").on("click", (function (e) {
-            var t = $(e.currentTarget).parent().find("input");
-            return t.val(parseInt(t.val()) + 1), t.change(), !1
-        })), $(".js-add-minus").on("click", (function (e) {
-            var t = $(e.currentTarget), n = t.parent().find("input"), o = parseInt(n.val()) - 1;
-            return o < 1 && (o = 1, t.closest(".card-adding-block").find(".js-add-cart").show(), t.closest(".card-adding-block").find(".js-add-block").hide()), n.val(o), n.change(), !1
         })), $("._like").on("click", (function (e) {
             $(e.currentTarget).toggleClass("is-active")
         })), document.querySelectorAll(".js-copy").forEach((function (e) {

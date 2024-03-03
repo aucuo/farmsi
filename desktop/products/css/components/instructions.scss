@@ -17,7 +17,7 @@
     &__link {
         color: var(--primary-color);
 
-        @include hover() {
+        &:hover {
             color: var(--primary-hover-color);
         }
     }

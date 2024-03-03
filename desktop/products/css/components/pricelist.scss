@@ -35,7 +35,7 @@
         font-weight: 600;
         padding: 12px 28px;
 
-        @include hover {
+        &:hover {
             background-color: var(--border-color);
             color: #000;
         }

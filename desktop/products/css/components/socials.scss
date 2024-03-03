@@ -14,19 +14,19 @@
 		transition: all 300ms;
 
 		&--vk {
-			@include hover {
+			&:hover {
 				background-color: #0077ff;
 			}
 		}
 
 		&--ok {
-			@include hover {
+			&:hover {
 				background-color: #ff8800;
 			}
 		}
 
 		&--tg {
-			@include hover {
+			&:hover {
 				background-color: #28aee9;
 			}
 		}

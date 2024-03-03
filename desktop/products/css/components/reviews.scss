@@ -22,7 +22,7 @@
             background-color: var(--border-color);
         }
 
-        @include hover() {
+        &:hover {
             color: var(--text-dark);
         }
 
@@ -68,7 +68,11 @@
             border-radius: 8px;
             cursor: pointer;
 
-            @include hover() {
+            &--active {
+                color: var(--icon-default);
+            }
+
+            &:hover {
                 background-color: var(--bg-light);
             }
         }
@@ -84,6 +88,7 @@
                 font-weight: 600;
                 background-color: unset;
                 padding: 0;
+                cursor: auto;
             }
 
             &__icon {
@@ -97,8 +102,9 @@
                 color: var(--secondary-color);
                 margin-left: 8px;
                 margin-top: 6px;
+                cursor: auto;
 
-                @include hover() {
+                &:hover {
                     color: var(--secondary-color);
                 }
             }
@@ -113,7 +119,7 @@
                 line-height: 24px;
                 font-weight: 600;
 
-                @include hover() {
+                &:hover {
                     background-color: var(--primary-hover-color);
                 }
             }
@@ -129,7 +135,7 @@
         line-height: 24px;
         font-weight: 600;
 
-        @include hover() {
+        &:hover {
             background-color: var(--border-color);
         }
     }
