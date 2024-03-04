@@ -1,0 +1,15 @@
+@import "../variables";
+@import "mixins/helpers";
+
+.cities {    
+    &__item {
+        color: var(--text-dark);
+        margin-bottom: 8px;
+
+        @include hover() {
+            a {
+                color: #000;
+            }
+        }
+    }
+}

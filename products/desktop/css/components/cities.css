@@ -1,0 +1,8 @@
+.cities__item {
+  color: var(--text-dark);
+  margin-bottom: 8px;
+}
+.cities__item:hover a {
+  color: #000;
+}
+/*# sourceMappingURL=data:application/json;charset=utf8;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbImNvbXBvbmVudHMvY2l0aWVzLnNjc3MiXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IkFBQ0k7RUFDSTtFQUNBOztBQUdJO0VBQ0kiLCJmaWxlIjoiY29tcG9uZW50cy9jaXRpZXMuY3NzIiwic291cmNlc0NvbnRlbnQiOlsiLmNpdGllcyB7XHJcbiAgICAmX19pdGVtIHtcclxuICAgICAgICBjb2xvcjogdmFyKC0tdGV4dC1kYXJrKTtcclxuICAgICAgICBtYXJnaW4tYm90dG9tOiA4cHg7XHJcblxyXG4gICAgICAgICY6aG92ZXIge1xyXG4gICAgICAgICAgICBhIHtcclxuICAgICAgICAgICAgICAgIGNvbG9yOiAjMDAwO1xyXG4gICAgICAgICAgICB9XHJcbiAgICAgICAgfVxyXG4gICAgfVxyXG59Il19 */

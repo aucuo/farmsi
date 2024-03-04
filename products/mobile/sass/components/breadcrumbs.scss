@@ -1,0 +1,55 @@
+@import "../variables";
+@import "mixins/helpers";
+
+/* Breadcrumb style */
+
+.breadcrumbs {
+    position: relative;
+    margin-bottom: 16px;
+
+    &__dropdown {
+        top: calc(100% - 4px) !important;
+        left: 0;
+        right: 0;
+    }
+}
+
+.breadcrumb {
+    flex-wrap: nowrap;
+    list-style: none;
+    padding: 3px 0;
+    margin-bottom: 16px;
+    overflow-x: scroll;
+
+    &-item {
+        display: flex;
+        align-items: center;
+        color: var(--secondary-color);
+        font-size: 14px;    
+        height: 24px;
+
+        &::before {
+            color: var(--icon-default) !important;
+        }
+
+        a {
+            display: flex;
+            align-items: center;
+            white-space: nowrap;
+            color: var(--secondary-color);
+
+            @include hover() {
+                color: var(--text-dark);
+            }
+        }
+
+        &.is-active a {
+            color: var(--text-dark);
+        }
+    }
+
+    &__text {
+        display: flex;
+        align-items: center;
+    }
+}
