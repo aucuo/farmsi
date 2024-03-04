@@ -18,12 +18,14 @@
 
     &__price {
         align-self: center;
+        min-width: 195px;
         font-weight: 600;
         font-size: 16px;
     }
 
     &__url {
         display: block;
+        width: fit-content;
         font-size: 14px;
         line-height: 16px;
         height: 16px;

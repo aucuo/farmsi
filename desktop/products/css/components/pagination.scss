@@ -1,30 +1,40 @@
 .pagination {
     display: flex;
-    justify-content: center;
+    justify-content: space-between;
     align-items: center;
+    user-select: none;
 
     &__pages {
         display: flex;
-        margin: 0 20px;
-    
+        margin-left: auto;
+        margin-right: auto;
+
         &-item {
             display: flex;
             justify-content: center;
             align-items: center;
-            width: 40px;
-            height: 40px;
-            border-radius: 99px;
-            color: var(--secondary-color);
-            font-size: 18px;
-            font-weight: 500;
-            line-height: 24px;
-    
+
+            button {
+                width: 40px;
+                height: 40px;
+                border: none;
+                background-color: unset;
+                color: var(--secondary-color);
+                font-size: 18px;
+                font-weight: 500;
+                line-height: 24px;
+            }
+
             &:not(:last-child) {
                 margin-right: 4px;
             }
-    
+
             &--active {
-                background-color: var(--bg-light);
+                button {
+                    color: var(--text-dark);
+                    background-color: var(--bg-light);
+                    border-radius: 99px;
+                }
             }
         }
     }
@@ -38,27 +48,25 @@
             stroke-width: 2px;
             transition: all 300ms;
         }
+
         &--prev,
         &--next {
-            width: 32px;
-            height: 32px;
-            background-color: #fff;
-            box-shadow: var(--box-shadow);
-            border-radius: 50%;
+            width: 40px;
+            height: 40px;
             display: flex;
             align-items: center;
             justify-content: center;
             cursor: pointer;
             transition: all 300ms;
             z-index: 2;
-    
-            &:hover {
+
+            @include hover {
                 .small-navigation__icon {
                     stroke: var(--primary-color);
                 }
             }
         }
-    
+
         &--disabled {
             opacity: .5;
         }

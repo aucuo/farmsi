@@ -29,6 +29,20 @@
         font-size: 24px;
     }
 
+    &__url {
+        display: block;
+        width: fit-content;
+        font-size: 16px;
+        line-height: 16px;
+        height: 16px;
+        font-weight: 600;
+        margin-top: 2px;
+
+        img {
+            margin-right: 4px;
+        }
+    }
+
     &__button {
         background-color: var(--bg-light);
         border-radius: 100px;

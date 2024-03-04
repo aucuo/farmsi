@@ -25,57 +25,13 @@
             color: var(--text-dark);
         }
 
-        &-text {
+        &-dropdown {
             width: fit-content;
             display: flex;
             align-items: center;
             background-color: #fff;
             padding-right: 12px;
             cursor: pointer;
-
-            &.is-active .reviews__dropdown-icon {
-                path {
-                    fill: var(--text-dark);
-                }
-            }
-        }
-    }
-
-    &__dropdown {
-        z-index: 4;
-        display: none;
-        position: absolute;
-        top: 100%;
-        padding: 12px;
-        border-radius: 16px;
-        box-shadow: 0px 12px 28px 0px #0000000F;
-        background-color: #fff;
-        border: none;
-
-        &-icon {
-            width: 8px;
-            height: 24px;
-            margin-left: 4px;
-
-            path {
-                fill: var(--secondary-color);
-            }
-        }
-
-        &-link {
-            padding: 4px 8px;
-            line-height: 20px;
-            font-size: 14px;
-            border-radius: 8px;
-            cursor: pointer;
-
-            &--active {
-                color: var(--icon-default);
-            }
-
-            &:hover {
-                background-color: var(--bg-light);
-            }
         }
     }
 
@@ -347,18 +303,41 @@
         font-size: 14px;
         line-height: 18px;
         font-weight: 600;
-        background-color: unset;
         padding: 0;
-        border-radius: 0;
+        background-color: unset;
 
-        img {
-            width: 20px;
-            height: 20px;
+        svg path {
+            transition: .3s;
+        }
+
+        &:not(&--active) {
+            svg path {
+                transition: .3s;
+                fill: #ABB6CC;
+            }
+        }
+
+        &--like {
+            svg path {
+                transition: .3s;
+                fill: #00C293;
+            }
         }
 
         &--dislike {
             margin-left: 20px;
             margin-right: 24px;
+
+            svg path {
+                transition: .3s;
+                fill: #EB1C4E;
+            }
+        }
+
+        svg {
+            width: 24px;
+            height: 24px;
+            margin-right: 4px;
         }
     }
 }

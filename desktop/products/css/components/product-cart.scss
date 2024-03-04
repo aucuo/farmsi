@@ -4,12 +4,10 @@
     padding-bottom: 12px;
     background-color: #fff;
     will-change: transform;
+    padding-top: 0;
     transition: all 300ms;
 
     @include laptop {
-        &:nth-child(-n + 3) {
-            padding-top: 0;
-        }
 
         &:not(:nth-child(3n + 3)) {
             border-right: 1px solid var(--border-color);
@@ -280,24 +278,19 @@
         right: -12px;
 
         .button {
-            padding: 8px 28px;
+            padding: 12px 28px;
             border-radius: 99px;
             background-color: var(--bg-light);
-            font-weight: 500;
-
-            &:last-child {
-                padding: 8px 8px;
-                margin-left: 8px;
-            }
+            font-weight: 600;
 
             &:hover {
-                background-color: var(--border-color);
-                color: #000;
+                background-color: var(--border-color) !important;
+                color: #000 !important;
             }
 
             &-share {
-                padding: 8px;
-                margin-left: 8px;
+                padding: 12px;
+                margin-left: 12px;
             }
         }
 

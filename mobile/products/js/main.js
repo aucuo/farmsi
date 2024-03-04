@@ -367,9 +367,16 @@
             $("body, html").scrollTop(0)
         })), $(".js-add-cart").on("click", (function (e) {
             var t = $(e.currentTarget), n = $(".toast");
-            
+            t.hide(), t.parent().find(".js-add-block").show();
             var o = t.closest(".product-cart").find("img").data("src");
-            n.find("img").attr("src", o)
+            n.find("img").attr("src", o);
+            t.closest('.product-cart').find('.js-add-second').hide();
+        })), $(".js-add-plus").on("click", (function (e) {
+            var t = $(e.currentTarget).parent().find("input");
+            return t.val(parseInt(t.val()) + 1), t.change(), !1
+        })), $(".js-add-minus").on("click", (function (e) {
+            var t = $(e.currentTarget), n = t.parent().find("input"), o = parseInt(n.val()) - 1;
+            return o < 1 && (o = 1, t.closest(".card-adding-block").find(".js-add-cart").show(), t.closest('.product-cart').find('.js-add-second').show(), t.closest(".card-adding-block").find(".js-add-block").hide()), n.val(o), n.change(), !1
         })), $("._like").on("click", (function (e) {
             $(e.currentTarget).toggleClass("is-active")
         })), document.querySelectorAll(".js-copy").forEach((function (e) {
@@ -397,6 +404,17 @@
 });
 //# sourceMappingURL=main.js.map
 
+var accardionManyInit = function accardionManyInit() {
+    var e = $(".js-accardion-many");
+    e.on("click", (function (e) {
+        var t = $(e.currentTarget);
+        t.toggleClass("is-active"), t.children(".js-accardion-body").slideToggle();
+    }))
+}
+
+$(document).ready(function () {
+    accardionManyInit();
+});
 
 $(document).ready(function () {
     $('.dropdown-menu__link').click(function () {
@@ -424,22 +442,15 @@ $(document).ready(function () {
     });
 });
 
-var accardionManyInit = function accardionManyInit() {
-    var e = $(".js-accardion-many");
-    e.on("click", (function (e) {
-        var t = $(e.currentTarget);
-        t.toggleClass("is-active"), t.children(".js-accardion-body").slideToggle();
-    }))
-}
-
-$(document).ready(function () {
-    accardionManyInit();
-});
-
 var dropdownToggleInit = function dropdownToggleInit() {
-    var shareButtons = $(".button-share"); // Выбираем все кнопки поделиться
+    var shareButton = $(".button-share"); // Выбираем все кнопки поделиться
+    var closeButton = $(".dropdown-menu__close"); // Выбираем все кнопки поделиться
 
-    shareButtons.on("click", function () {
+    closeButton.on("click", function () {
+        $(this).closest('.dropdown-menu').stop(true, true).fadeOut(300);
+    })
+
+    shareButton.on("click", function () {
         var dropdownId = $(this).data('dropdown-id'); // Получаем ID выпадающего меню из атрибута кнопки
         var dropdownMenu = $('.products__dropdown[data-dropdown-id="' + dropdownId + '"]'); // Находим соответствующее выпадающее меню
 
@@ -467,14 +478,13 @@ $(document).ready(function () {
 });
 
 var jsDropdownInit = function jsDropdownInit() {
-    var dropdownItems = $(".js-dropdown"); // Выбираем все элементы хлебных крошек
+    var dropdownItems = $(".js-dropdown");
 
-    dropdownItems.on("mouseenter", function () {
+    dropdownItems.on("click", function () {
         var dropdownId = $(this).data("id");
         var dropdownMenu = dropdownId ? $(".js-dropdown-menu[data-id='" + dropdownId + "']") : $(this).find(".js-dropdown-menu");
         if (dropdownMenu.length) {
             $(this).addClass("is-active"); // Добавляем активный класс к иконке, если есть выпадающий список
-            console.log(dropdownMenu)
             dropdownMenu.stop(true, true).fadeIn(300); // Плавно показываем выпадающий список за 300 мс
         }
     });
@@ -484,7 +494,6 @@ var jsDropdownInit = function jsDropdownInit() {
         var dropdownMenu = dropdownId ? $(".js-dropdown-menu[data-id='" + dropdownId + "']") : $(this).find(".js-dropdown-menu");
         if (dropdownMenu.length) {
             $(this).removeClass("is-active"); // Убираем активный класс у иконки
-            console.log(dropdownMenu)
             dropdownMenu.stop(true, true).fadeOut(300); // Плавно скрываем выпадающий список за 300 мс
         }
     });
@@ -492,4 +501,70 @@ var jsDropdownInit = function jsDropdownInit() {
 
 $(document).ready(function () {
     jsDropdownInit(); // Инициализируем скрипт после загрузки документа
+});
+
+var jsSortButtonInit = function jsSortButtonInit() {
+    var sortButton = $(".js-sort")
+    var sortButtonItems = sortButton.find(".js-dropdown-link");
+
+    sortButtonItems.on("click", function () {
+        if (!$(this).hasClass("js-dropdown-link--active")) {
+            var parent = $(this).closest(".js-sort");
+            var activeItem = parent.find('.js-dropdown-link--active');
+            activeItem.removeClass('js-dropdown-link--active');
+            $(this).addClass('js-dropdown-link--active');
+            activeItem = $(this);
+            parent.find(".reviews__sort-text").text(activeItem.text())
+
+            // обработка сортировки
+        }
+    });
+};
+
+$(document).ready(function () {
+    jsSortButtonInit(); // Инициализируем скрипт после загрузки документа
+});
+
+var jsReviewButtonsInit = function jsReviewButtonsInit() {
+    var likeButton = $('.js-review-like');
+    var dislikeButton = $('.js-review-dislike');
+
+    likeButton.on("click", function () {
+        $(this).toggleClass("review__button--active")
+        var currentCount = parseInt($(this).find('.review__button-text').text());
+
+        if ($(this).hasClass("review__button--active"))
+            $(this).find('.review__button-text').text(++currentCount)
+        else
+            $(this).find('.review__button-text').text(--currentCount)
+
+        var otherButton = $(this).closest('.review__buttons').find('.js-review-dislike');
+        var otherCount = parseInt(otherButton.find('.review__button-text').text());
+        if (otherButton.hasClass("review__button--active")) {
+            otherButton.find('.review__button-text').text(--otherCount)
+            otherButton.toggleClass("review__button--active")
+        }
+    });
+
+    dislikeButton.on("click", function () {
+        $(this).toggleClass("review__button--active")
+        var currentCount = parseInt($(this).find('.review__button-text').text());
+
+        if ($(this).hasClass("review__button--active"))
+            $(this).find('.review__button-text').text(++currentCount)
+        else
+            $(this).find('.review__button-text').text(--currentCount)
+
+        var otherButton = $(this).closest('.review__buttons').find('.js-review-like');
+        var otherCount = parseInt(otherButton.find('.review__button-text').text());
+        console.log(otherButton)
+        if (otherButton.hasClass("review__button--active")) {
+            otherButton.find('.review__button-text').text(--otherCount)
+            otherButton.toggleClass("review__button--active")
+        }
+    });
+};
+
+$(document).ready(function () {
+    jsReviewButtonsInit(); // Инициализируем скрипт после загрузки документа
 });

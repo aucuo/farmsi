@@ -1,19 +1,15 @@
 /*general styles for all pages*/
 @import "/mobile/products/mobile_template/general/general.css";
-@import "/mobile/products/mobile_template/general/swiper.css";
+
 /*header footer styles*/
 @import "/mobile/products/mobile_template/header_footer/header.css";
 @import "/mobile/products/mobile_template/header_footer/footer.css";
 @import "/mobile/products/mobile_template/nav/style.css";
 @import "/mobile/products/mobile_template/scroll-up/style.css";
 @import "/mobile/products/mobile_template/toast/style.css";
-/*tabs style*/
-@import "/mobile/products/mobile_template/tabs/style.css";
+
 /*banner styles*/
 @import "/mobile/products/mobile_template/banners/style.css";
-/*hero styles*/
-@import "/mobile/products/mobile_template/hero/style.css";
-/*product styles*/
 @import "/mobile/products/mobile_template/product/style.css";
 /*rating styles*/
 @import "/mobile/products/mobile_template/rating/style.css";
@@ -23,27 +19,9 @@
 @import "/mobile/products/mobile_template/tooltip/style.css";
 /*search styles*/
 @import "/mobile/products/mobile_template/search/style.css";
-/*category styles*/
-@import "/mobile/products/mobile_template/category/style.css";
-/*pharmacy styles*/
-@import "/mobile/products/mobile_template/pharmacy/style.css";
-/*news styles*/
-@import "/mobile/products/mobile_template/news/style.css";
-/*info styles*/
-@import "/mobile/products/mobile_template/info/style.css";
-/*ibox styles*/
-@import "/mobile/products/mobile_template/ibox/style.css";
-/*article styles*/
-@import "/mobile/products/mobile_template/article/style.css";
-/*ui styles*/
-@import "/mobile/products/mobile_template/ui-section/style.css";
-/*information styles*/
-@import "/mobile/products/mobile_template/information/style.css";
 /*find styles*/
 @import "/mobile/products/mobile_template/find/style.css";
-
-@import "/mobile/products/mobile_template/booking/style.css";
-
+/* adv styles */
 @import "/mobile/products/mobile_template/adv/adv.css";
 
 @import '../../../node_modules/bootstrap/scss/bootstrap';
@@ -61,6 +39,7 @@
 @import "../faqs";
 @import "../cities";
 @import "../reviews";
+@import "../dropdown";
 
 // IMPORTS END
 .photo-slider {
