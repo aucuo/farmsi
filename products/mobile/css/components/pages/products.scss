@@ -1,0 +1,59 @@
+/*general styles for all pages*/
+@import "../mobile_template/general/general.css";
+
+/*header footer styles*/
+@import "../mobile_template/header_footer/header.css";
+@import "../mobile_template/header_footer/footer.css";
+@import "../mobile_template/nav/style.css";
+@import "../mobile_template/scroll-up/style.css";
+@import "../mobile_template/toast/style.css";
+
+/*banner styles*/
+@import "../mobile_template/banners/style.css";
+@import "../mobile_template/product/style.css";
+/*rating styles*/
+@import "../mobile_template/rating/style.css";
+/*tooltip styles*/
+@import "../mobile_template/tooltip/style.css";
+/*search styles*/
+@import "../mobile_template/search/style.css";
+/*find styles*/
+@import "../mobile_template/find/style.css";
+/* adv styles */
+@import "../mobile_template/adv/adv.css";
+
+@import '../general.scss';
+@import "../../variables";
+@import "../mixins/helpers";
+@import "../breadcrumbs";
+@import "../product-cart";
+@import "../pagination";
+@import "../instructions";
+@import "../map";
+@import "../slider";
+@import "../pricelist";
+@import "../reviews";
+@import "../faqs";
+@import "../cities";
+@import "../reviews";
+@import "../dropdown";
+
+// IMPORTS END
+.photo-slider {
+    &__slide {
+        border: 1px solid #F2F2F5;
+        border-radius: 16px;
+        
+        &:not(:last-child) {
+            margin-right: 8px;
+        }
+
+        img {
+            object-fit: contain;
+        }
+    }
+    &__block {
+        display: block;
+        width: fit-content;
+    }
+}

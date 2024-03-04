@@ -1,0 +1,2096 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, viewport-fit=cover">
+    <meta name="description" content="Описание страницы">
+    <meta name="format-detection" content="telephone=no">
+    <title>Продукты</title>
+    <link rel="apple-touch-icon" href="favicon/apple-touch-icon.png" sizes="144x144">
+    <link rel="icon" href="favicon/favicon-16x16.png" sizes="16x16">
+    <link rel="icon" href="favicon/favicon-32x32.png" sizes="32x32">
+    <link rel="manifest" href="favicon/site.webmanifest">
+    <link rel="mask-icon" href="favicon/safari-pinned-tab.svg">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto+Flex:opsz,wght@8..144,400;8..144,600&amp;display=swap"
+        rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <link rel="stylesheet" href="./css/products.css">
+</head>
+
+<body>
+    <div class="site">
+        <!-- Header Start-->
+        <!-- Header Top-->
+        <div class="header__top">
+            <div class="container">
+                <div class="d-flex flex-wrap align-items-center justify-content-between">
+                    <a class="header__logo logo" href="/"><img class="logo__image"
+                            src="mobile_template/header_footer/images/logo.svg" alt="logo" width="124" height="24"></a>
+                    <div class="header__location location"><a class="location__current" href="javascript:void(0)">
+                            <img src="mobile_template/header_footer/images/pin.svg" alt="" class="location__icon">
+                            Москва и МО</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Header Middle-->
+        <div class="header__middle header__fixed">
+            <div class="container">
+                <div class="d-flex align-items-center justify-content-between">
+                    <div class="header__search search">
+                        <form class="search__form d-flex align-items-center" action="/" autocomplete="off">
+                            <div class="form-group w-100">
+                                <input class="search__input big__input js-searchInput" type="text" name="q"
+                                    placeholder="Поиск лучших цен..">
+                                <svg class="search__icon">
+                                    <use xlink:href="./images/sprites.svg#loupe"></use>
+                                </svg>
+                                <svg class="search__loading">
+                                    <use xlink:href="./images/sprites.svg#loading"></use>
+                                </svg>
+                                <button class="search__clear js-qclear" type="button"></button>
+                            </div>
+                        </form>
+                        <div class="search__backdrop"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Header End-->
+
+        <!-- Main section-->
+        <main class="main">
+            <!-- Breadcrumbs Start -->
+            <section class="breadcrumbs">
+                <div class="container">
+                    <nav aria-label="breadcrumb">
+                        <ol class="breadcrumb">
+                            <li class="breadcrumb-item"><a href="#">Главная</a></li>
+                            <li class="breadcrumb-item js-dropdown" data-id="breadcrumb-1">
+                                <div class="breadcrumb__text">
+                                    <a href="#">Каталог</a>
+                                    <svg class="js-dropdown-icon" width="8" height="24" viewBox="0 0 8 24" fill="none"
+                                        xmlns="http://www.w3.org/2000/svg">
+                                        <g clip-path="url(#clip0_1899_12853)">
+                                            <path
+                                                d="M4.76837e-07 10L4 12.8366L8 10L8 11.755L4.30227 15L3.71788 15L4.00125e-07 11.755L4.76837e-07 10Z"
+                                                fill="#444952" />
+                                        </g>
+                                        <defs>
+                                            <clipPath id="clip0_1899_12853">
+                                                <rect width="8" height="24" fill="white" />
+                                            </clipPath>
+                                        </defs>
+                                    </svg>
+                                </div>
+                            </li>
+                            <li class="breadcrumb-item js-dropdown" data-id="breadcrumb-2">
+                                <div class="breadcrumb__text">
+                                    <a href="#">Лекарственные средства</a>
+                                    <svg class="js-dropdown-icon" width="8" height="24" viewBox="0 0 8 24" fill="none"
+                                        xmlns="http://www.w3.org/2000/svg">
+                                        <g clip-path="url(#clip0_1899_12853)">
+                                            <path
+                                                d="M4.76837e-07 10L4 12.8366L8 10L8 11.755L4.30227 15L3.71788 15L4.00125e-07 11.755L4.76837e-07 10Z"
+                                                fill="#444952" />
+                                        </g>
+                                        <defs>
+                                            <clipPath id="clip0_1899_12853">
+                                                <rect width="8" height="24" fill="white" />
+                                            </clipPath>
+                                        </defs>
+                                    </svg>
+                                </div>
+                            </li>
+                            <li class="breadcrumb-item js-dropdown" data-id="breadcrumb-3">
+                                <div class="breadcrumb__text">
+                                    <a href="#">Сердечно-сосудистые препараты</a>
+                                    <svg class="js-dropdown-icon" width="8" height="24" viewBox="0 0 8 24" fill="none"
+                                        xmlns="http://www.w3.org/2000/svg">
+                                        <g clip-path="url(#clip0_1899_12853)">
+                                            <path
+                                                d="M4.76837e-07 10L4 12.8366L8 10L8 11.755L4.30227 15L3.71788 15L4.00125e-07 11.755L4.76837e-07 10Z"
+                                                fill="#444952" />
+                                        </g>
+                                        <defs>
+                                            <clipPath id="clip0_1899_12853">
+                                                <rect width="8" height="24" fill="white" />
+                                            </clipPath>
+                                        </defs>
+                                    </svg>
+                                </div>
+                            </li>
+                            <li class="breadcrumb-item">Бисопролол</li>
+                        </ol>
+                        <ul class="breadcrumbs__dropdown js-dropdown-menu" data-id="breadcrumb-1">
+                            <li class="js-dropdown-link"><a href="#">1 пункт выпадающего списка</a></li>
+                            <li class="js-dropdown-link"><a href="#">2 пункт выпадающего списка</a></li>
+                            <li class="js-dropdown-link"><a href="#">3 пункт выпадающего списка</a></li>
+                            <li class="js-dropdown-link"><a href="#">4 пункт выпадающего списка</a></li>
+                            <li class="js-dropdown-link"><a href="#">5 пункт выпадающего списка</a></li>
+                        </ul>
+                        <ul class="breadcrumbs__dropdown js-dropdown-menu" data-id="breadcrumb-2">
+                            <li class="js-dropdown-link"><a href="#">1 пункт выпадающего списка</a></li>
+                            <li class="js-dropdown-link"><a href="#">2 пункт выпадающего списка</a></li>
+                            <li class="js-dropdown-link"><a href="#">3 пункт выпадающего списка</a></li>
+                            <li class="js-dropdown-link"><a href="#">4 пункт выпадающего списка</a></li>
+                            <li class="js-dropdown-link"><a href="#">5 пункт выпадающего списка</a></li>
+                        </ul>
+                        <ul class="breadcrumbs__dropdown js-dropdown-menu" data-id="breadcrumb-3">
+                            <li class="js-dropdown-link"><a href="#">1 пункт выпадающего списка</a></li>
+                            <li class="js-dropdown-link"><a href="#">2 пункт выпадающего списка</a></li>
+                            <li class="js-dropdown-link"><a href="#">3 пункт выпадающего списка</a></li>
+                            <li class="js-dropdown-link"><a href="#">4 пункт выпадающего списка</a></li>
+                            <li class="js-dropdown-link"><a href="#">5 пункт выпадающего списка</a></li>
+                        </ul>
+                    </nav>
+                </div>
+            </section>
+            <!-- Breadcrumbs end -->
+
+            <!-- Advertisings start-->
+            <section class="section" style="margin-bottom: 16px;">
+                <div class="container">
+                    <div class="banner__grid">
+                        <div class="banner">
+                            <a class="bg-light rounded-4" href="#">
+                                <img src="https://images.unsplash.com/photo-1691168223030-5e5cadfe07d1?ixlib=rb-4.0.3&amp;ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&amp;auto=format&amp;fit=crop&amp;w=3432&amp;q=80"
+                                    alt="">
+                            </a>
+                            <div class="banner__advertising advertising">
+                                <div class="advertising__text">Реклама</div>
+                                <div class="advertising__block" data-id="ad-1">
+                                    <div class="advertising__header">
+                                        <div class="advertising__title">Реклама</div>
+                                        <div class="advertising__close"></div>
+                                    </div>
+                                    <div class="advertising__subtitle">
+                                        ООО&nbsp;«Название длинное компании чтобы посмотреть как вмещается»
+                                    </div>
+                                    <div class="d-flex flex-column align-items-start"><a class="advertising__link"
+                                            href="https://rostov-na-donu.uteka.ru" target="_blank" rel="nofollow">
+                                            <div class="advertising__icon advertising__icon--earth"></div>
+                                            <div class="advertising__desc">https://rostov-na-donu.uteka.ru</div>
+                                        </a><a class="advertising__link js-copy" href="uzk2dklH28Gmckh92Pod00"
+                                            target="_blank" rel="nofollow">
+                                            <div class="advertising__icon advertising__icon--copy"></div>
+                                            <div class="advertising__desc">uzk2dklH28Gmckh92Pod00</div>
+                                        </a>
+                                        <p class="advertising__link advertising__link--complete"><span
+                                                class="advertising__icon advertising__icon--checked"></span><span
+                                                class="advertising__desc">ID скопирован</span></p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <!-- Advertisings end -->
+
+            <!-- Products start -->
+            <section class="section">
+                <div class="container">
+                    <div class="products">
+                        <h1 class="title">Бисопролол</h1>
+                        <ul class="unordered-list" style="margin-bottom: 16px;">
+                            <li>Купить Бисопролол в Москве в ФАРМСИ.ru.</li>
+                            <li>Цена на Бисопролол от 547 руб. в Москве. </li>
+                            <li>Доставка и заказ Бисопролол в 1452 аптек.</li>
+                        </ul>
+                        <div class="products__buttons">
+                            <div class="products__buttons--wrapper">
+                                <button class="button">Посмотреть аналоги</button>
+                                <button class="button button-share" data-bs-toggle="modal"
+                                    data-bs-target="#shareModal"><img src="./images/icons/Share.svg"
+                                        alt="Поделиться"></button>
+                                <div class="modal" id="shareModal" tabindex="-1" aria-labelledby="exampleModalLabel"
+                                    aria-hidden="true">
+                                    <div class="modal-dialog modal-dialog-centered">
+                                        <div class="modal-wrapper">
+                                            <p class="modal__title">Поделиться</p>
+                                            <svg class="modal__close" width="20" height="20" viewBox="0 0 20 20"
+                                                fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                <path d="M15.332 4.66663L4.66536 15.3333" stroke="#ABB6CC"
+                                                    stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                                                <path d="M4.66797 4.66663L15.3346 15.3333" stroke="#ABB6CC"
+                                                    stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                                            </svg>
+                                            <div class="modal__variant modal__variant--socials">
+                                                <p class="modal__text">Через соц.сети</p>
+                                                <div class="modal__socials">
+                                                    <a class="modal__social modal__social--vk" href="">
+                                                        <img src="./images/icons/VK.svg" alt="Vkontakte">
+                                                    </a>
+                                                    <a class="modal__social modal__social--ok" href="">
+                                                        <img src="./images/icons/OK.svg" alt="OK.ru">
+                                                    </a>
+                                                    <a class="modal__social modal__social--tg" href="">
+                                                        <img src="./images/icons/TG.svg" alt="Telegram">
+                                                    </a>
+                                                    <a class="modal__social modal__social--wa" href="">
+                                                        <img src="./images/icons/WA.svg" alt="Whatsapp">
+                                                    </a>
+                                                    <a class="modal__social modal__social--vi" href="">
+                                                        <img src="./images/icons/VB.svg" alt="Viber">
+                                                    </a>
+                                                </div>
+                                            </div>
+                                            <div class="modal__variant modal__variant--link">
+                                                <p class="modal__text">Прямой ссылкой</p>
+                                                <div class="modal__link">
+                                                    <img class="modal__link--icon" src="./images/icons/copy.svg"
+                                                        alt="Копировать">
+                                                    <span class="modal__link--url"
+                                                        data-url="https://farmsi.ru/catalog/bisoprolol/239673">https://farmsi.ru/catalog/bisoprolol/239673</span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row products__list">
+                        <div class="products__list-item col-6">
+                            <div class="product-cart">
+                                <div class="product-cart__header">
+                                    <a class="product-cart__link" href="#"><img
+                                            class="image js-lazy product-cart__image is-loaded" draggable="false"
+                                            src="./images/products/product-6.png"
+                                            data-src="./images/products/product-6.png"
+                                            data-srcset="./images/products/product-6@2x.png 2x"
+                                            alt="Цетрин, 10 мг, таблетки, покрытые пленочной оболочкой, 20 шт."
+                                            width="234" height="234" srcset="./images/products/product-6@2x.png 2x"
+                                            data-loaded="true">
+                                        <noscript><img src="./images/products/product-6.png"
+                                                alt="Цетрин, 10 мг, таблетки, покрытые пленочной оболочкой, 20 шт."
+                                                width="234" height="234" /></noscript>
+                                    </a>
+                                    <div class="product-cart__action">
+                                        <button class="product-cart__icon product-cart__like _like"
+                                            aria-label="Favorite toggle">
+                                            <svg class="product-cart__like-icon">
+                                                <use xlink:href="./images/sprites.svg#Heart"></use>
+                                            </svg>
+                                        </button>
+                                        <a class="product-cart__icon product-cart__tooltip" href="javascript:void(0)"
+                                            data-bs-toggle="tooltip" title="" data-bs-original-title="По рецепту">
+                                            <svg class="product-cart__tooltip-icon">
+                                                <use xlink:href="./images/sprites.svg#doc-med"></use>
+                                            </svg>
+                                        </a>
+                                    </div>
+                                </div>
+                                <div class="product-cart__body"><a class="product-cart__name" href="#">Цетрин, 10
+                                        мг,
+                                        таблетки, покрытые пленочной оболочкой, 20 шт.</a>
+                                    <p class="product-cart__company">Berlin-Chemie/Menarini Group, Германия</p>
+                                </div>
+                                <div class="product-cart__rating rating">
+                                    <div class="rating__block" data-bs-toggle="tooltip" title=""
+                                        data-bs-original-title="Рейтинг 4.7 из 5.0 – на основе 37 отзывов">
+                                        <svg class="rating__icon">
+                                            <use xlink:href="./images/sprites.svg#Star"></use>
+                                        </svg>
+                                        4.9
+                                    </div>
+                                    <div class="rating__count" data-bs-toggle="tooltip" title=""
+                                        data-bs-original-title="Количество отзывов">
+                                        37 отзывов
+                                    </div>
+                                </div>
+                                <div class="product-cart__footer">
+                                    <div class="product-cart__price">от 980 ₽</div>
+                                    <div class="product-cart__count">в 2347 аптеках</div>
+                                    <div class="product-cart__buttons">
+                                        <div class="card-adding-block">
+                                            <!-- Чтобы показать лоадер надо на кнопку добавить класс "button--loading"-->
+                                            <button class="button button-primary js-add-cart button--loading"
+                                                type="button">
+                                                <img src="./images/icons/Cart Plus.svg" alt="">
+                                            </button>
+                                            <!-- Чтобы показать лоадер надо на кнопку добавить класс "button--loading"-->
+                                            <div class="product-cart__adding js-add-block" style="display: none;">
+                                                <div class="card-adding">
+                                                    <button class="button card-adding--minus js-add-minus"></button>
+                                                    <div class="card-adding__wrap">
+                                                        <input class="card-adding__input js-add-input" type="text"
+                                                            disabled="disabled" value="1">
+                                                    </div>
+                                                    <button class="button card-adding--plus js-add-plus"></button>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <button class="button button-secondary button--loading js-add-second"
+                                            type="button">
+                                            <img src="mobile_template/product/images/bag-green.svg" alt=""
+                                                class="button__icon">
+                                            в 1 клик
+                                        </button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="products__list-item col-6">
+                            <div class="product-cart">
+                                <div class="product-cart__header">
+                                    <a class="product-cart__link" href="#"><img
+                                            class="image js-lazy product-cart__image is-loaded" draggable="false"
+                                            src="./images/products/product-6.png"
+                                            data-src="./images/products/product-6.png"
+                                            data-srcset="./images/products/product-6@2x.png 2x"
+                                            alt="Цетрин, 10 мг, таблетки, покрытые пленочной оболочкой, 20 шт."
+                                            width="234" height="234" srcset="./images/products/product-6@2x.png 2x"
+                                            data-loaded="true">
+                                        <noscript><img src="./images/products/product-6.png"
+                                                alt="Цетрин, 10 мг, таблетки, покрытые пленочной оболочкой, 20 шт."
+                                                width="234" height="234" /></noscript>
+                                    </a>
+                                    <div class="product-cart__action">
+                                        <button class="product-cart__icon product-cart__like _like"
+                                            aria-label="Favorite toggle">
+                                            <svg class="product-cart__like-icon">
+                                                <use xlink:href="./images/sprites.svg#Heart"></use>
+                                            </svg>
+                                        </button>
+                                        <a class="product-cart__icon product-cart__tooltip" href="javascript:void(0)"
+                                            data-bs-toggle="tooltip" title="" data-bs-original-title="По рецепту">
+                                            <svg class="product-cart__tooltip-icon">
+                                                <use xlink:href="./images/sprites.svg#doc-med"></use>
+                                            </svg>
+                                        </a>
+                                    </div>
+                                </div>
+                                <div class="product-cart__body"><a class="product-cart__name" href="#">Цетрин, 10
+                                        мг,
+                                        таблетки, покрытые пленочной оболочкой, 20 шт.</a>
+                                    <p class="product-cart__company">Berlin-Chemie/Menarini Group, Германия</p>
+                                </div>
+                                <div class="product-cart__rating rating">
+                                    <div class="rating__block" data-bs-toggle="tooltip" title=""
+                                        data-bs-original-title="Рейтинг 4.7 из 5.0 – на основе 37 отзывов">
+                                        <svg class="rating__icon">
+                                            <use xlink:href="./images/sprites.svg#Star"></use>
+                                        </svg>
+                                        4.9
+                                    </div>
+                                    <div class="rating__count" data-bs-toggle="tooltip" title=""
+                                        data-bs-original-title="Количество отзывов">
+                                        37 отзывов
+                                    </div>
+                                </div>
+                                <div class="product-cart__footer">
+                                    <div class="product-cart__price">от 980 ₽</div>
+                                    <div class="product-cart__count">в 2347 аптеках</div>
+                                    <div class="product-cart__buttons">
+                                        <div class="card-adding-block">
+                                            <!-- Чтобы показать лоадер надо на кнопку добавить класс "button--loading"-->
+                                            <button class="button button-primary js-add-cart button--loading"
+                                                type="button">
+                                                <img src="./images/icons/Cart Plus.svg" alt="">
+                                            </button>
+                                            <!-- Чтобы показать лоадер надо на кнопку добавить класс "button--loading"-->
+                                            <div class="product-cart__adding js-add-block" style="display: none;">
+                                                <div class="card-adding">
+                                                    <button class="button card-adding--minus js-add-minus"></button>
+                                                    <div class="card-adding__wrap">
+                                                        <input class="card-adding__input js-add-input" type="text"
+                                                            disabled="disabled" value="1">
+                                                    </div>
+                                                    <button class="button card-adding--plus js-add-plus"></button>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <button class="button button-secondary button--loading js-add-second"
+                                            type="button">
+                                            <img src="mobile_template/product/images/bag-green.svg" alt=""
+                                                class="button__icon">
+                                            в 1 клик
+                                        </button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="products__list-item col-6">
+                            <div class="product-cart">
+                                <div class="product-cart__header">
+                                    <a class="product-cart__link" href="#"><img
+                                            class="image js-lazy product-cart__image is-loaded" draggable="false"
+                                            src="./images/products/product-6.png"
+                                            data-src="./images/products/product-6.png"
+                                            data-srcset="./images/products/product-6@2x.png 2x"
+                                            alt="Цетрин, 10 мг, таблетки, покрытые пленочной оболочкой, 20 шт."
+                                            width="234" height="234" srcset="./images/products/product-6@2x.png 2x"
+                                            data-loaded="true">
+                                        <noscript><img src="./images/products/product-6.png"
+                                                alt="Цетрин, 10 мг, таблетки, покрытые пленочной оболочкой, 20 шт."
+                                                width="234" height="234" /></noscript>
+                                    </a>
+                                    <div class="product-cart__action">
+                                        <button class="product-cart__icon product-cart__like _like"
+                                            aria-label="Favorite toggle">
+                                            <svg class="product-cart__like-icon">
+                                                <use xlink:href="./images/sprites.svg#Heart"></use>
+                                            </svg>
+                                        </button>
+                                        <a class="product-cart__icon product-cart__tooltip" href="javascript:void(0)"
+                                            data-bs-toggle="tooltip" title="" data-bs-original-title="По рецепту">
+                                            <svg class="product-cart__tooltip-icon">
+                                                <use xlink:href="./images/sprites.svg#doc-med"></use>
+                                            </svg>
+                                        </a>
+                                    </div>
+                                </div>
+                                <div class="product-cart__body"><a class="product-cart__name" href="#">Цетрин, 10
+                                        мг,
+                                        таблетки, покрытые пленочной оболочкой, 20 шт.</a>
+                                    <p class="product-cart__company">Berlin-Chemie/Menarini Group, Германия</p>
+                                </div>
+                                <div class="product-cart__rating rating">
+                                    <div class="rating__block" data-bs-toggle="tooltip" title=""
+                                        data-bs-original-title="Рейтинг 4.7 из 5.0 – на основе 37 отзывов">
+                                        <svg class="rating__icon">
+                                            <use xlink:href="./images/sprites.svg#Star"></use>
+                                        </svg>
+                                        4.9
+                                    </div>
+                                    <div class="rating__count" data-bs-toggle="tooltip" title=""
+                                        data-bs-original-title="Количество отзывов">
+                                        37 отзывов
+                                    </div>
+                                </div>
+                                <div class="product-cart__footer">
+                                    <div class="product-cart__price">от 980 ₽</div>
+                                    <div class="product-cart__count">в 2347 аптеках</div>
+                                    <div class="product-cart__buttons">
+                                        <div class="card-adding-block">
+                                            <!-- Чтобы показать лоадер надо на кнопку добавить класс "button--loading"-->
+                                            <button class="button button-primary js-add-cart button--loading"
+                                                type="button">
+                                                <img src="./images/icons/Cart Plus.svg" alt="">
+                                            </button>
+                                            <!-- Чтобы показать лоадер надо на кнопку добавить класс "button--loading"-->
+                                            <div class="product-cart__adding js-add-block" style="display: none;">
+                                                <div class="card-adding">
+                                                    <button class="button card-adding--minus js-add-minus"></button>
+                                                    <div class="card-adding__wrap">
+                                                        <input class="card-adding__input js-add-input" type="text"
+                                                            disabled="disabled" value="1">
+                                                    </div>
+                                                    <button class="button card-adding--plus js-add-plus"></button>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <button class="button button-secondary button--loading js-add-second"
+                                            type="button">
+                                            <img src="mobile_template/product/images/bag-green.svg" alt=""
+                                                class="button__icon">
+                                            в 1 клик
+                                        </button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="products__list-item col-6">
+                            <div class="product-cart">
+                                <div class="product-cart__header">
+                                    <a class="product-cart__link" href="#"><img
+                                            class="image js-lazy product-cart__image is-loaded" draggable="false"
+                                            src="./images/products/product-6.png"
+                                            data-src="./images/products/product-6.png"
+                                            data-srcset="./images/products/product-6@2x.png 2x"
+                                            alt="Цетрин, 10 мг, таблетки, покрытые пленочной оболочкой, 20 шт."
+                                            width="234" height="234" srcset="./images/products/product-6@2x.png 2x"
+                                            data-loaded="true">
+                                        <noscript><img src="./images/products/product-6.png"
+                                                alt="Цетрин, 10 мг, таблетки, покрытые пленочной оболочкой, 20 шт."
+                                                width="234" height="234" /></noscript>
+                                    </a>
+                                    <div class="product-cart__action">
+                                        <button class="product-cart__icon product-cart__like _like"
+                                            aria-label="Favorite toggle">
+                                            <svg class="product-cart__like-icon">
+                                                <use xlink:href="./images/sprites.svg#Heart"></use>
+                                            </svg>
+                                        </button>
+                                        <a class="product-cart__icon product-cart__tooltip" href="javascript:void(0)"
+                                            data-bs-toggle="tooltip" title="" data-bs-original-title="По рецепту">
+                                            <svg class="product-cart__tooltip-icon">
+                                                <use xlink:href="./images/sprites.svg#doc-med"></use>
+                                            </svg>
+                                        </a>
+                                    </div>
+                                </div>
+                                <div class="product-cart__body"><a class="product-cart__name" href="#">Цетрин, 10
+                                        мг,
+                                        таблетки, покрытые пленочной оболочкой, 20 шт.</a>
+                                    <p class="product-cart__company">Berlin-Chemie/Menarini Group, Германия</p>
+                                </div>
+                                <div class="product-cart__rating rating">
+                                    <div class="rating__block" data-bs-toggle="tooltip" title=""
+                                        data-bs-original-title="Рейтинг 4.7 из 5.0 – на основе 37 отзывов">
+                                        <svg class="rating__icon">
+                                            <use xlink:href="./images/sprites.svg#Star"></use>
+                                        </svg>
+                                        4.9
+                                    </div>
+                                    <div class="rating__count" data-bs-toggle="tooltip" title=""
+                                        data-bs-original-title="Количество отзывов">
+                                        37 отзывов
+                                    </div>
+                                </div>
+                                <div class="product-cart__footer">
+                                    <div class="product-cart__price">от 980 ₽</div>
+                                    <div class="product-cart__count">в 2347 аптеках</div>
+                                    <div class="product-cart__buttons">
+                                        <div class="card-adding-block">
+                                            <!-- Чтобы показать лоадер надо на кнопку добавить класс "button--loading"-->
+                                            <button class="button button-primary js-add-cart button--loading"
+                                                type="button">
+                                                <img src="./images/icons/Cart Plus.svg" alt="">
+                                            </button>
+                                            <!-- Чтобы показать лоадер надо на кнопку добавить класс "button--loading"-->
+                                            <div class="product-cart__adding js-add-block" style="display: none;">
+                                                <div class="card-adding">
+                                                    <button class="button card-adding--minus js-add-minus"></button>
+                                                    <div class="card-adding__wrap">
+                                                        <input class="card-adding__input js-add-input" type="text"
+                                                            disabled="disabled" value="1">
+                                                    </div>
+                                                    <button class="button card-adding--plus js-add-plus"></button>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <button class="button button-secondary button--loading js-add-second"
+                                            type="button">
+                                            <img src="mobile_template/product/images/bag-green.svg" alt=""
+                                                class="button__icon">
+                                            в 1 клик
+                                        </button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="products__list-item col-6">
+                            <div class="product-cart">
+                                <div class="product-cart__header">
+                                    <a class="product-cart__link" href="#"><img
+                                            class="image js-lazy product-cart__image is-loaded" draggable="false"
+                                            src="./images/products/product-6.png"
+                                            data-src="./images/products/product-6.png"
+                                            data-srcset="./images/products/product-6@2x.png 2x"
+                                            alt="Цетрин, 10 мг, таблетки, покрытые пленочной оболочкой, 20 шт."
+                                            width="234" height="234" srcset="./images/products/product-6@2x.png 2x"
+                                            data-loaded="true">
+                                        <noscript><img src="./images/products/product-6.png"
+                                                alt="Цетрин, 10 мг, таблетки, покрытые пленочной оболочкой, 20 шт."
+                                                width="234" height="234" /></noscript>
+                                    </a>
+                                    <div class="product-cart__action">
+                                        <button class="product-cart__icon product-cart__like _like"
+                                            aria-label="Favorite toggle">
+                                            <svg class="product-cart__like-icon">
+                                                <use xlink:href="./images/sprites.svg#Heart"></use>
+                                            </svg>
+                                        </button>
+                                        <a class="product-cart__icon product-cart__tooltip" href="javascript:void(0)"
+                                            data-bs-toggle="tooltip" title="" data-bs-original-title="По рецепту">
+                                            <svg class="product-cart__tooltip-icon">
+                                                <use xlink:href="./images/sprites.svg#doc-med"></use>
+                                            </svg>
+                                        </a>
+                                    </div>
+                                </div>
+                                <div class="product-cart__body"><a class="product-cart__name" href="#">Цетрин, 10
+                                        мг,
+                                        таблетки, покрытые пленочной оболочкой, 20 шт.</a>
+                                    <p class="product-cart__company">Berlin-Chemie/Menarini Group, Германия</p>
+                                </div>
+                                <div class="product-cart__rating rating">
+                                    <div class="rating__block" data-bs-toggle="tooltip" title=""
+                                        data-bs-original-title="Рейтинг 4.7 из 5.0 – на основе 37 отзывов">
+                                        <svg class="rating__icon">
+                                            <use xlink:href="./images/sprites.svg#Star"></use>
+                                        </svg>
+                                        4.9
+                                    </div>
+                                    <div class="rating__count" data-bs-toggle="tooltip" title=""
+                                        data-bs-original-title="Количество отзывов">
+                                        37 отзывов
+                                    </div>
+                                </div>
+                                <div class="product-cart__footer">
+                                    <div class="product-cart__price">от 980 ₽</div>
+                                    <div class="product-cart__count">в 2347 аптеках</div>
+                                    <div class="product-cart__buttons">
+                                        <div class="card-adding-block">
+                                            <!-- Чтобы показать лоадер надо на кнопку добавить класс "button--loading"-->
+                                            <button class="button button-primary js-add-cart button--loading"
+                                                type="button">
+                                                <img src="./images/icons/Cart Plus.svg" alt="">
+                                            </button>
+                                            <!-- Чтобы показать лоадер надо на кнопку добавить класс "button--loading"-->
+                                            <div class="product-cart__adding js-add-block" style="display: none;">
+                                                <div class="card-adding">
+                                                    <button class="button card-adding--minus js-add-minus"></button>
+                                                    <div class="card-adding__wrap">
+                                                        <input class="card-adding__input js-add-input" type="text"
+                                                            disabled="disabled" value="1">
+                                                    </div>
+                                                    <button class="button card-adding--plus js-add-plus"></button>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <button class="button button-secondary button--loading js-add-second"
+                                            type="button">
+                                            <img src="mobile_template/product/images/bag-green.svg" alt=""
+                                                class="button__icon">
+                                            в 1 клик
+                                        </button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="products__list-item col-6">
+                            <div class="product-cart">
+                                <div class="product-cart__header">
+                                    <a class="product-cart__link" href="#"><img
+                                            class="image js-lazy product-cart__image is-loaded" draggable="false"
+                                            src="./images/products/product-6.png"
+                                            data-src="./images/products/product-6.png"
+                                            data-srcset="./images/products/product-6@2x.png 2x"
+                                            alt="Цетрин, 10 мг, таблетки, покрытые пленочной оболочкой, 20 шт."
+                                            width="234" height="234" srcset="./images/products/product-6@2x.png 2x"
+                                            data-loaded="true">
+                                        <noscript><img src="./images/products/product-6.png"
+                                                alt="Цетрин, 10 мг, таблетки, покрытые пленочной оболочкой, 20 шт."
+                                                width="234" height="234" /></noscript>
+                                    </a>
+                                    <div class="product-cart__action">
+                                        <button class="product-cart__icon product-cart__like _like"
+                                            aria-label="Favorite toggle">
+                                            <svg class="product-cart__like-icon">
+                                                <use xlink:href="./images/sprites.svg#Heart"></use>
+                                            </svg>
+                                        </button>
+                                        <a class="product-cart__icon product-cart__tooltip" href="javascript:void(0)"
+                                            data-bs-toggle="tooltip" title="" data-bs-original-title="По рецепту">
+                                            <svg class="product-cart__tooltip-icon">
+                                                <use xlink:href="./images/sprites.svg#doc-med"></use>
+                                            </svg>
+                                        </a>
+                                    </div>
+                                </div>
+                                <div class="product-cart__body"><a class="product-cart__name" href="#">Цетрин, 10
+                                        мг,
+                                        таблетки, покрытые пленочной оболочкой, 20 шт.</a>
+                                    <p class="product-cart__company">Berlin-Chemie/Menarini Group, Германия</p>
+                                </div>
+                                <div class="product-cart__rating rating">
+                                    <div class="rating__block" data-bs-toggle="tooltip" title=""
+                                        data-bs-original-title="Рейтинг 4.7 из 5.0 – на основе 37 отзывов">
+                                        <svg class="rating__icon">
+                                            <use xlink:href="./images/sprites.svg#Star"></use>
+                                        </svg>
+                                        4.9
+                                    </div>
+                                    <div class="rating__count" data-bs-toggle="tooltip" title=""
+                                        data-bs-original-title="Количество отзывов">
+                                        37 отзывов
+                                    </div>
+                                </div>
+                                <div class="product-cart__footer">
+                                    <div class="product-cart__price">от 980 ₽</div>
+                                    <div class="product-cart__count">в 2347 аптеках</div>
+                                    <div class="product-cart__buttons">
+                                        <div class="card-adding-block">
+                                            <!-- Чтобы показать лоадер надо на кнопку добавить класс "button--loading"-->
+                                            <button class="button button-primary js-add-cart button--loading"
+                                                type="button">
+                                                <img src="./images/icons/Cart Plus.svg" alt="">
+                                            </button>
+                                            <!-- Чтобы показать лоадер надо на кнопку добавить класс "button--loading"-->
+                                            <div class="product-cart__adding js-add-block" style="display: none;">
+                                                <div class="card-adding">
+                                                    <button class="button card-adding--minus js-add-minus"></button>
+                                                    <div class="card-adding__wrap">
+                                                        <input class="card-adding__input js-add-input" type="text"
+                                                            disabled="disabled" value="1">
+                                                    </div>
+                                                    <button class="button card-adding--plus js-add-plus"></button>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <button class="button button-secondary button--loading js-add-second"
+                                            type="button">
+                                            <img src="mobile_template/product/images/bag-green.svg" alt=""
+                                                class="button__icon">
+                                            в 1 клик
+                                        </button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <button class="button mx-auto" style="margin-top: 32px; margin-bottom: 24px;">Показать
+                        еще</button>
+                    <div class="products__pagination pagination">
+                        <div class="pagination__navigation--prev pagination__navigation--disabled">
+                            <svg class="pagination__navigation-icon">
+                                <use xlink:href="./images/sprites.svg#triangle-left"></use>
+                            </svg>
+                        </div>
+                        <ul class="pagination__pages">
+                            <li class="pagination__pages-item pagination__pages-item--active"><button>1</button>
+                            </li>
+                            <li class="pagination__pages-item"><button>2</button></li>
+                            <li class="pagination__pages-item"><button>3</button></li>
+                            <li class="pagination__pages-item">...</li>
+                            <li class="pagination__pages-item"><button>33</button></li>
+                        </ul>
+                        <div class="pagination__navigation--next">
+                            <svg class="pagination__navigation-icon">
+                                <use xlink:href="./images/sprites.svg#triangle-right"></use>
+                            </svg>
+                        </div>
+                    </div>
+                    <div class="products__banner">
+                        <img src="./images/banners/bisporolol_mobile.png" alt="Бисопролол">
+                        <button class="products__banner-button button">В корзину</button>
+                    </div>
+                </div>
+            </section>
+            <!-- Products end -->
+
+            <section class="section instructions">
+                <div class="container">
+                    <div class="col-12 cl-md-6 col-xl-9 instructions__left">
+                        <h2 class="subtitle" style="margin-bottom: 16px;">Бисопролол Инструкция по применению</h2>
+                        <div class="instructions__block js-accardion-many is-active">
+                            <h3 class="instructions__title">Действующее вещество</h3>
+                            <div class="js-accardion-body">
+                                <a class="instructions__link" href="#">Бисопролол</a>
+                            </div>
+                        </div>
+                        <div class="instructions__block js-accardion-many is-active">
+                            <h3 class="instructions__title">Состав</h3>
+                            <div class="js-accardion-body">
+                                <p class="instructions__text">5 мл (1 мерная ложка) суспензии содержат: действующие
+                                    вещества: алюминия гидроксид гель 2,18 г (в пересчете на Al2O3 218 мг), магния
+                                    гидроксид паста 350 мг (в пересчете на MgO 75 мг), бензокаин 109 мг;
+                                    вспомогательные
+                                    вещества: водорода пероксида раствор 30% 0,41 мг, сорбитол 801,15 мг, гиэтеллоза
+                                    15,26 мг, метилпарагидроксибензоат 10,90 мг, пропилпарагидроксибензоат 1,363 мг,
+                                    бутилпарагидроксибензоат 1,363 мг, натрия сахарината дигидрат 0,818 мг,
+                                    пропиленгликоль 327,00 мг, макрогол 4000 218,00 мг, лимона масло 1,635 мг,
+                                    этанол
+                                    96% 98,10 мг, вода очищенная до 5 мл. 10 мл (1 пакетик) суспензии содержат:
+                                    действующие вещества: алюминия гидроксид гель 4,36 г (в пересчете на Al2O3 436
+                                    мг),
+                                    магния гидроксид паста 700 мг (в пересчете на MgO 150 мг), бензокаин 218 мг;
+                                    вспомогательные вещества: водорода пероксида раствор 30% 0,82 мг, сорбитол
+                                    1602,30
+                                    мг, гиэтеллоза 30,52 мг, метилпарагидроксибензоат 21,80 мг,
+                                    пропилпарагидроксибензоат 2,726 мг, бутилпарагидроксибензоат 2,726 мг, натрия
+                                    сахарината дигидрат 1,636 мг, пропиленгликоль 654,00 мг, макрогол 4000 436,00
+                                    мг,
+                                    лимона масло 3,27 мг, этанол 96% 196,20 мг, вода очищенная до 10 мл.</p>
+                            </div>
+                        </div>
+                        <div class="instructions__block js-accardion-many is-active">
+                            <h3 class="instructions__title">Описание</h3>
+                            <div class="js-accardion-body">
+                                <p class="instructions__text">В <a class="instructions__link"
+                                        href="#">онлайн-каталоге</a> «ФАРМСИ» представлены <a class="instructions__link"
+                                        href="#">десятки тысяч наименований</a> для
+                                    здоровья от ведущих производителей
+                                    медикаментов, витаминов и БАД, косметики, товаров для будущих мам и малышей,
+                                    кормящих мам. В интернет-магазине «ФАРМСИ» можно найти и заказать гомеопатию,
+                                    товары
+                                    для похудения, медицинские приборы, предметы для ухода за больными, оптику.</p>
+                                <p class="instructions__text">Для покупки лекарств воспользуйтесь поиском, добавьте
+                                    позиции в корзину, выберите ближайшую к вам аптеку в Москве и оформите заказ.
+                                    Оплатить и получить заказ можно в выбранной аптеке.</p>
+                            </div>
+                        </div>
+                        <div class="instructions__block js-accardion-many is-active">
+                            <h3 class="instructions__title">Список литературы</h3>
+                            <div class="js-accardion-body">
+                                <ol class="ordered-list">
+                                    <li>Десятки тысяч наименований</li>
+                                    <li>Алюминия гидроксид гель</li>
+                                    <li>Медицинские приборы</li>
+                                </ol>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <section class="section">
+                <div class="container">
+                    <h2 class="subtitle">Аналоги Бисопролол</h2>
+                    <div class="row analogs-slider slider">
+                        <div class="col-7 slider__slide">
+                            <div class="product-cart">
+                                <div class="product-cart__header">
+                                    <a class="product-cart__link" href="#"><img
+                                            class="image js-lazy product-cart__image is-loaded" draggable="false"
+                                            src="./images/products/product-6.png"
+                                            data-src="./images/products/product-6.png"
+                                            data-srcset="./images/products/product-6@2x.png 2x"
+                                            alt="Цетрин, 10 мг, таблетки, покрытые пленочной оболочкой, 20 шт."
+                                            width="234" height="234" srcset="./images/products/product-6@2x.png 2x"
+                                            data-loaded="true">
+                                        <noscript><img src="./images/products/product-6.png"
+                                                alt="Цетрин, 10 мг, таблетки, покрытые пленочной оболочкой, 20 шт."
+                                                width="234" height="234" /></noscript>
+                                    </a>
+                                    <div class="product-cart__action">
+                                        <button class="product-cart__icon product-cart__like _like"
+                                            aria-label="Favorite toggle">
+                                            <svg class="product-cart__like-icon">
+                                                <use xlink:href="./images/sprites.svg#Heart"></use>
+                                            </svg>
+                                        </button>
+                                        <a class="product-cart__icon product-cart__tooltip" href="javascript:void(0)"
+                                            data-bs-toggle="tooltip" title="" data-bs-original-title="По рецепту">
+                                            <svg class="product-cart__tooltip-icon">
+                                                <use xlink:href="./images/sprites.svg#doc-med"></use>
+                                            </svg>
+                                        </a>
+                                    </div>
+                                </div>
+                                <div class="product-cart__body"><a class="product-cart__name" href="#">Цетрин, 10
+                                        мг,
+                                        таблетки, покрытые пленочной оболочкой, 20 шт.</a>
+                                    <p class="product-cart__company">Berlin-Chemie/Menarini Group, Германия</p>
+                                </div>
+                                <div class="product-cart__rating rating">
+                                    <div class="rating__block" data-bs-toggle="tooltip" title=""
+                                        data-bs-original-title="Рейтинг 4.7 из 5.0 – на основе 37 отзывов">
+                                        <svg class="rating__icon">
+                                            <use xlink:href="./images/sprites.svg#Star"></use>
+                                        </svg>
+                                        4.9
+                                    </div>
+                                    <div class="rating__count" data-bs-toggle="tooltip" title=""
+                                        data-bs-original-title="Количество отзывов">
+                                        37 отзывов
+                                    </div>
+                                </div>
+                                <div class="product-cart__footer">
+                                    <div class="product-cart__price">от 980 ₽</div>
+                                    <div class="product-cart__count">в 2347 аптеках</div>
+                                    <div class="product-cart__buttons">
+                                        <div class="card-adding-block">
+                                            <!-- Чтобы показать лоадер надо на кнопку добавить класс "button--loading"-->
+                                            <button class="button button-primary js-add-cart button--loading"
+                                                type="button">
+                                                <img src="./images/icons/Cart Plus.svg" alt="">
+                                            </button>
+                                            <!-- Чтобы показать лоадер надо на кнопку добавить класс "button--loading"-->
+                                            <div class="product-cart__adding js-add-block" style="display: none;">
+                                                <div class="card-adding">
+                                                    <button class="button card-adding--minus js-add-minus"></button>
+                                                    <div class="card-adding__wrap">
+                                                        <input class="card-adding__input js-add-input" type="text"
+                                                            disabled="disabled" value="1">
+                                                    </div>
+                                                    <button class="button card-adding--plus js-add-plus"></button>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <button class="button button-secondary button--loading js-add-second"
+                                            type="button">
+                                            <img src="mobile_template/product/images/bag-green.svg" alt=""
+                                                class="button__icon">
+                                            в 1 клик
+                                        </button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-7 slider__slide">
+                            <div class="product-cart">
+                                <div class="product-cart__header">
+                                    <a class="product-cart__link" href="#"><img
+                                            class="image js-lazy product-cart__image is-loaded" draggable="false"
+                                            src="./images/products/product-6.png"
+                                            data-src="./images/products/product-6.png"
+                                            data-srcset="./images/products/product-6@2x.png 2x"
+                                            alt="Цетрин, 10 мг, таблетки, покрытые пленочной оболочкой, 20 шт."
+                                            width="234" height="234" srcset="./images/products/product-6@2x.png 2x"
+                                            data-loaded="true">
+                                        <noscript><img src="./images/products/product-6.png"
+                                                alt="Цетрин, 10 мг, таблетки, покрытые пленочной оболочкой, 20 шт."
+                                                width="234" height="234" /></noscript>
+                                    </a>
+                                    <div class="product-cart__action">
+                                        <button class="product-cart__icon product-cart__like _like"
+                                            aria-label="Favorite toggle">
+                                            <svg class="product-cart__like-icon">
+                                                <use xlink:href="./images/sprites.svg#Heart"></use>
+                                            </svg>
+                                        </button>
+                                        <a class="product-cart__icon product-cart__tooltip" href="javascript:void(0)"
+                                            data-bs-toggle="tooltip" title="" data-bs-original-title="По рецепту">
+                                            <svg class="product-cart__tooltip-icon">
+                                                <use xlink:href="./images/sprites.svg#doc-med"></use>
+                                            </svg>
+                                        </a>
+                                    </div>
+                                </div>
+                                <div class="product-cart__body"><a class="product-cart__name" href="#">Цетрин, 10
+                                        мг,
+                                        таблетки, покрытые пленочной оболочкой, 20 шт.</a>
+                                    <p class="product-cart__company">Berlin-Chemie/Menarini Group, Германия</p>
+                                </div>
+                                <div class="product-cart__rating rating">
+                                    <div class="rating__block" data-bs-toggle="tooltip" title=""
+                                        data-bs-original-title="Рейтинг 4.7 из 5.0 – на основе 37 отзывов">
+                                        <svg class="rating__icon">
+                                            <use xlink:href="./images/sprites.svg#Star"></use>
+                                        </svg>
+                                        4.9
+                                    </div>
+                                    <div class="rating__count" data-bs-toggle="tooltip" title=""
+                                        data-bs-original-title="Количество отзывов">
+                                        37 отзывов
+                                    </div>
+                                </div>
+                                <div class="product-cart__footer">
+                                    <div class="product-cart__price">от 980 ₽</div>
+                                    <div class="product-cart__count">в 2347 аптеках</div>
+                                    <div class="product-cart__buttons">
+                                        <div class="card-adding-block">
+                                            <!-- Чтобы показать лоадер надо на кнопку добавить класс "button--loading"-->
+                                            <button class="button button-primary js-add-cart button--loading"
+                                                type="button">
+                                                <img src="./images/icons/Cart Plus.svg" alt="">
+                                            </button>
+                                            <!-- Чтобы показать лоадер надо на кнопку добавить класс "button--loading"-->
+                                            <div class="product-cart__adding js-add-block" style="display: none;">
+                                                <div class="card-adding">
+                                                    <button class="button card-adding--minus js-add-minus"></button>
+                                                    <div class="card-adding__wrap">
+                                                        <input class="card-adding__input js-add-input" type="text"
+                                                            disabled="disabled" value="1">
+                                                    </div>
+                                                    <button class="button card-adding--plus js-add-plus"></button>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <button class="button button-secondary button--loading js-add-second"
+                                            type="button">
+                                            <img src="mobile_template/product/images/bag-green.svg" alt=""
+                                                class="button__icon">
+                                            в 1 клик
+                                        </button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-7 slider__slide">
+                            <div class="product-cart">
+                                <div class="product-cart__header">
+                                    <a class="product-cart__link" href="#"><img
+                                            class="image js-lazy product-cart__image is-loaded" draggable="false"
+                                            src="./images/products/product-6.png"
+                                            data-src="./images/products/product-6.png"
+                                            data-srcset="./images/products/product-6@2x.png 2x"
+                                            alt="Цетрин, 10 мг, таблетки, покрытые пленочной оболочкой, 20 шт."
+                                            width="234" height="234" srcset="./images/products/product-6@2x.png 2x"
+                                            data-loaded="true">
+                                        <noscript><img src="./images/products/product-6.png"
+                                                alt="Цетрин, 10 мг, таблетки, покрытые пленочной оболочкой, 20 шт."
+                                                width="234" height="234" /></noscript>
+                                    </a>
+                                    <div class="product-cart__action">
+                                        <button class="product-cart__icon product-cart__like _like"
+                                            aria-label="Favorite toggle">
+                                            <svg class="product-cart__like-icon">
+                                                <use xlink:href="./images/sprites.svg#Heart"></use>
+                                            </svg>
+                                        </button>
+                                        <a class="product-cart__icon product-cart__tooltip" href="javascript:void(0)"
+                                            data-bs-toggle="tooltip" title="" data-bs-original-title="По рецепту">
+                                            <svg class="product-cart__tooltip-icon">
+                                                <use xlink:href="./images/sprites.svg#doc-med"></use>
+                                            </svg>
+                                        </a>
+                                    </div>
+                                </div>
+                                <div class="product-cart__body"><a class="product-cart__name" href="#">Цетрин, 10
+                                        мг,
+                                        таблетки, покрытые пленочной оболочкой, 20 шт.</a>
+                                    <p class="product-cart__company">Berlin-Chemie/Menarini Group, Германия</p>
+                                </div>
+                                <div class="product-cart__rating rating">
+                                    <div class="rating__block" data-bs-toggle="tooltip" title=""
+                                        data-bs-original-title="Рейтинг 4.7 из 5.0 – на основе 37 отзывов">
+                                        <svg class="rating__icon">
+                                            <use xlink:href="./images/sprites.svg#Star"></use>
+                                        </svg>
+                                        4.9
+                                    </div>
+                                    <div class="rating__count" data-bs-toggle="tooltip" title=""
+                                        data-bs-original-title="Количество отзывов">
+                                        37 отзывов
+                                    </div>
+                                </div>
+                                <div class="product-cart__footer">
+                                    <div class="product-cart__price">от 980 ₽</div>
+                                    <div class="product-cart__count">в 2347 аптеках</div>
+                                    <div class="product-cart__buttons">
+                                        <div class="card-adding-block">
+                                            <!-- Чтобы показать лоадер надо на кнопку добавить класс "button--loading"-->
+                                            <button class="button button-primary js-add-cart button--loading"
+                                                type="button">
+                                                <img src="./images/icons/Cart Plus.svg" alt="">
+                                            </button>
+                                            <!-- Чтобы показать лоадер надо на кнопку добавить класс "button--loading"-->
+                                            <div class="product-cart__adding js-add-block" style="display: none;">
+                                                <div class="card-adding">
+                                                    <button class="button card-adding--minus js-add-minus"></button>
+                                                    <div class="card-adding__wrap">
+                                                        <input class="card-adding__input js-add-input" type="text"
+                                                            disabled="disabled" value="1">
+                                                    </div>
+                                                    <button class="button card-adding--plus js-add-plus"></button>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <button class="button button-secondary button--loading js-add-second"
+                                            type="button">
+                                            <img src="mobile_template/product/images/bag-green.svg" alt=""
+                                                class="button__icon">
+                                            в 1 клик
+                                        </button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-7 slider__slide">
+                            <div class="product-cart">
+                                <div class="product-cart__header">
+                                    <a class="product-cart__link" href="#"><img
+                                            class="image js-lazy product-cart__image is-loaded" draggable="false"
+                                            src="./images/products/product-6.png"
+                                            data-src="./images/products/product-6.png"
+                                            data-srcset="./images/products/product-6@2x.png 2x"
+                                            alt="Цетрин, 10 мг, таблетки, покрытые пленочной оболочкой, 20 шт."
+                                            width="234" height="234" srcset="./images/products/product-6@2x.png 2x"
+                                            data-loaded="true">
+                                        <noscript><img src="./images/products/product-6.png"
+                                                alt="Цетрин, 10 мг, таблетки, покрытые пленочной оболочкой, 20 шт."
+                                                width="234" height="234" /></noscript>
+                                    </a>
+                                    <div class="product-cart__action">
+                                        <button class="product-cart__icon product-cart__like _like"
+                                            aria-label="Favorite toggle">
+                                            <svg class="product-cart__like-icon">
+                                                <use xlink:href="./images/sprites.svg#Heart"></use>
+                                            </svg>
+                                        </button>
+                                        <a class="product-cart__icon product-cart__tooltip" href="javascript:void(0)"
+                                            data-bs-toggle="tooltip" title="" data-bs-original-title="По рецепту">
+                                            <svg class="product-cart__tooltip-icon">
+                                                <use xlink:href="./images/sprites.svg#doc-med"></use>
+                                            </svg>
+                                        </a>
+                                    </div>
+                                </div>
+                                <div class="product-cart__body"><a class="product-cart__name" href="#">Цетрин, 10
+                                        мг,
+                                        таблетки, покрытые пленочной оболочкой, 20 шт.</a>
+                                    <p class="product-cart__company">Berlin-Chemie/Menarini Group, Германия</p>
+                                </div>
+                                <div class="product-cart__rating rating">
+                                    <div class="rating__block" data-bs-toggle="tooltip" title=""
+                                        data-bs-original-title="Рейтинг 4.7 из 5.0 – на основе 37 отзывов">
+                                        <svg class="rating__icon">
+                                            <use xlink:href="./images/sprites.svg#Star"></use>
+                                        </svg>
+                                        4.9
+                                    </div>
+                                    <div class="rating__count" data-bs-toggle="tooltip" title=""
+                                        data-bs-original-title="Количество отзывов">
+                                        37 отзывов
+                                    </div>
+                                </div>
+                                <div class="product-cart__footer">
+                                    <div class="product-cart__price">от 980 ₽</div>
+                                    <div class="product-cart__count">в 2347 аптеках</div>
+                                    <div class="product-cart__buttons">
+                                        <div class="card-adding-block">
+                                            <!-- Чтобы показать лоадер надо на кнопку добавить класс "button--loading"-->
+                                            <button class="button button-primary js-add-cart button--loading"
+                                                type="button">
+                                                <img src="./images/icons/Cart Plus.svg" alt="">
+                                            </button>
+                                            <!-- Чтобы показать лоадер надо на кнопку добавить класс "button--loading"-->
+                                            <div class="product-cart__adding js-add-block" style="display: none;">
+                                                <div class="card-adding">
+                                                    <button class="button card-adding--minus js-add-minus"></button>
+                                                    <div class="card-adding__wrap">
+                                                        <input class="card-adding__input js-add-input" type="text"
+                                                            disabled="disabled" value="1">
+                                                    </div>
+                                                    <button class="button card-adding--plus js-add-plus"></button>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <button class="button button-secondary button--loading js-add-second"
+                                            type="button">
+                                            <img src="mobile_template/product/images/bag-green.svg" alt=""
+                                                class="button__icon">
+                                            в 1 клик
+                                        </button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="slider__button">
+                        <button class="button">Смотреть все аналоги Бисопролол <img class="button__icon"
+                                src="./images/icons/Arrow Right.svg" alt=""></button>
+                    </div>
+                </div>
+            </section>
+            <section class="section">
+                <div class="container">
+                    <h2 class="subtitle">Фото Бисопролол</h2>
+                    <div class="photo-slider slider">
+                        <div class="photo-slider__slide slider__slide">
+                            <a class="photo-slider__block" href="#">
+                                <img src="./images/products/product-1.png" alt="Фотография препарата" loading="lazy"
+                                    width="156" height="117">
+                            </a>
+                        </div>
+                        <div class="photo-slider__slide slider__slide">
+                            <a class="photo-slider__block" href="#">
+                                <img src="./images/products/product-2.png" alt="Фотография препарата" loading="lazy"
+                                    width="156" height="117">
+                            </a>
+                        </div>
+                        <div class="photo-slider__slide slider__slide">
+                            <a class="photo-slider__block" href="#">
+                                <img src="./images/products/product-3.png" alt="Фотография препарата" loading="lazy"
+                                    width="156" height="117">
+                            </a>
+                        </div>
+                        <div class="photo-slider__slide slider__slide">
+                            <a class="photo-slider__block" href="#">
+                                <img src="./images/products/product-4.png" alt="Фотография препарата" loading="lazy"
+                                    width="156" height="117">
+                            </a>
+                        </div>
+                        <div class="photo-slider__slide slider__slide">
+                            <a class="photo-slider__block" href="#">
+                                <img src="./images/products/product-5.png" alt="Фотография препарата" loading="lazy"
+                                    width="156" height="117">
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <section class="section">
+                <div class="container">
+                    <h2 class="subtitle">Сертификаты Бисопролол</h2>
+                    <div class="photo-slider slider">
+                        <div class="photo-slider__slide slider__slide">
+                            <a class="photo-slider__block" href="#">
+                                <img src="./images/certeficates/certeficate (1).png" alt="Фотография препарата"
+                                    loading="lazy" width="156" height="220">
+                            </a>
+                        </div>
+                        <div class="photo-slider__slide slider__slide">
+                            <a class="photo-slider__block" href="#">
+                                <img src="./images/certeficates/certeficate (2).png" alt="Фотография препарата"
+                                    loading="lazy" width="156" height="220">
+                            </a>
+                        </div>
+                        <div class="photo-slider__slide slider__slide">
+                            <a class="photo-slider__block" href="#">
+                                <img src="./images/certeficates/certeficate (3).png" alt="Фотография препарата"
+                                    loading="lazy" width="156" height="220">
+                            </a>
+                        </div>
+                        <div class="photo-slider__slide slider__slide">
+                            <a class="photo-slider__block" href="#">
+                                <img src="./images/certeficates/certeficate (4).png" alt="Фотография препарата"
+                                    loading="lazy" width="156" height="220">
+                            </a>
+                        </div>
+                        <div class="photo-slider__slide slider__slide">
+                            <a class="photo-slider__block" href="#">
+                                <img src="./images/certeficates/certeficate (5).png" alt="Фотография препарата"
+                                    loading="lazy" width="156" height="220">
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <section class="section map">
+                <div class="container">
+                    <h2 class="subtitle" style="margin-bottom: 8px;">Доставка и заказ Бисопролол в Москве и Московской
+                        области</h2>
+                    <p style="margin-bottom: 26px;">Заказывая на ФАРМСИ.ru, можно выбрать удобную аптеку у дома или
+                        возле работы.
+                        В Москве и Московской области для получения доступно – 475 аптек.</p>
+
+                    <div class="map__image">
+                        <img src="./images/map/map_mobile.png" alt="Карта аптек">
+                    </div>
+                </div>
+            </section>
+
+            <section class="section">
+                <div class="container">
+                    <h2 class="subtitle" style="margin-bottom: 8px;">Цены на Бисопролол в аптеках в Москве и Московской
+                        области</h2>
+                    <p style="font-size: 16px; margin-bottom: 26px;">Заберите заказ в любой ближайшей аптеке</p>
+
+                    <ul class="pricelist">
+                        <li class="pricelist__item">
+                            <div class="pricelist__company">
+                                <img class="pricelist__logo" src="./images/apteki/apt_logo.png" alt="">
+                                <span class="pricelist__name">ЗдравСити</span>
+                            </div>
+                            <span class="pricelist__address">Земляной Вал ул, 27 c 1, Москва</span>
+                            <span class="pricelist__schedule">08:00-22:00 Пн-Пт, 09:00-21:00 Сб-Вс</span>
+                            <div class="pricelist__bottom">
+                                <span class="pricelist__price">2980 ₽</span>
+                                <button class="button pricelist__button">Смотреть аптеку</button>
+                            </div>
+                        </li>
+                        <li class="pricelist__item">
+                            <div class="pricelist__company">
+                                <img class="pricelist__logo" src="./images/apteki/magnit_logo.png" alt="">
+                                <span class="pricelist__name">
+                                    Магнит аптека
+                                    <a href="#" class="pricelist__url" style="color: #7AA0DB;"><img
+                                            src="./images/brands/Polza_logo.svg" alt="">polza.ru</a>
+                                </span>
+
+                            </div>
+                            <span class="pricelist__address">Земляной Вал ул, 27 c 1, Москва</span>
+                            <span class="pricelist__schedule">08:00-22:00 Пн-Пт, 09:00-21:00 Сб-Вс</span>
+                            <div class="pricelist__bottom">
+                                <span class="pricelist__price">2980 ₽</span>
+                                <button class="button pricelist__button">Смотреть аптеку</button>
+                            </div>
+                        </li>
+                        <li class="pricelist__item">
+                            <div class="pricelist__company">
+                                <img class="pricelist__logo" src="./images/apteki/apt_logo.png" alt="">
+                                <span class="pricelist__name">ЗдравСити</span>
+                            </div>
+                            <span class="pricelist__address">Земляной Вал ул, 27 c 1, Москва</span>
+                            <span class="pricelist__schedule">08:00-22:00 Пн-Пт, 09:00-21:00 Сб-Вс</span>
+                            <div class="pricelist__bottom">
+                                <span class="pricelist__price">2980 ₽</span>
+                                <button class="button pricelist__button">Смотреть аптеку</button>
+                            </div>
+                        </li>
+                        <li class="pricelist__item">
+                            <div class="pricelist__company">
+                                <img class="pricelist__logo" src="./images/apteki/apt_logo.png" alt="">
+                                <span class="pricelist__name">ЗдравСити</span>
+                            </div>
+                            <span class="pricelist__address">Земляной Вал ул, 27 c 1, Москва</span>
+                            <span class="pricelist__schedule">08:00-22:00 Пн-Пт, 09:00-21:00 Сб-Вс</span>
+                            <div class="pricelist__bottom">
+                                <span class="pricelist__price">2980 ₽</span>
+                                <button class="button pricelist__button">Смотреть аптеку</button>
+                            </div>
+                        </li>
+                    </ul>
+                    <div class="pagination">
+                        <ul class="pagination__pages">
+                            <li class="pagination__pages-item pagination__pages-item--active"><button>1</button></li>
+                            <li class="pagination__pages-item"><button>2</button></li>
+                            <li class="pagination__pages-item"><button>3</button></li>
+                        </ul>
+                    </div>
+                </div>
+            </section>
+
+            <section class="section">
+                <div class="container">
+                    <div class="col-12 col-md-9">
+                        <h2 class="subtitle" style="margin-bottom: 16px;">Часто задаваемые вопросы</h2>
+                        <div class="faqs">
+                            <div class="faqs__item js-accardion">
+                                <div class="faqs__header">Почему цены дешевле, чем в аптеках?</div>
+                                <div class="faqs__body js-accardion-body">Мы сотрудничаем напрямую с разными аптечными
+                                    организациями, каждое учреждение устанавливает свои цены. Сервис отображает самые
+                                    минимальные цены на товары в вашем городе. Для приобретения товара по нужной цене
+                                    оформите
+                                    заказ и цена на него не изменится в момент его оплаты в аптеке. Сервис работает для
+                                    вас
+                                    без
+                                    наценки и комиссий.
+                                </div>
+                            </div>
+                            <div class="faqs__item js-accardion">
+                                <div class="faqs__header">В чем польза вашего сервиса?</div>
+                                <div class="faqs__body js-accardion-body">Преимущество сервиса в том, что не нужно
+                                    посещать
+                                    или
+                                    обзванивать 3-5 аптечных сетей, чтобы узнать наличие и цену. Вы заранее знаете, где
+                                    и по
+                                    какой цене можете купить необходимые аптечные товары. Достаточно оформить заказ с
+                                    помощью
+                                    ФАРМСИ.ru.
+                                </div>
+                            </div>
+                            <div class="faqs__item js-accardion">
+                                <div class="faqs__header">Как работает ваш сервис?</div>
+                                <div class="faqs__body js-accardion-body">1. Найдите необходимые аптечные товары и
+                                    выберете
+                                    удобную для себя аптеку.<br>2. Оформите заказ.<br>3. Получите уведомление о
+                                    готовности и
+                                    заберите заказ с гарантией по известной цене.
+                                </div>
+                            </div>
+                            <div class="faqs__item js-accardion">
+                                <div class="faqs__header">Зачем оформлять заказ, если я могу посмотреть наличие и пойти
+                                    купить в
+                                    аптеке?
+                                </div>
+                                <div class="faqs__body js-accardion-body">Указанные цены действительны только при заказе
+                                    на
+                                    ФАРМСИ.ру, а приобретение некоторых лекарств через наш сервис помогает сэкономить,
+                                    поскольку
+                                    аптеки предоставляют нам специальные цены. Кроме этого, до вашего визита в аптеку
+                                    нужное
+                                    лекарство может закончиться, так как его уже купили.
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <section class="section">
+                <div class="container">
+                    <div class="col-12 col-md-9">
+                        <h2 class="subtitle" style="margin-bottom: 22px;">Цена на Бисопролол в других городах</h2>
+                        <div class="row" style="flex-wrap: nowrap; overflow-y: scroll; scroll-snap-type: x mandatory;">
+                            <div class="col-9" style="scroll-snap-align: start;">
+                                <ul class="cities">
+                                    <li class="cities__item"><a href="">Бисопролол в Санкт-Петербурге</a></li>
+                                    <li class="cities__item"><a href="">Бисопролол в Нижнем Новгорода</a></li>
+                                    <li class="cities__item"><a href="">Бисопролол в Самаре</a></li>
+                                    <li class="cities__item"><a href="">Бисопролол в Ростове-на-Дону</a></li>
+                                    <li class="cities__item"><a href="">Бисопролол в Сочи</a></li>
+                                    <li class="cities__item"><a href="">Бисопролол в Краснадаре</a></li>
+                                    <li class="cities__item"><a href="">Бисопролол в Волгограде</a></li>
+                                    <li class="cities__item"><a href="">Бисопролол в Новосибирске</a></li>
+                                </ul>
+                            </div>
+                            <div class="col-9" style="scroll-snap-align: start;">
+                                <ul class="cities">
+                                    <li class="cities__item"><a href="">Бисопролол в Санкт-Петербурге</a></li>
+                                    <li class="cities__item"><a href="">Бисопролол в Нижнем Новгорода</a></li>
+                                    <li class="cities__item"><a href="">Бисопролол в Самаре</a></li>
+                                    <li class="cities__item"><a href="">Бисопролол в Ростове-на-Дону</a></li>
+                                    <li class="cities__item"><a href="">Бисопролол в Сочи</a></li>
+                                    <li class="cities__item"><a href="">Бисопролол в Краснадаре</a></li>
+                                    <li class="cities__item"><a href="">Бисопролол в Волгограде</a></li>
+                                    <li class="cities__item"><a href="">Бисопролол в Новосибирске</a></li>
+                                </ul>
+                            </div>
+                            <div class="col-9" style="scroll-snap-align: start;">
+                                <ul class="cities">
+                                    <li class="cities__item"><a href="">Бисопролол в Санкт-Петербурге</a></li>
+                                    <li class="cities__item"><a href="">Бисопролол в Нижнем Новгорода</a></li>
+                                    <li class="cities__item"><a href="">Бисопролол в Самаре</a></li>
+                                    <li class="cities__item"><a href="">Бисопролол в Ростове-на-Дону</a></li>
+                                    <li class="cities__item"><a href="">Бисопролол в Сочи</a></li>
+                                    <li class="cities__item"><a href="">Бисопролол в Краснадаре</a></li>
+                                    <li class="cities__item"><a href="">Бисопролол в Волгограде</a></li>
+                                    <li class="cities__item"><a href="">Бисопролол в Новосибирске</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+            </section>
+            <section class="section">
+                <div class="container">
+                    <div class="col-12 col-md-9">
+                        <h2 class="subtitle" style="margin-bottom: 20px;">Отзывы о Бисопролол</h2>
+                        <div class="reviews">
+                            <div class="reviews__rating rating">
+                                <div class="reting__left">
+                                    <div class="rating__block">
+                                        <svg class="rating__icon">
+                                            <use xlink:href="./images/sprites.svg#Star"></use>
+                                        </svg>
+                                        <div class="rating__mark">4,9</div>
+                                    </div>
+                                    <div class="rating__count">На основе 17 отзывов</div>
+                                </div>
+                                <button class="rating__button button">Оставить отзыв</button>
+                            </div>
+                            <div class="reviews__images">
+                                <div class="reviews__image">
+                                    <img src="./images/reviews/review (1).jpg" srcset="./images/reviews/review (1).jpg"
+                                        alt="Logo_Zdrav" loading="lazy" width="84" height="84">
+                                </div>
+                                <div class="reviews__image">
+                                    <img src="./images/reviews/review (2).jpg" srcset="./images/reviews/review (2).jpg"
+                                        alt="Logo_Zdrav" loading="lazy" width="84" height="84">
+                                </div>
+                                <div class="reviews__image">
+                                    <img src="./images/reviews/review (3).jpg" srcset="./images/reviews/review (3).jpg"
+                                        alt="Logo_Zdrav" loading="lazy" width="84" height="84">
+                                </div>
+                                <div class="reviews__image">
+                                    <img src="./images/reviews/review (4).jpg" srcset="./images/reviews/review (4).jpg"
+                                        alt="Logo_Zdrav" loading="lazy" width="84" height="84">
+                                </div>
+                                <div class="reviews__image reviews__image--count">
+                                    <span class="reviews__image--sign">+352</span>
+                                    <img src="./images/reviews/review (5).jpg" srcset="./images/reviews/review (5).jpg"
+                                        alt="Logo_Zdrav" loading="lazy" width="84" height="84">
+                                </div>
+                            </div>
+                            <div class="reviews__sort">
+                                <div class="reviews__sort-dropdown js-dropdown js-sort" tabindex="-1">
+                                    <div class="reviews__sort-text">
+                                        Сначала новые
+                                    </div>
+                                    <svg class="js-dropdown-icon" width="8" height="24" viewBox="0 0 8 24" fill="none"
+                                        xmlns="http://www.w3.org/2000/svg">
+                                        <g clip-path="url(#clip0_1899_12853)">
+                                            <path
+                                                d="M4.76837e-07 10L4 12.8366L8 10L8 11.755L4.30227 15L3.71788 15L4.00125e-07 11.755L4.76837e-07 10Z"
+                                                fill="#444952" />
+                                        </g>
+                                        <defs>
+                                            <clipPath id="clip0_1899_12853">
+                                                <rect width="8" height="24" fill="white" />
+                                            </clipPath>
+                                        </defs>
+                                    </svg>
+                                    <ul class="js-dropdown-menu">
+                                        <li class="js-dropdown-link js-dropdown-link--active">
+                                            Сначала новые</li>
+                                        <li class="js-dropdown-link">Сначала старые</li>
+                                        <li class="js-dropdown-link">Сначала положительные</li>
+                                        <li class="js-dropdown-link">Сначала отрицательные</li>
+                                    </ul>
+                                </div>
+                                <div class="reviews__line"></div>
+                            </div>
+                            <div class="reviews__list">
+                                <div class="reviews__review review">
+                                    <div class="review__top">
+                                        <div class="review__username">Виктория Н.</div>
+                                        <div class="review__rating">
+                                            5
+                                            <div class="review__stars">
+                                                <svg class="review__star-icon">
+                                                    <use xlink:href="./images/sprites.svg#Star"></use>
+                                                </svg>
+                                                <svg class="review__star-icon">
+                                                    <use xlink:href="./images/sprites.svg#Star"></use>
+                                                </svg>
+                                                <svg class="review__star-icon">
+                                                    <use xlink:href="./images/sprites.svg#Star"></use>
+                                                </svg>
+                                                <svg class="review__star-icon">
+                                                    <use xlink:href="./images/sprites.svg#Star"></use>
+                                                </svg>
+                                                <svg class="review__star-icon review__star-icon--disabled">
+                                                    <use xlink:href="./images/sprites.svg#Star"></use>
+                                                </svg>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="review__checked">
+                                        <svg class="review__checked-icon">
+                                            <use xlink:href="./images/sprites.svg#check"></use>
+                                        </svg>
+                                        Товар заказан на ФАРМСИ
+                                    </div>
+                                    <div class="review__product">
+                                        <img class="review__product-image" src="./images/products/product-1@2x.png"
+                                            alt="Продукт" width="64" height="64">
+                                        <div class="review__product-block">
+                                            <span class="review__product-name">Супрастин — раствор для внутривенных
+                                                инъекций</span>
+                                            <span class="review__product-desc">Цетрин</span>
+                                        </div>
+                                        <div class="review__product-price">от 12 000 ₽</div>
+                                    </div>
+                                    <p class="review__text">Достаточно эффективный дженерик.
+                                        Сама не имею опыта применения, но мой муж через раз пользуется. Быстро
+                                        нормализует
+                                        давление и самое главное "не отключает". То есть препаратом можно пользоваться
+                                        ситуативно и даже за рулем.</p>
+                                    <div class="review__images">
+                                        <img src="./images/reviews/review (1).jpg" alt="Картинка отзыва">
+                                        <img src="./images/reviews/review (2).jpg" alt="Картинка отзыва">
+                                    </div>
+                                    <div class="review__bottom">
+                                        <span class="review__date">Сегодня</span>
+                                        <div class="review__buttons">
+                                            <button class="review__button review__button--like js-review-like"
+                                                data-review-id="1">
+                                                <svg xmlns="http://www.w3.org/2000/svg" width="25" height="24"
+                                                    viewBox="0 0 25 24" fill="none">
+                                                    <path
+                                                        d="M21.4752 11.6852L20.4898 11.5148L21.4752 11.6852ZM20.7696 15.765L19.7842 15.5945L20.7696 15.765ZM7.43777 19.9771L6.44149 20.0632L7.43777 19.9771ZM6.62561 10.5844L7.62189 10.4983L6.62561 10.5844ZM14.495 4.72142L15.4818 4.88311V4.88311L14.495 4.72142ZM13.8323 8.76598L14.8191 8.92767V8.92767L13.8323 8.76598ZM7.19814 9.17749L6.54535 8.41995H6.54535L7.19814 9.17749ZM8.63688 7.93769L9.28967 8.69523L9.28967 8.69523L8.63688 7.93769ZM11.0181 4.28374L10.0501 4.03265L10.0501 4.03265L11.0181 4.28374ZM11.4938 2.44989L12.4617 2.70098L12.4617 2.70098L11.4938 2.44989ZM13.1676 1.56435L12.8617 2.51643L12.8617 2.51643L13.1676 1.56435ZM13.3126 1.61093L13.6184 0.658847L13.6184 0.658846L13.3126 1.61093ZM10.3619 5.96262L11.244 6.43378L10.3619 5.96262ZM14.4047 2.74752L13.4367 2.99862V2.99862L14.4047 2.74752ZM12.1742 1.63239L11.7401 0.73153V0.73153L12.1742 1.63239ZM4.4716 20.9707L3.47532 21.0569H3.47532L4.4716 20.9707ZM3.5 9.7342L4.49628 9.64806C4.45015 9.11453 3.99191 8.71204 3.45689 8.73513C2.92187 8.75822 2.5 9.19868 2.5 9.7342H3.5ZM20.4898 11.5148L19.7842 15.5945L21.755 15.9354L22.4605 11.8556L20.4898 11.5148ZM13.745 20.5H9.09635V22.5H13.745V20.5ZM8.43405 19.8909L7.62189 10.4983L5.62932 10.6705L6.44149 20.0632L8.43405 19.8909ZM19.7842 15.5945C19.2993 18.3989 16.7663 20.5 13.745 20.5V22.5C17.6862 22.5 21.0953 19.7499 21.755 15.9354L19.7842 15.5945ZM13.5081 4.55973L12.8454 8.60429L14.8191 8.92767L15.4818 4.88311L13.5081 4.55973ZM7.85093 9.93503L9.28967 8.69523L7.98409 7.18015L6.54535 8.41995L7.85093 9.93503ZM11.986 4.53484L12.4617 2.70098L10.5258 2.1988L10.0501 4.03265L11.986 4.53484ZM12.8617 2.51643L13.0067 2.563L13.6184 0.658846L13.4734 0.612275L12.8617 2.51643ZM11.244 6.43378C11.5652 5.83249 11.8147 5.19545 11.986 4.53484L10.0501 4.03265C9.91874 4.53902 9.72724 5.02842 9.4799 5.49145L11.244 6.43378ZM13.0067 2.563C13.2347 2.63624 13.3875 2.8089 13.4367 2.99862L15.3726 2.49643C15.1449 1.61838 14.4739 0.933656 13.6184 0.658847L13.0067 2.563ZM12.4617 2.70098C12.4777 2.63936 12.5249 2.57347 12.6083 2.53326L11.7401 0.73153C11.144 1.01876 10.6941 1.55011 10.5258 2.1988L12.4617 2.70098ZM12.6083 2.53326C12.6851 2.49626 12.7775 2.48936 12.8617 2.51643L13.4734 0.612276C12.9029 0.429001 12.2807 0.471046 11.7401 0.73153L12.6083 2.53326ZM14.6537 10.7342H19.8348V8.7342H14.6537V10.7342ZM5.46788 20.8846L4.49628 9.64806L2.50372 9.82035L3.47532 21.0569L5.46788 20.8846ZM4.5 21.0127V9.7342H2.5V21.0127H4.5ZM3.47532 21.0569C3.44952 20.7586 3.68458 20.5 3.98671 20.5V22.5C4.85955 22.5 5.54289 21.7521 5.46788 20.8846L3.47532 21.0569ZM15.4818 4.88311C15.612 4.08863 15.5748 3.27569 15.3726 2.49643L13.4367 2.99862C13.5689 3.50831 13.5933 4.04006 13.5081 4.55973L15.4818 4.88311ZM9.09635 20.5C8.75239 20.5 8.46393 20.2364 8.43405 19.8909L6.44149 20.0632C6.56061 21.4408 7.71274 22.5 9.09635 22.5V20.5ZM9.28967 8.69523C9.97363 8.10585 10.7367 7.38351 11.244 6.43378L9.4799 5.49145C9.15652 6.09684 8.6352 6.61908 7.98409 7.18015L9.28967 8.69523ZM22.4605 11.8556C22.7422 10.2266 21.4895 8.7342 19.8348 8.7342V10.7342C20.246 10.7342 20.5605 11.1058 20.4898 11.5148L22.4605 11.8556ZM3.98671 20.5C4.27126 20.5 4.5 20.7306 4.5 21.0127H2.5C2.5 21.8331 3.16455 22.5 3.98671 22.5V20.5ZM12.8454 8.60429C12.6628 9.71899 13.522 10.7342 14.6537 10.7342V8.7342C14.7584 8.7342 14.8355 8.82758 14.8191 8.92767L12.8454 8.60429ZM7.62189 10.4983C7.60338 10.2842 7.68884 10.0747 7.85093 9.93503L6.54535 8.41995C5.89613 8.97939 5.55551 9.81687 5.62932 10.6705L7.62189 10.4983Z"
+                                                        fill="#ABB6CC" />
+                                                </svg>
+                                                <span class="review__button-text">2</span>
+                                            </button>
+                                            <button class="review__button review__button--dislike js-review-dislike"
+                                                data-review-id="1">
+                                                <svg xmlns="http://www.w3.org/2000/svg" width="25" height="24"
+                                                    viewBox="0 0 25 24" fill="none">
+                                                    <path
+                                                        d="M21.4752 11.8148L20.4898 11.9852L21.4752 11.8148ZM20.7696 7.73505L19.7842 7.90545L20.7696 7.73505ZM7.43777 3.52293L6.44149 3.43678L7.43777 3.52293ZM6.62561 12.9156L7.62189 13.0017L6.62561 12.9156ZM14.495 18.7786L15.4818 18.6169V18.6169L14.495 18.7786ZM13.8323 14.734L14.8191 14.5723V14.5723L13.8323 14.734ZM7.19814 14.3225L6.54535 15.0801H6.54535L7.19814 14.3225ZM8.63688 15.5623L9.28967 14.8048L9.28967 14.8048L8.63688 15.5623ZM11.0181 19.2163L10.0501 19.4673L10.0501 19.4673L11.0181 19.2163ZM11.4938 21.0501L12.4617 20.799L12.4617 20.799L11.4938 21.0501ZM13.1676 21.9356L12.8617 20.9836L12.8617 20.9836L13.1676 21.9356ZM13.3126 21.8891L13.6184 22.8412L13.6184 22.8412L13.3126 21.8891ZM10.3619 17.5374L11.244 17.0662L10.3619 17.5374ZM14.4047 20.7525L13.4367 20.5014V20.5014L14.4047 20.7525ZM12.1742 21.8676L11.7401 22.7685V22.7685L12.1742 21.8676ZM4.4716 2.52928L3.47532 2.44313H3.47532L4.4716 2.52928ZM3.5 13.7658L4.49628 13.8519C4.45015 14.3855 3.99191 14.788 3.45689 14.7649C2.92187 14.7418 2.5 14.3013 2.5 13.7658H3.5ZM20.4898 11.9852L19.7842 7.90545L21.755 7.56464L22.4605 11.6444L20.4898 11.9852ZM13.745 3H9.09635V1H13.745V3ZM8.43405 3.60908L7.62189 13.0017L5.62932 12.8295L6.44149 3.43678L8.43405 3.60908ZM19.7842 7.90545C19.2993 5.10114 16.7663 3 13.745 3V1C17.6862 1 21.0953 3.75007 21.755 7.56464L19.7842 7.90545ZM13.5081 18.9403L12.8454 14.8957L14.8191 14.5723L15.4818 18.6169L13.5081 18.9403ZM7.85093 13.565L9.28967 14.8048L7.98409 16.3198L6.54535 15.0801L7.85093 13.565ZM11.986 18.9652L12.4617 20.799L10.5258 21.3012L10.0501 19.4673L11.986 18.9652ZM12.8617 20.9836L13.0067 20.937L13.6184 22.8412L13.4734 22.8877L12.8617 20.9836ZM11.244 17.0662C11.5652 17.6675 11.8147 18.3046 11.986 18.9652L10.0501 19.4673C9.91874 18.961 9.72724 18.4716 9.4799 18.0086L11.244 17.0662ZM13.0067 20.937C13.2347 20.8638 13.3875 20.6911 13.4367 20.5014L15.3726 21.0036C15.1449 21.8816 14.4739 22.5663 13.6184 22.8412L13.0067 20.937ZM12.4617 20.799C12.4777 20.8606 12.5249 20.9265 12.6083 20.9667L11.7401 22.7685C11.144 22.4812 10.6941 21.9499 10.5258 21.3012L12.4617 20.799ZM12.6083 20.9667C12.6851 21.0037 12.7775 21.0106 12.8617 20.9836L13.4734 22.8877C12.9029 23.071 12.2807 23.029 11.7401 22.7685L12.6083 20.9667ZM14.6537 12.7658H19.8348V14.7658H14.6537V12.7658ZM5.46788 2.61543L4.49628 13.8519L2.50372 13.6797L3.47532 2.44313L5.46788 2.61543ZM4.5 2.48726V13.7658H2.5V2.48726H4.5ZM3.47532 2.44313C3.44952 2.74141 3.68458 3 3.98671 3V1C4.85955 1 5.54289 1.74791 5.46788 2.61543L3.47532 2.44313ZM15.4818 18.6169C15.612 19.4114 15.5748 20.2243 15.3726 21.0036L13.4367 20.5014C13.5689 19.9917 13.5933 19.4599 13.5081 18.9403L15.4818 18.6169ZM9.09635 3C8.75239 3 8.46393 3.26357 8.43405 3.60908L6.44149 3.43678C6.56061 2.05921 7.71274 1 9.09635 1V3ZM9.28967 14.8048C9.97363 15.3942 10.7367 16.1165 11.244 17.0662L9.4799 18.0086C9.15652 17.4032 8.6352 16.8809 7.98409 16.3198L9.28967 14.8048ZM22.4605 11.6444C22.7422 13.2734 21.4895 14.7658 19.8348 14.7658V12.7658C20.246 12.7658 20.5605 12.3942 20.4898 11.9852L22.4605 11.6444ZM3.98671 3C4.27126 3 4.5 2.76937 4.5 2.48726H2.5C2.5 1.66694 3.16455 1 3.98671 1V3ZM12.8454 14.8957C12.6628 13.781 13.522 12.7658 14.6537 12.7658V14.7658C14.7584 14.7658 14.8355 14.6724 14.8191 14.5723L12.8454 14.8957ZM7.62189 13.0017C7.60338 13.2158 7.68884 13.4253 7.85093 13.565L6.54535 15.0801C5.89613 14.5206 5.55551 13.6831 5.62932 12.8295L7.62189 13.0017Z"
+                                                        fill="#ABB6CC" />
+                                                </svg>
+                                                <span class="review__button-text">2</span>
+                                            </button>
+                                            <div class="js-dropdown">
+                                                <button class="review__button review__button--more">
+                                                    <img src="./images/icons/more.svg" alt="Показать еще">
+                                                </button>
+                                                <ul class="js-dropdown-menu" style="right: 0;">
+                                                    <li class="js-dropdown-link"><a href="#">Пожаловаться на отзыв</a>
+                                                    </li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="reviews__review review">
+                                    <div class="review__top">
+                                        <div class="review__username">Виктория Н.</div>
+                                        <div class="review__rating">
+                                            5
+                                            <div class="review__stars">
+                                                <svg class="review__star-icon">
+                                                    <use xlink:href="./images/sprites.svg#Star"></use>
+                                                </svg>
+                                                <svg class="review__star-icon">
+                                                    <use xlink:href="./images/sprites.svg#Star"></use>
+                                                </svg>
+                                                <svg class="review__star-icon">
+                                                    <use xlink:href="./images/sprites.svg#Star"></use>
+                                                </svg>
+                                                <svg class="review__star-icon">
+                                                    <use xlink:href="./images/sprites.svg#Star"></use>
+                                                </svg>
+                                                <svg class="review__star-icon review__star-icon--disabled">
+                                                    <use xlink:href="./images/sprites.svg#Star"></use>
+                                                </svg>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="review__checked">
+                                        <svg class="review__checked-icon">
+                                            <use xlink:href="./images/sprites.svg#check"></use>
+                                        </svg>
+                                        Товар заказан на ФАРМСИ
+                                    </div>
+                                    <div class="review__product">
+                                        <img class="review__product-image" src="./images/products/product-1@2x.png"
+                                            alt="Продукт" width="64" height="64">
+                                        <div class="review__product-block">
+                                            <span class="review__product-name">Супрастин — раствор для внутривенных
+                                                инъекций</span>
+                                            <span class="review__product-desc">Цетрин</span>
+                                        </div>
+                                        <div class="review__product-price">от 12 000 ₽</div>
+                                    </div>
+                                    <p class="review__text">Достаточно эффективный дженерик.
+                                        Сама не имею опыта применения, но мой муж через раз пользуется. Быстро
+                                        нормализует
+                                        давление и самое главное "не отключает". То есть препаратом можно пользоваться
+                                        ситуативно и даже за рулем.</p>
+                                    <div class="review__images">
+                                        <img src="./images/reviews/review (1).jpg" alt="Картинка отзыва">
+                                        <img src="./images/reviews/review (2).jpg" alt="Картинка отзыва">
+                                    </div>
+                                    <div class="review__bottom">
+                                        <span class="review__date">Сегодня</span>
+                                        <div class="review__buttons">
+                                            <button class="review__button review__button--like js-review-like"
+                                                data-review-id="1">
+                                                <svg xmlns="http://www.w3.org/2000/svg" width="25" height="24"
+                                                    viewBox="0 0 25 24" fill="none">
+                                                    <path
+                                                        d="M21.4752 11.6852L20.4898 11.5148L21.4752 11.6852ZM20.7696 15.765L19.7842 15.5945L20.7696 15.765ZM7.43777 19.9771L6.44149 20.0632L7.43777 19.9771ZM6.62561 10.5844L7.62189 10.4983L6.62561 10.5844ZM14.495 4.72142L15.4818 4.88311V4.88311L14.495 4.72142ZM13.8323 8.76598L14.8191 8.92767V8.92767L13.8323 8.76598ZM7.19814 9.17749L6.54535 8.41995H6.54535L7.19814 9.17749ZM8.63688 7.93769L9.28967 8.69523L9.28967 8.69523L8.63688 7.93769ZM11.0181 4.28374L10.0501 4.03265L10.0501 4.03265L11.0181 4.28374ZM11.4938 2.44989L12.4617 2.70098L12.4617 2.70098L11.4938 2.44989ZM13.1676 1.56435L12.8617 2.51643L12.8617 2.51643L13.1676 1.56435ZM13.3126 1.61093L13.6184 0.658847L13.6184 0.658846L13.3126 1.61093ZM10.3619 5.96262L11.244 6.43378L10.3619 5.96262ZM14.4047 2.74752L13.4367 2.99862V2.99862L14.4047 2.74752ZM12.1742 1.63239L11.7401 0.73153V0.73153L12.1742 1.63239ZM4.4716 20.9707L3.47532 21.0569H3.47532L4.4716 20.9707ZM3.5 9.7342L4.49628 9.64806C4.45015 9.11453 3.99191 8.71204 3.45689 8.73513C2.92187 8.75822 2.5 9.19868 2.5 9.7342H3.5ZM20.4898 11.5148L19.7842 15.5945L21.755 15.9354L22.4605 11.8556L20.4898 11.5148ZM13.745 20.5H9.09635V22.5H13.745V20.5ZM8.43405 19.8909L7.62189 10.4983L5.62932 10.6705L6.44149 20.0632L8.43405 19.8909ZM19.7842 15.5945C19.2993 18.3989 16.7663 20.5 13.745 20.5V22.5C17.6862 22.5 21.0953 19.7499 21.755 15.9354L19.7842 15.5945ZM13.5081 4.55973L12.8454 8.60429L14.8191 8.92767L15.4818 4.88311L13.5081 4.55973ZM7.85093 9.93503L9.28967 8.69523L7.98409 7.18015L6.54535 8.41995L7.85093 9.93503ZM11.986 4.53484L12.4617 2.70098L10.5258 2.1988L10.0501 4.03265L11.986 4.53484ZM12.8617 2.51643L13.0067 2.563L13.6184 0.658846L13.4734 0.612275L12.8617 2.51643ZM11.244 6.43378C11.5652 5.83249 11.8147 5.19545 11.986 4.53484L10.0501 4.03265C9.91874 4.53902 9.72724 5.02842 9.4799 5.49145L11.244 6.43378ZM13.0067 2.563C13.2347 2.63624 13.3875 2.8089 13.4367 2.99862L15.3726 2.49643C15.1449 1.61838 14.4739 0.933656 13.6184 0.658847L13.0067 2.563ZM12.4617 2.70098C12.4777 2.63936 12.5249 2.57347 12.6083 2.53326L11.7401 0.73153C11.144 1.01876 10.6941 1.55011 10.5258 2.1988L12.4617 2.70098ZM12.6083 2.53326C12.6851 2.49626 12.7775 2.48936 12.8617 2.51643L13.4734 0.612276C12.9029 0.429001 12.2807 0.471046 11.7401 0.73153L12.6083 2.53326ZM14.6537 10.7342H19.8348V8.7342H14.6537V10.7342ZM5.46788 20.8846L4.49628 9.64806L2.50372 9.82035L3.47532 21.0569L5.46788 20.8846ZM4.5 21.0127V9.7342H2.5V21.0127H4.5ZM3.47532 21.0569C3.44952 20.7586 3.68458 20.5 3.98671 20.5V22.5C4.85955 22.5 5.54289 21.7521 5.46788 20.8846L3.47532 21.0569ZM15.4818 4.88311C15.612 4.08863 15.5748 3.27569 15.3726 2.49643L13.4367 2.99862C13.5689 3.50831 13.5933 4.04006 13.5081 4.55973L15.4818 4.88311ZM9.09635 20.5C8.75239 20.5 8.46393 20.2364 8.43405 19.8909L6.44149 20.0632C6.56061 21.4408 7.71274 22.5 9.09635 22.5V20.5ZM9.28967 8.69523C9.97363 8.10585 10.7367 7.38351 11.244 6.43378L9.4799 5.49145C9.15652 6.09684 8.6352 6.61908 7.98409 7.18015L9.28967 8.69523ZM22.4605 11.8556C22.7422 10.2266 21.4895 8.7342 19.8348 8.7342V10.7342C20.246 10.7342 20.5605 11.1058 20.4898 11.5148L22.4605 11.8556ZM3.98671 20.5C4.27126 20.5 4.5 20.7306 4.5 21.0127H2.5C2.5 21.8331 3.16455 22.5 3.98671 22.5V20.5ZM12.8454 8.60429C12.6628 9.71899 13.522 10.7342 14.6537 10.7342V8.7342C14.7584 8.7342 14.8355 8.82758 14.8191 8.92767L12.8454 8.60429ZM7.62189 10.4983C7.60338 10.2842 7.68884 10.0747 7.85093 9.93503L6.54535 8.41995C5.89613 8.97939 5.55551 9.81687 5.62932 10.6705L7.62189 10.4983Z"
+                                                        fill="#ABB6CC" />
+                                                </svg>
+                                                <span class="review__button-text">2</span>
+                                            </button>
+                                            <button class="review__button review__button--dislike js-review-dislike"
+                                                data-review-id="1">
+                                                <svg xmlns="http://www.w3.org/2000/svg" width="25" height="24"
+                                                    viewBox="0 0 25 24" fill="none">
+                                                    <path
+                                                        d="M21.4752 11.8148L20.4898 11.9852L21.4752 11.8148ZM20.7696 7.73505L19.7842 7.90545L20.7696 7.73505ZM7.43777 3.52293L6.44149 3.43678L7.43777 3.52293ZM6.62561 12.9156L7.62189 13.0017L6.62561 12.9156ZM14.495 18.7786L15.4818 18.6169V18.6169L14.495 18.7786ZM13.8323 14.734L14.8191 14.5723V14.5723L13.8323 14.734ZM7.19814 14.3225L6.54535 15.0801H6.54535L7.19814 14.3225ZM8.63688 15.5623L9.28967 14.8048L9.28967 14.8048L8.63688 15.5623ZM11.0181 19.2163L10.0501 19.4673L10.0501 19.4673L11.0181 19.2163ZM11.4938 21.0501L12.4617 20.799L12.4617 20.799L11.4938 21.0501ZM13.1676 21.9356L12.8617 20.9836L12.8617 20.9836L13.1676 21.9356ZM13.3126 21.8891L13.6184 22.8412L13.6184 22.8412L13.3126 21.8891ZM10.3619 17.5374L11.244 17.0662L10.3619 17.5374ZM14.4047 20.7525L13.4367 20.5014V20.5014L14.4047 20.7525ZM12.1742 21.8676L11.7401 22.7685V22.7685L12.1742 21.8676ZM4.4716 2.52928L3.47532 2.44313H3.47532L4.4716 2.52928ZM3.5 13.7658L4.49628 13.8519C4.45015 14.3855 3.99191 14.788 3.45689 14.7649C2.92187 14.7418 2.5 14.3013 2.5 13.7658H3.5ZM20.4898 11.9852L19.7842 7.90545L21.755 7.56464L22.4605 11.6444L20.4898 11.9852ZM13.745 3H9.09635V1H13.745V3ZM8.43405 3.60908L7.62189 13.0017L5.62932 12.8295L6.44149 3.43678L8.43405 3.60908ZM19.7842 7.90545C19.2993 5.10114 16.7663 3 13.745 3V1C17.6862 1 21.0953 3.75007 21.755 7.56464L19.7842 7.90545ZM13.5081 18.9403L12.8454 14.8957L14.8191 14.5723L15.4818 18.6169L13.5081 18.9403ZM7.85093 13.565L9.28967 14.8048L7.98409 16.3198L6.54535 15.0801L7.85093 13.565ZM11.986 18.9652L12.4617 20.799L10.5258 21.3012L10.0501 19.4673L11.986 18.9652ZM12.8617 20.9836L13.0067 20.937L13.6184 22.8412L13.4734 22.8877L12.8617 20.9836ZM11.244 17.0662C11.5652 17.6675 11.8147 18.3046 11.986 18.9652L10.0501 19.4673C9.91874 18.961 9.72724 18.4716 9.4799 18.0086L11.244 17.0662ZM13.0067 20.937C13.2347 20.8638 13.3875 20.6911 13.4367 20.5014L15.3726 21.0036C15.1449 21.8816 14.4739 22.5663 13.6184 22.8412L13.0067 20.937ZM12.4617 20.799C12.4777 20.8606 12.5249 20.9265 12.6083 20.9667L11.7401 22.7685C11.144 22.4812 10.6941 21.9499 10.5258 21.3012L12.4617 20.799ZM12.6083 20.9667C12.6851 21.0037 12.7775 21.0106 12.8617 20.9836L13.4734 22.8877C12.9029 23.071 12.2807 23.029 11.7401 22.7685L12.6083 20.9667ZM14.6537 12.7658H19.8348V14.7658H14.6537V12.7658ZM5.46788 2.61543L4.49628 13.8519L2.50372 13.6797L3.47532 2.44313L5.46788 2.61543ZM4.5 2.48726V13.7658H2.5V2.48726H4.5ZM3.47532 2.44313C3.44952 2.74141 3.68458 3 3.98671 3V1C4.85955 1 5.54289 1.74791 5.46788 2.61543L3.47532 2.44313ZM15.4818 18.6169C15.612 19.4114 15.5748 20.2243 15.3726 21.0036L13.4367 20.5014C13.5689 19.9917 13.5933 19.4599 13.5081 18.9403L15.4818 18.6169ZM9.09635 3C8.75239 3 8.46393 3.26357 8.43405 3.60908L6.44149 3.43678C6.56061 2.05921 7.71274 1 9.09635 1V3ZM9.28967 14.8048C9.97363 15.3942 10.7367 16.1165 11.244 17.0662L9.4799 18.0086C9.15652 17.4032 8.6352 16.8809 7.98409 16.3198L9.28967 14.8048ZM22.4605 11.6444C22.7422 13.2734 21.4895 14.7658 19.8348 14.7658V12.7658C20.246 12.7658 20.5605 12.3942 20.4898 11.9852L22.4605 11.6444ZM3.98671 3C4.27126 3 4.5 2.76937 4.5 2.48726H2.5C2.5 1.66694 3.16455 1 3.98671 1V3ZM12.8454 14.8957C12.6628 13.781 13.522 12.7658 14.6537 12.7658V14.7658C14.7584 14.7658 14.8355 14.6724 14.8191 14.5723L12.8454 14.8957ZM7.62189 13.0017C7.60338 13.2158 7.68884 13.4253 7.85093 13.565L6.54535 15.0801C5.89613 14.5206 5.55551 13.6831 5.62932 12.8295L7.62189 13.0017Z"
+                                                        fill="#ABB6CC" />
+                                                </svg>
+                                                <span class="review__button-text">2</span>
+                                            </button>
+                                            <div class="js-dropdown">
+                                                <button class="review__button review__button--more">
+                                                    <img src="./images/icons/more.svg" alt="Показать еще">
+                                                </button>
+                                                <ul class="js-dropdown-menu" style="right: 0;">
+                                                    <li class="js-dropdown-link"><a href="#">Пожаловаться на отзыв</a>
+                                                    </li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="reviews__review review">
+                                    <div class="review__top">
+                                        <div class="review__username">Виктория Н.</div>
+                                        <div class="review__rating">
+                                            5
+                                            <div class="review__stars">
+                                                <svg class="review__star-icon">
+                                                    <use xlink:href="./images/sprites.svg#Star"></use>
+                                                </svg>
+                                                <svg class="review__star-icon">
+                                                    <use xlink:href="./images/sprites.svg#Star"></use>
+                                                </svg>
+                                                <svg class="review__star-icon">
+                                                    <use xlink:href="./images/sprites.svg#Star"></use>
+                                                </svg>
+                                                <svg class="review__star-icon">
+                                                    <use xlink:href="./images/sprites.svg#Star"></use>
+                                                </svg>
+                                                <svg class="review__star-icon review__star-icon--disabled">
+                                                    <use xlink:href="./images/sprites.svg#Star"></use>
+                                                </svg>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="review__checked">
+                                        <svg class="review__checked-icon">
+                                            <use xlink:href="./images/sprites.svg#check"></use>
+                                        </svg>
+                                        Товар заказан на ФАРМСИ
+                                    </div>
+                                    <div class="review__product">
+                                        <img class="review__product-image" src="./images/products/product-1@2x.png"
+                                            alt="Продукт" width="64" height="64">
+                                        <div class="review__product-block">
+                                            <span class="review__product-name">Супрастин — раствор для внутривенных
+                                                инъекций</span>
+                                            <span class="review__product-desc">Цетрин</span>
+                                        </div>
+                                        <div class="review__product-price">от 12 000 ₽</div>
+                                    </div>
+                                    <p class="review__text">Достаточно эффективный дженерик.
+                                        Сама не имею опыта применения, но мой муж через раз пользуется. Быстро
+                                        нормализует
+                                        давление и самое главное "не отключает". То есть препаратом можно пользоваться
+                                        ситуативно и даже за рулем.</p>
+                                    <div class="review__images">
+                                        <img src="./images/reviews/review (1).jpg" alt="Картинка отзыва">
+                                        <img src="./images/reviews/review (2).jpg" alt="Картинка отзыва">
+                                    </div>
+                                    <div class="review__bottom">
+                                        <span class="review__date">Сегодня</span>
+                                        <div class="review__buttons">
+                                            <button class="review__button review__button--like js-review-like"
+                                                data-review-id="1">
+                                                <svg xmlns="http://www.w3.org/2000/svg" width="25" height="24"
+                                                    viewBox="0 0 25 24" fill="none">
+                                                    <path
+                                                        d="M21.4752 11.6852L20.4898 11.5148L21.4752 11.6852ZM20.7696 15.765L19.7842 15.5945L20.7696 15.765ZM7.43777 19.9771L6.44149 20.0632L7.43777 19.9771ZM6.62561 10.5844L7.62189 10.4983L6.62561 10.5844ZM14.495 4.72142L15.4818 4.88311V4.88311L14.495 4.72142ZM13.8323 8.76598L14.8191 8.92767V8.92767L13.8323 8.76598ZM7.19814 9.17749L6.54535 8.41995H6.54535L7.19814 9.17749ZM8.63688 7.93769L9.28967 8.69523L9.28967 8.69523L8.63688 7.93769ZM11.0181 4.28374L10.0501 4.03265L10.0501 4.03265L11.0181 4.28374ZM11.4938 2.44989L12.4617 2.70098L12.4617 2.70098L11.4938 2.44989ZM13.1676 1.56435L12.8617 2.51643L12.8617 2.51643L13.1676 1.56435ZM13.3126 1.61093L13.6184 0.658847L13.6184 0.658846L13.3126 1.61093ZM10.3619 5.96262L11.244 6.43378L10.3619 5.96262ZM14.4047 2.74752L13.4367 2.99862V2.99862L14.4047 2.74752ZM12.1742 1.63239L11.7401 0.73153V0.73153L12.1742 1.63239ZM4.4716 20.9707L3.47532 21.0569H3.47532L4.4716 20.9707ZM3.5 9.7342L4.49628 9.64806C4.45015 9.11453 3.99191 8.71204 3.45689 8.73513C2.92187 8.75822 2.5 9.19868 2.5 9.7342H3.5ZM20.4898 11.5148L19.7842 15.5945L21.755 15.9354L22.4605 11.8556L20.4898 11.5148ZM13.745 20.5H9.09635V22.5H13.745V20.5ZM8.43405 19.8909L7.62189 10.4983L5.62932 10.6705L6.44149 20.0632L8.43405 19.8909ZM19.7842 15.5945C19.2993 18.3989 16.7663 20.5 13.745 20.5V22.5C17.6862 22.5 21.0953 19.7499 21.755 15.9354L19.7842 15.5945ZM13.5081 4.55973L12.8454 8.60429L14.8191 8.92767L15.4818 4.88311L13.5081 4.55973ZM7.85093 9.93503L9.28967 8.69523L7.98409 7.18015L6.54535 8.41995L7.85093 9.93503ZM11.986 4.53484L12.4617 2.70098L10.5258 2.1988L10.0501 4.03265L11.986 4.53484ZM12.8617 2.51643L13.0067 2.563L13.6184 0.658846L13.4734 0.612275L12.8617 2.51643ZM11.244 6.43378C11.5652 5.83249 11.8147 5.19545 11.986 4.53484L10.0501 4.03265C9.91874 4.53902 9.72724 5.02842 9.4799 5.49145L11.244 6.43378ZM13.0067 2.563C13.2347 2.63624 13.3875 2.8089 13.4367 2.99862L15.3726 2.49643C15.1449 1.61838 14.4739 0.933656 13.6184 0.658847L13.0067 2.563ZM12.4617 2.70098C12.4777 2.63936 12.5249 2.57347 12.6083 2.53326L11.7401 0.73153C11.144 1.01876 10.6941 1.55011 10.5258 2.1988L12.4617 2.70098ZM12.6083 2.53326C12.6851 2.49626 12.7775 2.48936 12.8617 2.51643L13.4734 0.612276C12.9029 0.429001 12.2807 0.471046 11.7401 0.73153L12.6083 2.53326ZM14.6537 10.7342H19.8348V8.7342H14.6537V10.7342ZM5.46788 20.8846L4.49628 9.64806L2.50372 9.82035L3.47532 21.0569L5.46788 20.8846ZM4.5 21.0127V9.7342H2.5V21.0127H4.5ZM3.47532 21.0569C3.44952 20.7586 3.68458 20.5 3.98671 20.5V22.5C4.85955 22.5 5.54289 21.7521 5.46788 20.8846L3.47532 21.0569ZM15.4818 4.88311C15.612 4.08863 15.5748 3.27569 15.3726 2.49643L13.4367 2.99862C13.5689 3.50831 13.5933 4.04006 13.5081 4.55973L15.4818 4.88311ZM9.09635 20.5C8.75239 20.5 8.46393 20.2364 8.43405 19.8909L6.44149 20.0632C6.56061 21.4408 7.71274 22.5 9.09635 22.5V20.5ZM9.28967 8.69523C9.97363 8.10585 10.7367 7.38351 11.244 6.43378L9.4799 5.49145C9.15652 6.09684 8.6352 6.61908 7.98409 7.18015L9.28967 8.69523ZM22.4605 11.8556C22.7422 10.2266 21.4895 8.7342 19.8348 8.7342V10.7342C20.246 10.7342 20.5605 11.1058 20.4898 11.5148L22.4605 11.8556ZM3.98671 20.5C4.27126 20.5 4.5 20.7306 4.5 21.0127H2.5C2.5 21.8331 3.16455 22.5 3.98671 22.5V20.5ZM12.8454 8.60429C12.6628 9.71899 13.522 10.7342 14.6537 10.7342V8.7342C14.7584 8.7342 14.8355 8.82758 14.8191 8.92767L12.8454 8.60429ZM7.62189 10.4983C7.60338 10.2842 7.68884 10.0747 7.85093 9.93503L6.54535 8.41995C5.89613 8.97939 5.55551 9.81687 5.62932 10.6705L7.62189 10.4983Z"
+                                                        fill="#ABB6CC" />
+                                                </svg>
+                                                <span class="review__button-text">2</span>
+                                            </button>
+                                            <button class="review__button review__button--dislike js-review-dislike"
+                                                data-review-id="1">
+                                                <svg xmlns="http://www.w3.org/2000/svg" width="25" height="24"
+                                                    viewBox="0 0 25 24" fill="none">
+                                                    <path
+                                                        d="M21.4752 11.8148L20.4898 11.9852L21.4752 11.8148ZM20.7696 7.73505L19.7842 7.90545L20.7696 7.73505ZM7.43777 3.52293L6.44149 3.43678L7.43777 3.52293ZM6.62561 12.9156L7.62189 13.0017L6.62561 12.9156ZM14.495 18.7786L15.4818 18.6169V18.6169L14.495 18.7786ZM13.8323 14.734L14.8191 14.5723V14.5723L13.8323 14.734ZM7.19814 14.3225L6.54535 15.0801H6.54535L7.19814 14.3225ZM8.63688 15.5623L9.28967 14.8048L9.28967 14.8048L8.63688 15.5623ZM11.0181 19.2163L10.0501 19.4673L10.0501 19.4673L11.0181 19.2163ZM11.4938 21.0501L12.4617 20.799L12.4617 20.799L11.4938 21.0501ZM13.1676 21.9356L12.8617 20.9836L12.8617 20.9836L13.1676 21.9356ZM13.3126 21.8891L13.6184 22.8412L13.6184 22.8412L13.3126 21.8891ZM10.3619 17.5374L11.244 17.0662L10.3619 17.5374ZM14.4047 20.7525L13.4367 20.5014V20.5014L14.4047 20.7525ZM12.1742 21.8676L11.7401 22.7685V22.7685L12.1742 21.8676ZM4.4716 2.52928L3.47532 2.44313H3.47532L4.4716 2.52928ZM3.5 13.7658L4.49628 13.8519C4.45015 14.3855 3.99191 14.788 3.45689 14.7649C2.92187 14.7418 2.5 14.3013 2.5 13.7658H3.5ZM20.4898 11.9852L19.7842 7.90545L21.755 7.56464L22.4605 11.6444L20.4898 11.9852ZM13.745 3H9.09635V1H13.745V3ZM8.43405 3.60908L7.62189 13.0017L5.62932 12.8295L6.44149 3.43678L8.43405 3.60908ZM19.7842 7.90545C19.2993 5.10114 16.7663 3 13.745 3V1C17.6862 1 21.0953 3.75007 21.755 7.56464L19.7842 7.90545ZM13.5081 18.9403L12.8454 14.8957L14.8191 14.5723L15.4818 18.6169L13.5081 18.9403ZM7.85093 13.565L9.28967 14.8048L7.98409 16.3198L6.54535 15.0801L7.85093 13.565ZM11.986 18.9652L12.4617 20.799L10.5258 21.3012L10.0501 19.4673L11.986 18.9652ZM12.8617 20.9836L13.0067 20.937L13.6184 22.8412L13.4734 22.8877L12.8617 20.9836ZM11.244 17.0662C11.5652 17.6675 11.8147 18.3046 11.986 18.9652L10.0501 19.4673C9.91874 18.961 9.72724 18.4716 9.4799 18.0086L11.244 17.0662ZM13.0067 20.937C13.2347 20.8638 13.3875 20.6911 13.4367 20.5014L15.3726 21.0036C15.1449 21.8816 14.4739 22.5663 13.6184 22.8412L13.0067 20.937ZM12.4617 20.799C12.4777 20.8606 12.5249 20.9265 12.6083 20.9667L11.7401 22.7685C11.144 22.4812 10.6941 21.9499 10.5258 21.3012L12.4617 20.799ZM12.6083 20.9667C12.6851 21.0037 12.7775 21.0106 12.8617 20.9836L13.4734 22.8877C12.9029 23.071 12.2807 23.029 11.7401 22.7685L12.6083 20.9667ZM14.6537 12.7658H19.8348V14.7658H14.6537V12.7658ZM5.46788 2.61543L4.49628 13.8519L2.50372 13.6797L3.47532 2.44313L5.46788 2.61543ZM4.5 2.48726V13.7658H2.5V2.48726H4.5ZM3.47532 2.44313C3.44952 2.74141 3.68458 3 3.98671 3V1C4.85955 1 5.54289 1.74791 5.46788 2.61543L3.47532 2.44313ZM15.4818 18.6169C15.612 19.4114 15.5748 20.2243 15.3726 21.0036L13.4367 20.5014C13.5689 19.9917 13.5933 19.4599 13.5081 18.9403L15.4818 18.6169ZM9.09635 3C8.75239 3 8.46393 3.26357 8.43405 3.60908L6.44149 3.43678C6.56061 2.05921 7.71274 1 9.09635 1V3ZM9.28967 14.8048C9.97363 15.3942 10.7367 16.1165 11.244 17.0662L9.4799 18.0086C9.15652 17.4032 8.6352 16.8809 7.98409 16.3198L9.28967 14.8048ZM22.4605 11.6444C22.7422 13.2734 21.4895 14.7658 19.8348 14.7658V12.7658C20.246 12.7658 20.5605 12.3942 20.4898 11.9852L22.4605 11.6444ZM3.98671 3C4.27126 3 4.5 2.76937 4.5 2.48726H2.5C2.5 1.66694 3.16455 1 3.98671 1V3ZM12.8454 14.8957C12.6628 13.781 13.522 12.7658 14.6537 12.7658V14.7658C14.7584 14.7658 14.8355 14.6724 14.8191 14.5723L12.8454 14.8957ZM7.62189 13.0017C7.60338 13.2158 7.68884 13.4253 7.85093 13.565L6.54535 15.0801C5.89613 14.5206 5.55551 13.6831 5.62932 12.8295L7.62189 13.0017Z"
+                                                        fill="#ABB6CC" />
+                                                </svg>
+                                                <span class="review__button-text">2</span>
+                                            </button>
+                                            <div class="js-dropdown">
+                                                <button class="review__button review__button--more">
+                                                    <img src="./images/icons/more.svg" alt="Показать еще">
+                                                </button>
+                                                <ul class="js-dropdown-menu" style="right: 0;">
+                                                    <li class="js-dropdown-link"><a href="#">Пожаловаться на отзыв</a>
+                                                    </li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <button class="button reviews__button--more">Смотреть все отзывы</button>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <div class="information">
+                <div class="container">
+                    <div class="information__block">Информация на сайте представлена для ознакомления, не является
+                        призывом
+                        или рекомендацией к самолечению и не заменяет консультации врача. Имеются противопоказания,
+                        перед
+                        применением необходимо проконсультироваться со специалистом.<br><br>Отпуск лекарственных
+                        препаратов
+                        осуществляется исключительно аптечными организациями, имеющими действующую лицензию на
+                        фармацевтическую деятельность, а также разрешение на дистанционную торговлю лекарственными
+                        препаратами. Лекарственные препараты можно забрать только из аптеки самовывозом.
+                    </div>
+                </div>
+            </div>
+            <section class="find-section">
+                <div class="container">
+                    <div class="find-section__title ui-section__h2">Лекарства по алфавиту</div>
+                    <div class="find-section__item"><a class="find-section__link" href="#">а</a><a
+                            class="find-section__link" href="#">б</a><a class="find-section__link" href="#">в</a><a
+                            class="find-section__link" href="#">г</a><a class="find-section__link" href="#">д</a><a
+                            class="find-section__link" href="#">е</a><a class="find-section__link" href="#">ж</a><a
+                            class="find-section__link" href="#">з</a><a class="find-section__link" href="#">и</a><a
+                            class="find-section__link" href="#">й</a><a class="find-section__link" href="#">к</a><a
+                            class="find-section__link" href="#">л</a><a class="find-section__link" href="#">м</a><a
+                            class="find-section__link" href="#">н</a><a class="find-section__link" href="#">о</a><a
+                            class="find-section__link" href="#">п</a><a class="find-section__link" href="#">р</a><a
+                            class="find-section__link" href="#">с</a><a class="find-section__link" href="#">т</a><a
+                            class="find-section__link" href="#">у</a><a class="find-section__link" href="#">ф</a><a
+                            class="find-section__link" href="#">х</a><a class="find-section__link" href="#">ц</a><a
+                            class="find-section__link" href="#">ч</a><a class="find-section__link" href="#">ш</a><a
+                            class="find-section__link" href="#">э</a><a class="find-section__link" href="#">ю</a><a
+                            class="find-section__link" href="#">я</a>
+                        <a class="find-section__link find-section__last" href="#">A-Z</a><a
+                            class="find-section__link find-section__last" href="#">0-9</a>
+                    </div>
+                </div>
+            </section>
+        </main>
+
+
+        <!-- Удалить эти стили. Они подключены для наглядности. В основных компонентах они есть -->
+        <style>
+            .nav {
+                height: fit-content;
+            }
+
+            .nav__menu {
+                width: 100%;
+            }
+
+            .nav-list__link {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+            }
+
+            .toast {
+                --bs-toast-max-width: unset;
+                --bs-toast-bg: rgba(0, 0, 0, .9);
+                --bs-toast-border-radius: 24px;
+                --bs-toast-padding-x: 12px;
+                --bs-toast-padding-y: 12px;
+                bottom: 76px;
+                position: fixed;
+                right: 16px;
+                left: 16px;
+                z-index: 30;
+            }
+        </style>
+        <footer class="footer">
+            <div class="container container-fluid">
+                <div class="footer__top">
+                    <div class="row">
+                        <div class="col-12">
+                            <div class="d-flex align-items-end justify-content-between">
+                                <div class="d-flex flex-column">
+                                    <div class="footer__top-title">Выгода в почте</div>
+                                    <div class="footer__top-subtitle">
+                                        Подпишитесь и получайте
+                                        акции, и подборки товаров
+                                    </div>
+                                </div>
+                                <img class="footer__top-image" src="./images/icons/icon.png"
+                                    srcset="./images/icons/icon@2x.png 2x" alt="icon" width="95" height="95">
+
+                            </div>
+                        </div>
+                        <div class="col-12 mt-4">
+                            <form class="d-flex form-group">
+                                <input class="big__input big__input--flat--right big__input--white" type="email"
+                                    name="email" placeholder="E-mail">
+                                <button class="button button-big button-primary button--flat--left" type="submit">
+                                    Подписаться
+                                </button>
+                            </form>
+                            <div class="footer__policy">Нажимая «Подписаться» вы соглашаетесь с&nbsp;<a
+                                    class="footer__policy-link" href="#" target="_blank"
+                                    rel="nofollow">Пользовательским&nbsp;соглашением</a><br>и&nbsp;<a
+                                    class="footer__policy-link" href="#" target="_blank"
+                                    rel="nofollow">Политикой&nbsp;обработки&nbsp;персональных&nbsp;данных</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="footer__middle">
+                    <div class="row">
+                        <div class="col-12 ">
+                            <div class="js-accardion footer__list">
+                                <div class="footer__title">Покупателям</div>
+                                <div class="footer__items js-accardion-body"><a class="footer__link"
+                                        href="/how-order.html" title="Как сделать заказ">Как сделать
+                                        заказ</a><a class="footer__link" href="/pay.html" title="Оплата">Оплата</a><a
+                                        class="footer__link" href="/deliver.html" title="Доставка">Доставка</a><a
+                                        class="footer__link" href="/faqs.html" title="Вопросы и ответы">Вопросы и
+                                        ответы</a><a class="footer__link" href="/catalog.html"
+                                        title="Каталог">Каталог</a><a class="footer__link" href="/manufacturer.html"
+                                        title="Производители">Производители</a><a class="footer__link"
+                                        href="/med-cities.html" title="Лекарства в городах">Лекарства в
+                                        городах</a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-12  ">
+                            <div class="js-accardion footer__list">
+                                <div class="footer__title">Компания</div>
+                                <div class="footer__items js-accardion-body"><a class="footer__link" href="/about.html"
+                                        title="О нас">О нас</a><a class="footer__link" href="/contact.html"
+                                        title="Контакты">Контакты</a><a class="footer__link" href="/pharmacies.html"
+                                        title="Аптеки">Аптеки</a><a class="footer__link" href="/regions.html"
+                                        title="Регионы">Регионы</a><a class="footer__link" href="/partners.html"
+                                        title="Наши партнеры">Наши партнеры</a><a class="footer__link"
+                                        href="/callback.html" title="Обратная связь">Обратная связь</a><a
+                                        class="footer__link" href="/conect-pharm.html"
+                                        title="Подключение аптек">Подключение
+                                        аптек</a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-12 ">
+                            <div class="js-accardion footer__list">
+                                <div class="footer__title">Правовая информация</div>
+                                <div class="footer__items js-accardion-body"><a class="footer__link"
+                                        href="/term-use.html" title="Пользовательское соглашение">Пользовательское
+                                        соглашение</a><a class="footer__link" href="/policy.html"
+                                        title="Политика обработки персональных данных">Политика обработки
+                                        персональных данных</a><a class="footer__link" href="/policy-callback.html"
+                                        title="Политика обработки отзывов">Политика обработки
+                                        отзывов</a><a class="footer__link" href="/sell-remotely.html"
+                                        title="Продажа дистанционным способом">Продажа дистанционным
+                                        способом</a><a class="footer__link" href="/licenses.html"
+                                        title="Лицензии и разрешения">Лицензии и
+                                        разрешения</a><a class="footer__link" href="/requisites.html"
+                                        title="Реквизиты">Реквизиты</a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-12 footer__info">
+                            <div class="footer__number">+7 (495) 954-47-32</div>
+                            <div class="socials">
+                                <a class="socials__link" href="#" title="vk">
+                                    <img src="mobile_template/header_footer/images/vk.svg" alt="" class="socials__icon">
+                                </a>
+                                <a class="socials__link socials__link--ok" href="#" title="ok">
+                                    <img src="mobile_template/header_footer/images/ok.svg" alt="" class="socials__icon">
+                                </a>
+                                <a class="socials__link socials__link--tg" href="#" title="tg">
+                                    <img src="mobile_template/header_footer/images/tg.svg" alt="" class="socials__icon">
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="footer__bottom">
+                    <div class="row">
+                        <div class="col-12">
+                            <div class="footer__text">
+                                <p>
+                                    ООО «ФАРМСИ», ИНН 6162088627, 344116, Ростовская область, г.
+                                    Ростов-на-Дону, ул. Батуринская, дом 15/15, офис 12
+                                </p>
+                                <p>
+                                    Информация, размещенная на сайте,
+                                    носит ознакомительный характер и не является публичной офертой, определяемой п. 2
+                                    ст.
+                                    437 ГК
+                                    РФ.
+                                </p>
+                                <p>
+                                    © 2022 <a href="#" class="font-primary">ФАРМСИ в
+                                        Ростове-на-Дону</a>
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </footer>
+        <aside class="nav">
+            <nav class="nav__menu">
+                <ul class="nav__list nav-list">
+                    <li class="nav-list__item">
+                        <a href="#" class="nav-list__link nav-link nav-link--active">
+                            <span class="nav-link__header">
+                                <svg class="nav-link__icon" width="25" height="24" viewBox="0 0 25 24" fill="none"
+                                    xmlns="http://www.w3.org/2000/svg">
+                                    <path
+                                        d="M2.5 12.2039C2.5 9.91549 2.5 8.77128 3.0192 7.82274C3.5384 6.87421 4.48695 6.28551 6.38403 5.10813L8.38403 3.86687C10.3894 2.62229 11.3921 2 12.5 2C13.6079 2 14.6106 2.62229 16.616 3.86687L18.616 5.10812C20.5131 6.28551 21.4616 6.87421 21.9808 7.82274C22.5 8.77128 22.5 9.91549 22.5 12.2039V13.725C22.5 17.6258 22.5 19.5763 21.3284 20.7881C20.1569 22 18.2712 22 14.5 22H10.5C6.72876 22 4.84315 22 3.67157 20.7881C2.5 19.5763 2.5 17.6258 2.5 13.725V12.2039Z"
+                                        stroke-width="2"></path>
+                                    <path
+                                        d="M9.5 16C10.3504 16.6303 11.3846 17 12.5 17C13.6154 17 14.6496 16.6303 15.5 16"
+                                        stroke-width="2" stroke-linecap="round"></path>
+                                </svg>
+                            </span>
+                            <span class="nav-link__label">Главная</span>
+                        </a>
+                    </li>
+                    <li class="nav-list__item">
+                        <a href="#" class="nav-list__link nav-link">
+                            <span class="nav-link__header">
+                                <svg class="nav-link__icon" width="25" height="24" viewBox="0 0 25 24" fill="none"
+                                    xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M20.5 16L23.5 19" stroke-width="2" stroke-linecap="round"></path>
+                                    <circle cx="15" cy="10.5" r="6.5" stroke-width="2"></circle>
+                                    <path d="M1.5 6H5.5" stroke-width="2" stroke-linecap="round"
+                                        stroke-linejoin="round"></path>
+                                    <path d="M1.5 12H4" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                    </path>
+                                    <path d="M1.5 18H7" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                    </path>
+                                </svg>
+                            </span>
+                            <span class="nav-link__label">Каталог</span>
+                        </a>
+                    </li>
+                    <li class="nav-list__item">
+                        <a href="#" class="nav-list__link nav-link">
+                            <span class="nav-link__header">
+                                <svg class="nav-link__icon" width="25" height="24" viewBox="0 0 25 24" fill="none"
+                                    xmlns="http://www.w3.org/2000/svg">
+                                    <path
+                                        d="M8 18C8.82843 18 9.5 18.6716 9.5 19.5C9.5 20.3284 8.82843 21 8 21C7.17157 21 6.5 20.3284 6.5 19.5C6.5 18.6716 7.17157 18 8 18Z"
+                                        stroke-width="2"></path>
+                                    <path
+                                        d="M17 18.0001C17.8284 18.0001 18.5 18.6716 18.5 19.5001C18.5 20.3285 17.8284 21.0001 17 21.0001C16.1716 21.0001 15.5 20.3285 15.5 19.5001C15.5 18.6716 16.1716 18.0001 17 18.0001Z"
+                                        stroke-width="2"></path>
+                                    <path
+                                        d="M2.76121 3.09184L3.09289 2.14844L3.09289 2.14844L2.76121 3.09184ZM2.83168 2.05661C2.31066 1.87343 1.73979 2.1473 1.55661 2.66832C1.37343 3.18934 1.6473 3.76021 2.16832 3.94339L2.83168 2.05661ZM5.08584 4.32298L5.91148 3.75878L5.91148 3.75878L5.08584 4.32298ZM6.38772 14.5862L5.66203 15.2742L5.66203 15.2742L6.38772 14.5862ZM21.1578 9.88275L22.1372 10.0846L22.1384 10.0785L21.1578 9.88275ZM20.658 12.3075L21.6374 12.5093L21.6374 12.5093L20.658 12.3075ZM21.2345 6.69708L20.4419 7.30682L20.4419 7.30682L21.2345 6.69708ZM19.6336 15.0504L19.0019 14.2752L19.0019 14.2752L19.6336 15.0504ZM6.45808 9.76V7.03836H4.45808V9.76H6.45808ZM3.09289 2.14844L2.83168 2.05661L2.16832 3.94339L2.42953 4.03523L3.09289 2.14844ZM11.4375 16.5H16.7404V14.5H11.4375V16.5ZM6.45808 7.03836C6.45808 6.33667 6.45944 5.73075 6.40574 5.23466C6.34961 4.71611 6.22541 4.21818 5.91148 3.75878L4.2602 4.88718C4.31851 4.97251 4.38043 5.10872 4.41736 5.44989C4.45672 5.81355 4.45808 6.29295 4.45808 7.03836H6.45808ZM2.42953 4.03523C3.10274 4.27192 3.52505 4.42211 3.83153 4.57249C4.11186 4.71004 4.20483 4.80615 4.2602 4.88718L5.91148 3.75878C5.59461 3.29508 5.17606 3.00443 4.71253 2.77699C4.27516 2.56238 3.72127 2.36937 3.09289 2.14844L2.42953 4.03523ZM4.45808 9.76C4.45808 11.2064 4.47098 12.2769 4.61235 13.1023C4.76608 13.9999 5.07812 14.6583 5.66203 15.2742L7.1134 13.8981C6.83092 13.6002 6.67814 13.3164 6.58365 12.7647C6.4768 12.1408 6.45808 11.2551 6.45808 9.76H4.45808ZM11.4375 14.5C10.0133 14.5 9.05111 14.4976 8.33206 14.3957C7.64748 14.2986 7.33239 14.1291 7.1134 13.8981L5.66203 15.2742C6.30944 15.957 7.12478 16.2445 8.05126 16.3759C8.94326 16.5024 10.0728 16.5 11.4375 16.5V14.5ZM5.45808 7.12H17.5888V5.12H5.45808V7.12ZM20.1784 9.68089L19.6786 12.1056L21.6374 12.5093L22.1372 10.0846L20.1784 9.68089ZM17.5888 7.12C18.4498 7.12 19.188 7.12134 19.766 7.18595C20.0525 7.21797 20.2528 7.26114 20.383 7.30691C20.5213 7.35548 20.4962 7.37742 20.4419 7.30682L22.0271 6.08734C21.7508 5.7282 21.3697 5.53373 21.046 5.42C20.7144 5.30347 20.3469 5.23843 19.9881 5.19833C19.2755 5.11866 18.4128 5.12 17.5888 5.12V7.12ZM22.1384 10.0785C22.3062 9.23781 22.4544 8.50663 22.4909 7.91578C22.5287 7.30315 22.4623 6.65301 22.0271 6.08734L20.4419 7.30682C20.4507 7.31823 20.5194 7.3914 20.4947 7.79257C20.4686 8.21552 20.3564 8.78863 20.1771 9.68701L22.1384 10.0785ZM16.7404 16.5C17.4958 16.5 18.153 16.5017 18.687 16.4364C19.2482 16.3677 19.7886 16.2141 20.2653 15.8256L19.0019 14.2752C18.9269 14.3363 18.8012 14.4075 18.444 14.4512C18.0595 14.4983 17.5459 14.5 16.7404 14.5V16.5ZM19.6786 12.1056C19.516 12.8946 19.4106 13.3973 19.2869 13.7643C19.172 14.1053 19.0769 14.2141 19.0019 14.2752L20.2653 15.8256C20.742 15.4371 21.0016 14.9388 21.1822 14.403C21.354 13.8932 21.4849 13.2492 21.6374 12.5093L19.6786 12.1056Z"
+                                        fill="#ABB6CC"></path>
+                                </svg>
+                                <span class="nav-link__counter">99</span>
+                            </span>
+
+                            <span class="nav-link__label">Корзина</span>
+                        </a>
+                    </li>
+                    <li class="nav-list__item">
+                        <a href="#" class="nav-list__link nav-link">
+                            <span class="nav-link__header">
+                                <svg class="nav-link__icon" width="25" height="24" viewBox="0 0 25 24" fill="none"
+                                    xmlns="http://www.w3.org/2000/svg">
+                                    <path
+                                        d="M4.24941 19.6449C5.44791 21 7.67852 21 12.1397 21H12.8603C17.3215 21 19.5521 21 20.7506 19.6449M4.24941 19.6449C3.05091 18.2898 3.46198 16.2325 4.28414 12.1178C4.86881 9.19173 5.16115 7.72868 6.271 6.86434M4.24941 19.6449C4.24941 19.6449 4.24941 19.6449 4.24941 19.6449ZM20.7506 19.6449C21.9491 18.2898 21.538 16.2325 20.7159 12.1178C20.1312 9.19173 19.8389 7.72868 18.729 6.86434M20.7506 19.6449C20.7506 19.6449 20.7506 19.6449 20.7506 19.6449ZM18.729 6.86434C17.6191 6 16.0328 6 12.8603 6H12.1397C8.96716 6 7.38086 6 6.271 6.86434M18.729 6.86434C18.729 6.86434 18.729 6.86434 18.729 6.86434ZM6.271 6.86434C6.271 6.86434 6.27101 6.86434 6.271 6.86434Z"
+                                        stroke-width="2"></path>
+                                    <path d="M10.5 13.6999C11.0207 14.1685 11.3126 14.4313 11.8333 14.8999L14.5 11.8999"
+                                        stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
+                                    <path d="M9.5 6V5C9.5 3.34315 10.8431 2 12.5 2C14.1569 2 15.5 3.34315 15.5 5V6"
+                                        stroke-width="2" stroke-linecap="round"></path>
+                                </svg>
+                            </span>
+                            <span class="nav-link__label">Заказы</span>
+                        </a>
+                    </li>
+                    <li class="nav-list__item">
+                        <a href="#" class="nav-list__link nav-link">
+                            <span class="nav-link__header">
+                                <svg class="nav-link__icon" width="25" height="24" viewBox="0 0 25 24" fill="none"
+                                    xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M20.5 7L4.5 7" stroke-width="2" stroke-linecap="round"></path>
+                                    <path d="M20.5 12L4.5 12" stroke-width="2" stroke-linecap="round"></path>
+                                    <path d="M20.5 17L4.5 17" stroke-width="2" stroke-linecap="round"></path>
+                                </svg>
+                            </span>
+                            <span class="nav-link__label">Меню</span>
+                        </a>
+                    </li>
+                </ul>
+            </nav>
+        </aside>
+        <div class="scroll-up scroll-up--hidden">
+            <img src="mobile_template/header_footer/images/arrow-up.svg" alt="" class="scroll-up__icon">
+        </div>
+        <div class="toast">
+            <div class="toast-body">
+                <div class="d-flex align-items-center">
+                    <img class="toast-image" src="" alt="" width="52" height="52">
+                    <div class="d-flex align-items-center toast-content">
+                        <div class="text-white toast-text">Товар добавлен в корзину</div>
+                        <a class="button toast-button" href="#">Перейти</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        if (!('IntersectionObserver' in window)) {
+            var script = document.createElement("script");
+            script.src = "https://raw.githubusercontent.com/w3c/IntersectionObserver/master/polyfill/intersection-observer.js";
+            document.getElementsByTagName('head')[0].appendChild(script);
+        }
+
+    </script>
+    <script src="https://code.jquery.com/jquery-3.7.0.min.js"
+        integrity="sha256-2Pmvv0kuTBOenSvLm6bvfBSSHrUJ+3A7x6P5Ebd07/g=" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.0.1/js/bootstrap.bundle.min.js"></script>
+    <script src="./js/vendor.js?v=16892598293691"></script>
+    <script src="./js/main.js?v=168925982963921"></script>
+    <script>
+
+        document.addEventListener("DOMContentLoaded", function () {
+            var btns = document.querySelectorAll(".js-add-cart");
+            var toast = document.querySelector(".toast");
+
+            const option = {
+                autohide: true,
+                delay: 3000,
+                animation: true,
+            };
+
+            // Create toast instance
+            var myToast = new bootstrap.Toast(toast, option);
+
+            btns.forEach((element) => {
+                element.addEventListener("click", function () {
+                    myToast.show();
+                });
+            });
+        });
+
+    </script>
+</body>
+
+</html>
