@@ -38,6 +38,8 @@
     &__rating {
         width: 100%;
         justify-content: space-between;
+        flex-wrap: wrap;
+        gap: 8px;
         margin-bottom: 24px;
 
         .rating {
