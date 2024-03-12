@@ -43,18 +43,6 @@
         }
     }
 
-    &__button {
-        background-color: var(--bg-light);
-        border-radius: 100px;
-        font-weight: 600;
-        padding: 12px 28px;
-
-        &:hover {
-            background-color: var(--border-color);
-            color: #000;
-        }
-    }
-
     &__company {
         display: flex;
         margin-bottom: 12px;

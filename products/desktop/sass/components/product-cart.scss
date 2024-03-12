@@ -4,11 +4,9 @@
 
 .product-item {
     position: relative;
-    padding-top: 12px;
-    padding-bottom: 12px;
     background-color: #fff;
     will-change: transform;
-    padding-top: 0;
+    padding: 0 12px;
     transition: all 300ms;
 
     @include laptop {
@@ -19,6 +17,12 @@
 
         &:not(:nth-last-child(-n + 3)) {
             border-bottom: 1px solid var(--border-color);
+        }
+    }
+
+    @include desktop {
+        &:not(:nth-child(4n+4)) {
+            border-right: 1px solid var(--border-color);
         }
     }
 
@@ -41,16 +45,18 @@
     }
 
     &::after {
-        content: "";
-        position: absolute;
-        top: 0;
-        left: 0;
-        width: 100%;
-        height: 100%;
         background-color: #fff;
         border-radius: 6px;
+        content: "";
+        height: 100%;
+        left: 0;
+        position: absolute;
+        top: 0;
+        -webkit-transition: all .3s;
+        -o-transition: all .3s;
+        transition: all .3s;
+        width: 100%;
         z-index: 2;
-        transition: all 300ms;
     }
 
     &:hover {
@@ -59,7 +65,6 @@
         transition: all 300ms;
 
         &::after {
-            transform: scale(1.01);
             transform-origin: center;
             transition: all 300ms;
             box-shadow: var(--box-shadow);
@@ -185,6 +190,10 @@
         &:not(:last-child) {
             margin-bottom: 10px;
         }
+
+        &:hover {
+            color: #000 !important;
+        }
     }
 
     &__company {
@@ -295,6 +304,16 @@
             &-share {
                 padding: 12px;
                 margin-left: 12px;
+
+                svg path {
+                    transition: .3s;
+                }
+
+                &:hover {
+                    svg path {
+                        stroke: var(--secondary-color);
+                    }
+                }
             }
         }
 
@@ -305,10 +324,12 @@
     }
 
     &__dropdown {
-        box-shadow: 0px 12px 28px 0px #0000000F;
+        z-index: 90;
+        box-shadow: 0px 4px 28px 0px #0000000F;
         border: none;
         min-width: 360px;
         padding: 24px;
+        border-radius: 24px;
     }
 
     .dropdown-menu {
@@ -336,6 +357,7 @@
 
         &__socials {
             display: flex;
+            align-items: center;
         }
 
         &__social {
@@ -344,10 +366,26 @@
             align-items: center;
             width: 32px;
             height: 32px;
+            margin: 0 3px;
             border-radius: 100px;
 
-            &:not(:last-child) {
-                margin-right: 6px;
+            img {
+                width: 100%;
+                height: 100%;
+            }
+
+            &:hover {
+                width: 34px;
+                height: 34px;
+                margin: -1px 2px;
+            }
+
+            &:first-child {
+                margin-left: 0;
+
+                &:hover {
+                    margin-left: -1px;
+                }
             }
         }
 

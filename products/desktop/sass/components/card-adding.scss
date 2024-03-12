@@ -18,6 +18,7 @@
 			height: 16px;
 			margin: auto;
 			background-color: var(--icon-default);
+			transition: .2s;
 		}
 	}
 
@@ -38,10 +39,11 @@
 			height: 2px;
 			margin: auto;
 			background-color: var(--icon-default);
+			transition: .2s;
 		}
 
 		&:hover {
-			background-color: var(--bg-light);
+			background-color: var(--bg-light) !important;
 
 			&::after,
 			&::before {

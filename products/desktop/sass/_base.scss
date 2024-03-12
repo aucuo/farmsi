@@ -158,6 +158,7 @@ li {
 }
 
 .unordered-list {
+    font-size: 14px;
     margin-left: 6px;
     list-style: none; // Убираем стандартные маркеры
 
@@ -211,6 +212,10 @@ iframe {
 
 .w-100 {
     width: 100%;
+}
+
+.tooltip {
+    z-index: 90;
 }
 
 .button {
