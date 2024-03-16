@@ -214,6 +214,8 @@
     }
 
     &__price {
+        display: flex;
+        align-items: flex-end;
         margin: 0;
         font-weight: 600;
         font-size: 24px;
@@ -221,6 +223,14 @@
 
         &:not(:last-child) {
             margin-bottom: 10px;
+        }
+
+        &--last {
+            font-size: 14px;
+            font-weight: 400;
+            line-height: 18px;
+            margin-left: 6px;
+            color: var(--secondary-color);
         }
     }
 
@@ -241,6 +251,12 @@
             height: 6px;
             border-radius: 50%;
             background-color: var(--primary-color);
+        }
+
+        &--null {
+            &::before {
+                background-color: var(--icon-default);
+            }
         }
     }
 

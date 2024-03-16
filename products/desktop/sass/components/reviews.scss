@@ -2,16 +2,81 @@
     position: relative;
 
     &__images {
-        img {
+        margin-top: 24px;
+    }
+
+    &-block {
+        &__image {
             width: 84px;
             height: 84px;
+            border-radius: 16px;
+
+            &--more {
+                position: relative;
+                filter: brightness(.36);
+            }
+        }
+
+        &__count {
+            position: absolute;
+            left: 50%;
+            top: 50%;
+            transform: translate3d(-50%, -50%, 0);
+            color: #fff;
+            font-size: 16px;
+            font-weight: 500;
+            line-height: 20px;
+            letter-spacing: 0px;
+            text-align: center;
+            white-space: nowrap;
+        }
+    }
+
+    &-slider {
+        position: relative;
+
+        &__navigation {
+            position: absolute;
+            top: 50%;
+            width: 32px;
+            height: 32px;
+            padding: 0;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background-color: #fff;
+            border-radius: 50%;
+            cursor: pointer;
+            box-shadow: var(--box-shadow);
+            transform: translateY(-50%);
+            z-index: 1;
+
+            &--next {
+                right: -16px;
+            }
+
+            &--prev {
+                left: -16px;
+            }
+
+            &--disabled {
+                opacity: 0;
+                visibility: hidden;
+                transition: all 300ms;
+            }
+
+            &__icon {
+                width: 20px;
+                height: 20px;
+            }
         }
     }
 
     &__sort {
         position: relative;
         color: var(--secondary-color);
-        margin: 32px 0;
+        margin-top: 32px;
+        margin-bottom: 8px;
 
         &::before {
             z-index: -1;
@@ -145,7 +210,9 @@
         border-radius: 8px;
         padding: 3px 6px;
         background-color: var(--bg-light);
-        font-size: 14px !important;
+        font-size: 14px;
+        font-weight: 500;
+        line-height: 18px;
         color: var(--secondary-color);
 
         &-icon {
@@ -157,7 +224,7 @@
 
     &__stars {
         display: flex;
-        margin-left: 10px;
+        margin-left: 8px;
     }
 
     &__star-icon {
@@ -175,17 +242,38 @@
     }
 
     &__product {
+        position: relative;
         display: flex;
         align-items: center;
         margin-bottom: 16px;
         transition: .3s;
         border-radius: 15px;
-        padding: 8px 12px;
+        padding: 8px 0;
         cursor: pointer;
 
-        &:hover {
+        &::after {
+            z-index: -1;
+            content: "";
+            position: absolute;
+            left: -10px;
+            top: 0;
+            display: block;
+            width: calc(100% + 20px);
+            height: 100%;
+            border-radius: 15px;
             background-color: var(--bg-light);
+            overflow: hidden;
+            opacity: 0;
+            transition: .3s;
+        }
+
+        &:hover {
             color: #000 !important;
+
+            &::after {
+                overflow: visible;
+                opacity: 1;
+            }
         }
 
         &-block {
@@ -200,6 +288,9 @@
         }
 
         &-desc {
+            font-size: 14px;
+            font-weight: 400;
+            line-height: 22px;
             color: var(--secondary-color);
             margin-top: 4px;
         }
@@ -216,43 +307,31 @@
             margin-right: 24px;
             min-width: 106px;
             text-align: right;
+
+            &--null {
+                font-size: 16px;
+                font-weight: 500;
+                line-height: 24px;
+                color: #ABB6CC;
+            }
         }
 
         &-icon {
-            width: 14px;
-            height: 14px;
-            border-top: 2px solid var(--icon-default);
-            border-left: 2px solid var(--icon-default);
-            transform: rotate(135deg);
-            transition: all 300ms;
+            width: 24px;
+            height: 24px;
         }
     }
 
     &__text {
         font-size: 16px;
         line-height: 24px;
-        margin-bottom: 24px;
-    }
-
-    &__images {
-        display: flex;
         margin-bottom: 16px;
-
-        img {
-            width: 84px;
-            height: 84px;
-            border-radius: 16px;
-
-            &:not(:last-child) {
-                margin-right: 8px;
-            }
-        }
     }
 
     &__bottom {
         display: flex;
         align-items: center;
-        padding: 10px 0;
+        padding: 9px 0;
     }
 
     &__date {
@@ -279,6 +358,12 @@
             svg path {
                 transition: .3s;
                 fill: #ABB6CC;
+            }
+
+            &:hover {
+                svg path {
+                    fill: #78808F;
+                }
             }
         }
 

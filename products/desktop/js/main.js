@@ -13,23 +13,23 @@
 /******/ 			if (Object.prototype.hasOwnProperty.call(installedChunks, chunkId) && installedChunks[chunkId]) {
 /******/ 				resolves.push(installedChunks[chunkId][0]);
         /******/
-}
+      }
 /******/ 			installedChunks[chunkId] = 0;
       /******/
-}
+    }
 /******/ 		for (moduleId in moreModules) {
 /******/ 			if (Object.prototype.hasOwnProperty.call(moreModules, moduleId)) {
 /******/ 				modules[moduleId] = moreModules[moduleId];
         /******/
-}
+      }
       /******/
-}
+    }
 /******/ 		if (parentJsonpFunction) parentJsonpFunction(data);
 /******/
 /******/ 		while (resolves.length) {
 /******/ 			resolves.shift()();
       /******/
-}
+    }
 /******/
 /******/ 		// add entry modules from loaded chunk to deferred list
 /******/ 		deferredModules.push.apply(deferredModules, executeModules || []);
@@ -37,7 +37,7 @@
 /******/ 		// run deferred modules when all chunks ready
 /******/ 		return checkDeferredModules();
     /******/
-};
+  };
 /******/ 	function checkDeferredModules() {
 /******/ 		var result;
 /******/ 		for (var i = 0; i < deferredModules.length; i++) {
@@ -47,18 +47,18 @@
 /******/ 				var depId = deferredModule[j];
 /******/ 				if (installedChunks[depId] !== 0) fulfilled = false;
         /******/
-}
+      }
 /******/ 			if (fulfilled) {
 /******/ 				deferredModules.splice(i--, 1);
 /******/ 				result = __webpack_require__(__webpack_require__.s = deferredModule[0]);
         /******/
-}
+      }
       /******/
-}
+    }
 /******/
 /******/ 		return result;
     /******/
-}
+  }
 /******/
 /******/ 	// The module cache
 /******/ 	var installedModules = {};
@@ -69,7 +69,7 @@
 /******/ 	var installedChunks = {
 /******/ 		"main": 0
     /******/
-};
+  };
 /******/
 /******/ 	var deferredModules = [];
 /******/
@@ -80,14 +80,14 @@
 /******/ 		if (installedModules[moduleId]) {
 /******/ 			return installedModules[moduleId].exports;
       /******/
-}
+    }
 /******/ 		// Create a new module (and put it into the cache)
 /******/ 		var module = installedModules[moduleId] = {
 /******/ 			i: moduleId,
 /******/ 			l: false,
 /******/ 			exports: {}
       /******/
-};
+    };
 /******/
 /******/ 		// Execute the module function
 /******/ 		modules[moduleId].call(module.exports, module, module.exports, __webpack_require__);
@@ -98,7 +98,7 @@
 /******/ 		// Return the exports of the module
 /******/ 		return module.exports;
     /******/
-}
+  }
 /******/
 /******/
 /******/ 	// expose the modules object (__webpack_modules__)
@@ -112,19 +112,19 @@
 /******/ 		if (!__webpack_require__.o(exports, name)) {
 /******/ 			Object.defineProperty(exports, name, { enumerable: true, get: getter });
       /******/
-}
+    }
     /******/
-};
+  };
 /******/
 /******/ 	// define __esModule on exports
 /******/ 	__webpack_require__.r = function (exports) {
 /******/ 		if (typeof Symbol !== 'undefined' && Symbol.toStringTag) {
 /******/ 			Object.defineProperty(exports, Symbol.toStringTag, { value: 'Module' });
       /******/
-}
+    }
 /******/ 		Object.defineProperty(exports, '__esModule', { value: true });
     /******/
-};
+  };
 /******/
 /******/ 	// create a fake namespace object
 /******/ 	// mode & 1: value is a module id, require it
@@ -141,7 +141,7 @@
 /******/ 		if (mode & 2 && typeof value != 'string') for (var key in value) __webpack_require__.d(ns, key, function (key) { return value[key]; }.bind(null, key));
 /******/ 		return ns;
     /******/
-};
+  };
 /******/
 /******/ 	// getDefaultExport function for compatibility with non-harmony modules
 /******/ 	__webpack_require__.n = function (module) {
@@ -151,7 +151,7 @@
 /******/ 		__webpack_require__.d(getter, 'a', getter);
 /******/ 		return getter;
     /******/
-};
+  };
 /******/
 /******/ 	// Object.prototype.hasOwnProperty.call
 /******/ 	__webpack_require__.o = function (object, property) { return Object.prototype.hasOwnProperty.call(object, property); };
@@ -197,7 +197,7 @@
       };
 
       /***/
-}),
+    }),
 
 /***/ "./src/js/components/ad.js":
 /*!*********************************!*\
@@ -226,7 +226,7 @@
       };
 
       /***/
-}),
+    }),
 
 /***/ "./src/js/components/add-cart.js":
 /*!***************************************!*\
@@ -281,7 +281,7 @@
       };
 
       /***/
-}),
+    }),
 
 /***/ "./src/js/components/clearInput.js":
 /*!*****************************************!*\
@@ -310,7 +310,7 @@
       };
 
       /***/
-}),
+    }),
 
 /***/ "./src/js/components/copy.js":
 /*!***********************************!*\
@@ -341,7 +341,7 @@
       };
 
       /***/
-}),
+    }),
 
 /***/ "./src/js/components/inputFocus.js":
 /*!*****************************************!*\
@@ -367,7 +367,7 @@
       };
 
       /***/
-}),
+    }),
 
 /***/ "./src/js/components/likeToggle.js":
 /*!*****************************************!*\
@@ -387,7 +387,7 @@
       };
 
       /***/
-}),
+    }),
 
 /***/ "./src/js/components/scrollUp.js":
 /*!***************************************!*\
@@ -407,7 +407,7 @@
       };
 
       /***/
-}),
+    }),
 
 /***/ "./src/js/components/slider.js":
 /*!*************************************!*\
@@ -433,16 +433,35 @@
         }
       });
 
-      var reviewsSlider = new swiper__WEBPACK_IMPORTED_MODULE_0__["default"](".reviews-slider .swiper", {
-        modules: [swiper__WEBPACK_IMPORTED_MODULE_0__["Navigation"]],
-        loop: false,
-        slidesPerView: "auto",
-        spaceBetween: 0,
-        navigation: {
-          nextEl: ".reviews-slider__navigation--next",
-          prevEl: ".reviews-slider__navigation--prev",
-          disabledClass: "navigation--disabled"
-        }
+      // Находим все контейнеры слайдеров
+      var reviewSliders = document.querySelectorAll('.reviews-slider');
+
+      // Инициализируем Swiper для каждого контейнера слайдера
+      reviewSliders.forEach((sliderContainer, index) => {
+        sliderContainer.classList.add(`review-swiper-${index}`);
+        var prev = sliderContainer.querySelector('.reviews-slider__navigation--prev');
+        var next = sliderContainer.querySelector('.reviews-slider__navigation--next');
+        prev.classList.add(`reviews-slider-nav-prev-${index}`);
+        next.classList.add(`reviews-slider-nav-next-${index}`);
+        var swiper = new swiper__WEBPACK_IMPORTED_MODULE_0__["default"](`.review-swiper-${index} .swiper`, {
+          modules: [swiper__WEBPACK_IMPORTED_MODULE_0__["Navigation"]],
+          loop: false,
+          slidesPerView: 7,
+          spaceBetween: 8,
+          navigation: {
+            nextEl: `.reviews-slider-nav-next-${index}`,
+            prevEl: `.reviews-slider-nav-prev-${index}`,
+            disabledClass: "reviews-slider__navigation--disabled"
+          }
+        });
+
+        next.addEventListener('click', function() {
+          swiper.slideTo(swiper.slides.length - 1, 300); // Переход к последнему слайду
+        });
+
+        prev.addEventListener('click', function() {
+          swiper.slideTo(0, 300); // Переход к последнему слайду
+        });
       });
 
       var photoSlider = new swiper__WEBPACK_IMPORTED_MODULE_0__["default"](".photo-slider .swiper", {
@@ -502,9 +521,8 @@
           disabledClass: "navigation--disabled"
         }
       });
-
       /***/
-}),
+    }),
 
 /***/ "./src/js/components/submenu.js":
 /*!**************************************!*\
@@ -546,7 +564,7 @@
       };
 
       /***/
-}),
+    }),
 
 /***/ "./src/js/components/tab.js":
 /*!**********************************!*\
@@ -569,7 +587,7 @@
       };
 
       /***/
-}),
+    }),
 
 /***/ "./src/js/helpers.js":
 /*!***************************!*\
@@ -768,10 +786,10 @@
         vars.$window.on('resize', resize);
 /* harmony default export */ __webpack_exports__["default"] = (vars);
         /* WEBPACK VAR INJECTION */
-}.call(this, __webpack_require__(/*! ./../../node_modules/timers-browserify/main.js */ "./node_modules/timers-browserify/main.js").setImmediate))
+      }.call(this, __webpack_require__(/*! ./../../node_modules/timers-browserify/main.js */ "./node_modules/timers-browserify/main.js").setImmediate))
 
       /***/
-}),
+    }),
 
 /***/ "./src/js/main.js":
 /*!************************!*\
@@ -857,7 +875,7 @@
       $(window).scroll(fixedHeader);
 
       /***/
-}),
+    }),
 
 /***/ "./src/js/modules/lazyLoading.js":
 /*!***************************************!*\
@@ -905,7 +923,7 @@
       });
 
       /***/
-}),
+    }),
 
 /***/ "./src/js/vendor.js":
 /*!**************************!*\
@@ -939,7 +957,7 @@
       __webpack_require__(/*! ninelines-ua-parser */ "./node_modules/ninelines-ua-parser/dist/ninelines-ua-parser.js");
 
       /***/
-}),
+    }),
 
 /***/ "./src/js/vendor/ie-fix.js":
 /*!*********************************!*\
@@ -1251,7 +1269,7 @@
 
 
       /***/
-}),
+    }),
 
 /***/ "./src/js/vendor/vh-fix.js":
 /*!*********************************!*\
@@ -1281,7 +1299,7 @@
 
 
       /***/
-})
+    })
 
   /******/
 });
