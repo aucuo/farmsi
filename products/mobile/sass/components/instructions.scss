@@ -15,11 +15,11 @@
             position: absolute;
             top: 0;
             right: 3px;
-            width: 14px;
-            height: 14px;
-            border-top: 2px solid var(--icon-default);
-            border-left: 2px solid var(--icon-default);
-            transform: rotate(-135deg);
+            display: block;
+            width: 24px;
+            height: 24px;
+            transform: rotate(0deg);
+            background-image: url('../../images/icons/accardion_arrow.svg');
             transition: all 300ms;
         }
     }
@@ -38,32 +38,15 @@
     }
 
     &__block {
-            padding-top: 16px;
-            padding-bottom: 8px;
+        padding-top: 16px;
+        padding-bottom: 8px;
 
         @include active {
             transition: all 300ms;
 
-            .instructions__title--small:after {
-                top: 10px;
-                transform: rotate(45deg);
+            .instructions__title:after {
+                transform: rotate(180deg);
             }
-        }
-    }
-
-    &__banner {
-        position: relative;
-        margin: 56px 0;
-
-        &-button {
-            position: absolute;
-            padding: 12px 28px;
-            border-radius: 99px;
-            color: #fff;
-            background-color: #00C293;
-            transform: translateX(-50%);
-            right: -24px;
-            bottom: 24px;
         }
     }
 }

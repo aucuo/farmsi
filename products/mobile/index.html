@@ -797,27 +797,35 @@
                         </div>
                     </div>
                     <div class="instructions__banner">
-                        <img src="./images/banners/bisporolol_mobile.png" alt="Бисопролол">
-                        <button class="instructions__banner-button button">В корзину</button>
-                        <div class="banner__advertising advertising">
-                            <div class="advertising__text">Реклама</div>
-                            <div class="advertising__block advertising__block--top" data-id="ad-1">
-                                <div class="advertising__title">Реклама</div>
-                                <div class="advertising__subtitle">
-                                    ООО&nbsp;«Название длинное компании чтобы посмотреть как вмещается»
-                                </div>
-                                <div class="d-flex flex-column align-items-start"><a class="advertising__link"
-                                        href="https://rostov-na-donu.uteka.ru" target="_blank" rel="nofollow">
-                                        <div class="advertising__icon advertising__icon--earth"></div>
-                                        <div class="advertising__desc">https://rostov-na-donu.uteka.ru</div>
-                                    </a><a class="advertising__link js-copy" href="uzk2dklH28Gmckh92Pod00"
-                                        target="_blank" rel="nofollow">
-                                        <div class="advertising__icon advertising__icon--copy"></div>
-                                        <div class="advertising__desc">uzk2dklH28Gmckh92Pod00</div>
-                                    </a>
-                                    <p class="advertising__link advertising__link--complete"><span
-                                            class="advertising__icon advertising__icon--checked"></span><span
-                                            class="advertising__desc">ID скопирован</span></p>
+                        <div class="banner__grid">
+                            <div class="banner">
+                                <a class="bg-light rounded-4" href="#">
+                                    <img src="./images/banners/bisporolol_mobile.png" alt="Бисопролол">
+                                </a>
+                                <div class="banner__advertising advertising">
+                                    <div class="advertising__text">Реклама</div>
+                                    <div class="advertising__block advertising__block--active" data-id="ad-1">
+                                        <div class="advertising__header">
+                                            <div class="advertising__title">Реклама</div>
+                                            <div class="advertising__close"></div>
+                                        </div>
+                                        <div class="advertising__subtitle">
+                                            ООО&nbsp;«Название длинное компании чтобы посмотреть как вмещается»
+                                        </div>
+                                        <div class="d-flex flex-column align-items-start"><a class="advertising__link"
+                                                href="https://rostov-na-donu.uteka.ru" target="_blank" rel="nofollow">
+                                                <div class="advertising__icon advertising__icon--earth"></div>
+                                                <div class="advertising__desc">https://rostov-na-donu.uteka.ru</div>
+                                            </a><a class="advertising__link js-copy" href="uzk2dklH28Gmckh92Pod00"
+                                                target="_blank" rel="nofollow">
+                                                <div class="advertising__icon advertising__icon--copy"></div>
+                                                <div class="advertising__desc">uzk2dklH28Gmckh92Pod00</div>
+                                            </a>
+                                            <p class="advertising__link advertising__link--complete"><span
+                                                    class="advertising__icon advertising__icon--checked"></span><span
+                                                    class="advertising__desc">ID скопирован</span></p>
+                                        </div>
+                                    </div>
                                 </div>
                             </div>
                         </div>
@@ -831,13 +839,13 @@
                     <div class="col-12 cl-md-6 col-xl-9 instructions__left">
                         <h2 class="subtitle" style="margin-bottom: 16px;">Бисопролол Инструкция по применению</h2>
                         <div class="instructions__block js-accardion-many is-active">
-                            <h3 class="instructions__title">Действующее вещество</h3>
+                            <h3 class="instructions__title js-accardion-many-link">Действующее вещество</h3>
                             <div class="js-accardion-body">
                                 <a class="instructions__link" href="#">Бисопролол</a>
                             </div>
                         </div>
                         <div class="instructions__block js-accardion-many is-active">
-                            <h3 class="instructions__title">Состав</h3>
+                            <h3 class="instructions__title js-accardion-many-link">Состав</h3>
                             <div class="js-accardion-body">
                                 <p class="instructions__text">5 мл (1 мерная ложка) суспензии содержат: действующие
                                     вещества: алюминия гидроксид гель 2,18 г (в пересчете на Al2O3 218 мг), магния
@@ -862,7 +870,7 @@
                             </div>
                         </div>
                         <div class="instructions__block js-accardion-many is-active">
-                            <h3 class="instructions__title">Описание</h3>
+                            <h3 class="instructions__title js-accardion-many-link">Описание</h3>
                             <div class="js-accardion-body">
                                 <p class="instructions__text">В <a class="instructions__link"
                                         href="#">онлайн-каталоге</a> «ФАРМСИ» представлены <a class="instructions__link"
@@ -878,7 +886,7 @@
                             </div>
                         </div>
                         <div class="instructions__block js-accardion-many is-active">
-                            <h3 class="instructions__title">Список литературы</h3>
+                            <h3 class="instructions__title js-accardion-many-link">Список литературы</h3>
                             <div class="js-accardion-body">
                                 <ol class="ordered-list">
                                     <li>Десятки тысяч наименований</li>
@@ -1501,6 +1509,29 @@
             <section class="section">
                 <div class="container">
                     <h2 class="subtitle" style="margin-bottom: 20px;">Отзывы о Бисопролол</h2>
+                    <div class="reviews__empty">
+                        <div class="reviews__empty-stars">
+                            <svg class="review__star-icon review__star-icon--disabled">
+                                <use xlink:href="./images/sprites.svg#Star"></use>
+                            </svg>
+                            <svg class="review__star-icon review__star-icon--disabled">
+                                <use xlink:href="./images/sprites.svg#Star"></use>
+                            </svg>
+                            <svg class="review__star-icon review__star-icon--disabled">
+                                <use xlink:href="./images/sprites.svg#Star"></use>
+                            </svg>
+                            <svg class="review__star-icon review__star-icon--disabled">
+                                <use xlink:href="./images/sprites.svg#Star"></use>
+                            </svg>
+                            <svg class="review__star-icon review__star-icon--disabled">
+                                <use xlink:href="./images/sprites.svg#Star"></use>
+                            </svg>
+                        </div>
+                        <div class="reviews__empty-title">У этого товара еще нет отзывов. Станьте первым, кто оставит
+                            отзыв об этом товаре</div>
+                        <div class="reviews__empty-text">Поделитесь своим мнением о покупке</div>
+                        <button class="button button-primary reviews__empty-button">Оставить отзыв</button>
+                    </div>
                     <div class="reviews">
                         <div class="reviews__rating rating">
                             <div class="reting__left">
@@ -2323,6 +2354,29 @@
                         event.preventDefault();
                         event.stopPropagation();
                         if (!form.checkValidity()) {
+
+                        } else {
+                            var toast = document.querySelector(".toast");
+                            const option = {
+                                autohide: true,
+                                delay: 3000,
+                                animation: true,
+                            };
+
+                            // Create toast instance
+                            var myToast = new bootstrap.Toast(toast, option);
+                            $('.toast-image').attr('src', './images/statuses/success.svg')
+                            $('.toast-image').css('background-color', 'unset')
+                            $('.toast-image').css('padding', '12px')
+                            $('.toast-image').css('margin-right', '0px')
+                            $('.toast-text').html("Спасибо!<br>Мы учтём вашу жалобу");
+                            $('.toast-button').html(`
+                                <svg aria-hidden="true" width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M15.332 4.66663L4.66536 15.3333" stroke="#ABB6CC" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
+                                    <path d="M4.66797 4.66663L15.3346 15.3333" stroke="#ABB6CC" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
+                                </svg>
+                            `);
+                            myToast.show();
                         }
 
                         form.classList.add('was-validated');
@@ -2372,6 +2426,11 @@
 
             btns.forEach((element) => {
                 element.addEventListener("click", function () {
+                    $('.toast-image').css('background-color', '#fff')
+                    $('.toast-image').css('padding', '0')
+                    $('.toast-image').css('margin-right', '20px')
+                    $('.toast-text').html("Товар добавлен в корзину");
+                    $('.toast-button').html(`Перейти`);
                     myToast.show();
                 });
             });

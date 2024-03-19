@@ -405,9 +405,10 @@
 //# sourceMappingURL=main.js.map
 
 var accardionManyInit = function accardionManyInit() {
-    var e = $(".js-accardion-many");
+    var e = $(".js-accardion-many-link");
     e.on("click", (function (e) {
-        var t = $(e.currentTarget);
+        var t = $(e.currentTarget).closest('.js-accardion-many');
+        console.log(t)
         t.toggleClass("is-active"), t.children(".js-accardion-body").slideToggle();
     }))
 }
@@ -633,10 +634,13 @@ var checkSegmentedControl = function checkSegmentedControl() {
             }, 300);
             thumb.css('right', 'unset');
 
-            $('button[data-fancybox-close]').click();
             setTimeout(function () {
-                $('a[data-fancybox="product"] img')[0].click();
-            }, 10);
+                $('button[data-fancybox-close]').click();
+
+                setTimeout(function () {
+                    $('a[data-fancybox="product"] img')[0].click();
+                }, 10);
+            }, 600);
         }
         // Действие при выборе "Сертификаты"
         else if (this.value == 'certs') {
@@ -647,10 +651,15 @@ var checkSegmentedControl = function checkSegmentedControl() {
                 width: width,
             }, 300);
 
-            $('button[data-fancybox-close]').click();
             setTimeout(function () {
-                $('a[data-fancybox="cert"] img')[0].click();
-            }, 10);
+                $('button[data-fancybox-close]').click();
+
+                setTimeout(function () {
+                    $('a[data-fancybox="cert"] img')[0].click();
+                }, 10);
+            }, 600);
+
+            
         }
     }
 }
@@ -658,11 +667,27 @@ var checkSegmentedControl = function checkSegmentedControl() {
 var showSegmentedControl = function showSegmentedControl(fancybox) {
     var trigger = $(fancybox.options.triggerEl);
     var type = trigger.data('fancybox')
+    var parent = $('.segmented-control');
+    var thumb = parent.find('.segmented-control__color');
+    var segmentedControl = $('.js-segmented');
 
-    if (type == "product" || type == "cert") {
-        var segmentedControl = $('.js-segmented');
-
+    if (type == "product") {
         segmentedControl.fadeIn(100);
+        var width = parent.find('label[for="tab-1"]').width() + 24; // width + padding
+        var input = $('input#tab-1')
+        input.prop('checked', true);
+        thumb.css('right', 'unset');
+        thumb.css('left', 2);
+        thumb.css('width', width);
+
+    } else if (type == "cert") {
+        segmentedControl.fadeIn(100);
+        var width = parent.find('label[for="tab-2"]').width() + 24; // width + padding
+        var input = $('input#tab-2')
+        input.prop('checked', true);
+        thumb.css('left', 'unset');
+        thumb.css('right', 2);
+        thumb.css('width', width);
     }
 }
 
