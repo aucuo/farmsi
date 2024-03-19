@@ -1,10 +1,13 @@
 @import "../variables";
 @import "mixins/helpers";
 
-.cities {    
+.cities {
     &__item {
         color: var(--text-dark);
-        margin-bottom: 8px;
+
+        &:not(:last-child) {
+            margin-bottom: 8px;
+        }
 
         @include hover() {
             a {

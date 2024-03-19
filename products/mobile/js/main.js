@@ -417,25 +417,18 @@ $(document).ready(function () {
 });
 
 $(document).ready(function () {
-    $('.dropdown-menu__link').click(function () {
-        var $icon = $(this).find('.dropdown-menu__link--icon');
-        var $url = $(this).find('.dropdown-menu__link--url');
+    $('.modal__link').click(function (e) {
+        e.preventDefault();
+        var $icon = $(this).find('.modal__link--icon');
+        var $url = $(this).find('.modal__link--url');
         var newText = 'Ссылка скопирована';
         var newIconSrc = './images/icons/check.svg'; // Убедитесь, что путь к новой иконке верный
 
         // Копирование URL в буфер обмена
         var url = $url.data("url");
         navigator.clipboard.writeText(url).then(() => {
-            // Плавное исчезновение текста и иконки
-            $url.fadeOut(300, function () {
-                // Изменение текста после исчезновения
-                $url.text(newText).fadeIn(300);
-            });
-
-            $icon.fadeOut(300, function () {
-                // Изменение источника иконки после исчезновения и плавное появление
-                $icon.attr('src', newIconSrc).fadeIn(300);
-            });
+            $url.text(newText);
+            $icon.attr('src', newIconSrc);
         }).catch(err => {
             console.error('Ошибка при копировании: ', err);
         });
@@ -443,14 +436,9 @@ $(document).ready(function () {
 });
 
 var dropdownToggleInit = function dropdownToggleInit() {
-    var shareButton = $(".button-share"); // Выбираем все кнопки поделиться
-    var closeButton = $(".dropdown-menu__close"); // Выбираем все кнопки поделиться
+    var shareButtons = $(".button-share"); // Выбираем все кнопки поделиться
 
-    closeButton.on("click", function () {
-        $(this).closest('.dropdown-menu').stop(true, true).fadeOut(300);
-    })
-
-    shareButton.on("click", function () {
+    shareButtons.on("click", function () {
         var dropdownId = $(this).data('dropdown-id'); // Получаем ID выпадающего меню из атрибута кнопки
         var dropdownMenu = $('.products__dropdown[data-dropdown-id="' + dropdownId + '"]'); // Находим соответствующее выпадающее меню
 
@@ -461,14 +449,24 @@ var dropdownToggleInit = function dropdownToggleInit() {
             } else {
                 dropdownMenu.stop(true, true).fadeIn(300); // Если скрыто, показываем
             }
-
-            // Дополнительно: скрытие меню при клике вне его
-            $(document).on('click', function (e) {
-                if (!$(e.target).closest('.button-share, .products__dropdown').length) {
-                    $('.products__dropdown').stop(true, true).fadeOut(300);
-                }
-            });
         }
+    });
+
+    // Дополнительно: скрытие меню при клике вне его
+    $(document).on('click', function (e) {
+        if (!$(e.target).closest('.button-share, .products__dropdown').length) {
+            $('.products__dropdown').fadeOut(300);
+        }
+    });
+
+    // Дополнительно: скрытие меню при скролле
+    $(window).on('scroll', function () {
+        // Скрываем выпадающие меню
+        $('.products__dropdown').fadeOut(300);
+        $('.js-dropdown-menu').fadeOut(300);
+        $('.js-dropdown.is-active').toggleClass('is-active');
+        // Скрываем все активные tooltips Bootstrap
+        $('.tooltip').tooltip('hide');
     });
 };
 
@@ -483,24 +481,35 @@ var jsDropdownInit = function jsDropdownInit() {
     dropdownItems.on("click", function () {
         var dropdownId = $(this).data("id");
         var dropdownMenu = dropdownId ? $(".js-dropdown-menu[data-id='" + dropdownId + "']") : $(this).find(".js-dropdown-menu");
-        if (dropdownMenu.length) {
-            $(this).addClass("is-active"); // Добавляем активный класс к иконке, если есть выпадающий список
-            dropdownMenu.stop(true, true).fadeIn(300); // Плавно показываем выпадающий список за 300 мс
-        }
-    });
 
-    dropdownItems.on("mouseleave", function () {
-        var dropdownId = $(this).data("id");
-        var dropdownMenu = dropdownId ? $(".js-dropdown-menu[data-id='" + dropdownId + "']") : $(this).find(".js-dropdown-menu");
-        if (dropdownMenu.length) {
-            $(this).removeClass("is-active"); // Убираем активный класс у иконки
-            dropdownMenu.stop(true, true).fadeOut(300); // Плавно скрываем выпадающий список за 300 мс
+        if (!$(this).hasClass("is-active")) {
+            // Сначала скрываем все активные меню
+            $('.js-dropdown.is-active').each(function () {
+                var prevDropdownId = $(this).data("id");
+                var prevDropdownMenu = prevDropdownId ? $(".js-dropdown-menu[data-id='" + prevDropdownId + "']") : $(this).find(".js-dropdown-menu");
+                $(this).removeClass("is-active");
+                prevDropdownMenu.stop(true, true).fadeOut(100); // Исправлено на fadeOut
+            });
+
+            // Теперь добавляем класс 'is-active' к текущему элементу и показываем его меню
+            if (dropdownMenu.length) {
+                $(this).addClass("is-active");
+                dropdownMenu.stop(true, true).fadeIn(100); // Показываем выпадающий список за 100 мс
+            }
+        } else {
+            // Если элемент уже активен, просто убираем класс и скрываем меню
+            $(this).removeClass("is-active");
+            dropdownMenu.stop(true, true).fadeOut(100); // Скрываем выпадающий список за 100 мс
         }
     });
 };
 
 $(document).ready(function () {
     jsDropdownInit(); // Инициализируем скрипт после загрузки документа
+});
+
+$(document).ready(function () {
+    $('.breadcrumb').scrollLeft($('.breadcrumb')[0].scrollWidth); // Максимальный скролл крошек
 });
 
 var jsSortButtonInit = function jsSortButtonInit() {
@@ -566,4 +575,46 @@ var jsReviewButtonsInit = function jsReviewButtonsInit() {
 
 $(document).ready(function () {
     jsReviewButtonsInit(); // Инициализируем скрипт после загрузки документа
+});
+
+var advertisingsInit = function advertisingsInit() {
+    var $advertisingButton = $('.advertising__text');
+
+    $advertisingButton.on('click', function (e) {
+        console.log(1)
+        var $banner = $(this).closest('.advertising');
+        var $block = $banner.find('.advertising__block');
+
+        $block.toggleClass('advertising__block--active');
+    });
+};
+
+$(document).ready(function () {
+    advertisingsInit();
+});
+
+$(document).ready(function () {
+    $('.product-cart__expandable').click(function (event) {
+        event.preventDefault(); // Предотвращаем переход по ссылке
+        var $nameContainer = $(this).closest('.product-cart__name');
+
+        // Проверяем, расширен ли текст
+        if ($nameContainer.hasClass('expanded')) {
+            $nameContainer.removeClass('expanded'); // Сужаем текст
+            $nameContainer.css('max-height', '72px'); // Возвращаем исходную максимальную высоту
+        } else {
+            $nameContainer.addClass('expanded'); // Расширяем текст
+            $nameContainer.css('max-height', 'none'); // Убираем ограничение по высоте
+        }
+    });
+});
+
+$(document).ready(function () {
+    $('#switch-checkbox').change(function () {
+        if ($(this).is(':checked')) {
+            // Код, если switch активирован
+        } else {
+            // Код, если switch деактивирован
+        }
+    });
 });

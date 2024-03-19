@@ -9,8 +9,10 @@
 
     &__dropdown {
         top: calc(100% - 4px) !important;
-        left: 0;
-        right: 0;
+        left: 16px;
+        right: 16px;
+        overflow: hidden;
+        padding-right: 0 !important;
     }
 }
 
@@ -20,25 +22,68 @@
     padding: 3px 0;
     margin-bottom: 16px;
     overflow-x: scroll;
+    --bs-breadcrumb-item-padding-x: 2px;
+
+    &::-webkit-scrollbar {
+        height: 12px;
+        width: 12px;
+    }
+
+    &::-webkit-scrollbar-track {
+        background-color: #FFFFFF;
+    }
+
+    &::-webkit-scrollbar-track:hover {
+        background-color: #FFFFFF;
+    }
+
+    &::-webkit-scrollbar-track:active {
+        background-color: #FFFFFF;
+    }
+
+    &::-webkit-scrollbar-thumb {
+        background-color: #DEDEE0;
+        border-top: 4px solid #FFFFFF;
+        border-bottom: 4px solid #FFFFFF;
+    }
+
+    &::-webkit-scrollbar-thumb:hover {
+        background-color: #DEDEE0;
+    }
+
+    &::-webkit-scrollbar-thumb:active {
+        background-color: #DEDEE0;
+    }
 
     &-item {
         display: flex;
         align-items: center;
         color: var(--secondary-color);
-        font-size: 14px;    
+        font-size: 14px;
         height: 24px;
+
+        &:first-child {
+            a {
+                padding-right: 6px;
+                padding-left: 0;
+            }
+        }
 
         &::before {
             color: var(--icon-default) !important;
         }
 
         a {
+            font-size: 14px;
+            font-weight: 400;
+            line-height: 24px;
             display: flex;
             align-items: center;
             white-space: nowrap;
             color: var(--secondary-color);
+            padding-left: 4px;
 
-            @include hover() {
+            &:active {
                 color: var(--text-dark);
             }
         }

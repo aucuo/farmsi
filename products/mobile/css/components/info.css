@@ -1,0 +1,13 @@
+.information {
+  margin: 32px 0;
+}
+
+.information__block {
+  padding: 16px;
+  border-radius: 12px;
+  background-color: #F7F7FA;
+  font-size: 14px;
+  line-height: 18px;
+  color: #444952;
+}
+/*# sourceMappingURL=data:application/json;charset=utf8;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbImNvbXBvbmVudHMvaW5mby5zY3NzIl0sIm5hbWVzIjpbXSwibWFwcGluZ3MiOiJBQUFBO0VBQ0k7OztBQUdKO0VBQ0k7RUFDQTtFQUVBO0VBRUE7RUFDQTtFQUNBIiwiZmlsZSI6ImNvbXBvbmVudHMvaW5mby5jc3MiLCJzb3VyY2VzQ29udGVudCI6WyIuaW5mb3JtYXRpb257XHJcbiAgICBtYXJnaW46IDMycHggMDtcclxufVxyXG5cclxuLmluZm9ybWF0aW9uX19ibG9ja3tcclxuICAgIHBhZGRpbmc6IDE2cHg7XHJcbiAgICBib3JkZXItcmFkaXVzOiAxMnB4O1xyXG5cclxuICAgIGJhY2tncm91bmQtY29sb3I6ICNGN0Y3RkE7XHJcblxyXG4gICAgZm9udC1zaXplOiAxNHB4O1xyXG4gICAgbGluZS1oZWlnaHQ6IDE4cHg7XHJcbiAgICBjb2xvcjojNDQ0OTUyO1xyXG59Il19 */

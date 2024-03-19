@@ -55,7 +55,7 @@
     padding: 6px 16px;
     color:#00C293;
     display: block;
-
+    background-color: unset;
     border-radius: 100px;
 }
 
