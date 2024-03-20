@@ -23,16 +23,7 @@
         border: 1px solid var(--border-color);
         border-radius: var(--default-radius);
         overflow: hidden;
-        max-width: 196px;
-        height: 98px;
         transition: all 300ms;
-
-        &:hover {
-            border-color: transparent;
-            box-shadow: var(--box-shadow);
-            border-radius: var(--default-radius);
-            transition: all 300ms;
-        }
 
         &__image {
             display: block;

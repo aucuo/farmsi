@@ -195,11 +195,6 @@
     }
 
     .modal {
-        &-dialog {
-            width: calc(100% - 48px);
-            margin: 0 24px;
-        }
-
         &-content {
             position: relative;
             width: 100%;

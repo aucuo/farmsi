@@ -3,7 +3,7 @@
     user-select: none;
 
     &-icon {
-        width: 8px;
+        width: 17px;
         height: 24px;
         margin-left: 4px;
 
@@ -19,17 +19,54 @@
         top: 100%;
         padding: 12px;
         border-radius: 16px;
-        min-width: 360px;
-        box-shadow: 0px 12px 28px 0px #0000000F;
+        min-width: 300px;
+        box-shadow: 0px 4px 28px 0px #0000000F;
         background-color: #fff;
-        max-height: 400px;
-        overflow-y: scroll;
+
+        ul {
+            overflow-x: hidden;
+            overflow-y: scroll;
+            max-height: 200px;
+
+            &::-webkit-scrollbar {
+                width: 12px;
+            }
+
+            &::-webkit-scrollbar-track {
+                border-radius: 20px;
+                background-color: #FFFFFF;
+                padding-bottom: 12px;
+            }
+
+            &::-webkit-scrollbar-track:hover {
+                background-color: #FFFFFF;
+            }
+
+            &::-webkit-scrollbar-track:active {
+                background-color: #FFFFFF;
+            }
+
+            &::-webkit-scrollbar-thumb {
+                border-radius: 20px;
+                background-color: #ABB6CC;
+                border: 4px solid #FFFFFF;
+            }
+
+            &::-webkit-scrollbar-thumb:hover {
+                background-color: #ABB6CC;
+            }
+
+            &::-webkit-scrollbar-thumb:active {
+                background-color: #ABB6CC;
+            }
+        }
     }
 
     &-link {
         padding: 4px 8px;
         border-radius: 8px;
         transition: .3s;
+        color: var(--text-dark) !important;
         cursor: pointer;
 
         &:hover {
@@ -37,6 +74,7 @@
 
             a {
                 background-color: var(--bg-light);
+                color: var(--text-dark) !important;
             }
         }
 

@@ -455,11 +455,11 @@
           }
         });
 
-        next.addEventListener('click', function() {
+        next.addEventListener('click', function () {
           swiper.slideTo(swiper.slides.length - 1, 300); // Переход к последнему слайду
         });
 
-        prev.addEventListener('click', function() {
+        prev.addEventListener('click', function () {
           swiper.slideTo(0, 300); // Переход к последнему слайду
         });
       });
@@ -1353,7 +1353,8 @@ var dropdownToggleInit = function dropdownToggleInit() {
   $(window).on('scroll', function () {
     // Скрываем выпадающие меню
     $('.products__dropdown').fadeOut(300);
-
+    $('.js-dropdown').removeClass('is-active');
+    $('.js-dropdown-menu').fadeOut(300);
     // Скрываем все активные tooltips Bootstrap
     $('.tooltip').tooltip('hide');
   });
@@ -1366,12 +1367,27 @@ $(document).ready(function () {
 
 var jsDropdownInit = function jsDropdownInit() {
   var dropdownItems = $(".js-dropdown"); // Выбираем все элементы хлебных крошек
+  var dropdownItemsClick = $(".js-dropdown-click"); // Выбираем все элементы хлебных крошек
 
-  dropdownItems.on("mouseenter", function () {
+  dropdownItemsClick.on("click", function (e) {
     var dropdownMenu = $(this).find(".js-dropdown-menu");
+
+    if (!$(e.target).hasClass("js-dropdown-link"))
+      dropdownMenu.css('z-index', '1');
+
     if (dropdownMenu.length) {
       $(this).addClass("is-active"); // Добавляем активный класс к иконке, если есть выпадающий список
-      dropdownMenu.stop(true, true).fadeIn(300); // Плавно показываем выпадающий список за 300 мс
+      dropdownMenu.stop(true, true).fadeIn(100); // Плавно показываем выпадающий список за 300 мс
+    }
+  });
+
+  dropdownItems.on("mouseenter", function () {
+    if (!$(this).hasClass("js-dropdown-click")) {
+      var dropdownMenu = $(this).find(".js-dropdown-menu");
+      if (dropdownMenu.length) {
+        $(this).addClass("is-active"); // Добавляем активный класс к иконке, если есть выпадающий список
+        dropdownMenu.stop(true, true).fadeIn(100); // Плавно показываем выпадающий список за 300 мс
+      }
     }
   });
 
@@ -1379,7 +1395,7 @@ var jsDropdownInit = function jsDropdownInit() {
     var dropdownMenu = $(this).find(".js-dropdown-menu");
     if (dropdownMenu.length) {
       $(this).removeClass("is-active"); // Убираем активный класс у иконки
-      dropdownMenu.stop(true, true).fadeOut(300); // Плавно скрываем выпадающий список за 300 мс
+      dropdownMenu.stop(true, true).fadeOut(100); // Плавно скрываем выпадающий список за 300 мс
     }
   });
 };
@@ -1401,6 +1417,8 @@ var jsSortButtonInit = function jsSortButtonInit() {
       activeItem = $(this);
       parent.find(".reviews__sort-text").text(activeItem.text())
 
+      parent.removeClass('is-active');
+      parent.find('.js-dropdown-menu').css('z-index', '-1');
       // обработка сортировки
     }
   });
@@ -1452,4 +1470,126 @@ var jsReviewButtonsInit = function jsReviewButtonsInit() {
 
 $(document).ready(function () {
   jsReviewButtonsInit(); // Инициализируем скрипт после загрузки документа
+});
+
+$(document).ready(function () {
+  $('#switch-checkbox').change(function () {
+    if ($(this).is(':checked')) {
+      // Код, если switch активирован
+    } else {
+      // Код, если switch деактивирован
+    }
+  });
+});
+
+var checkSegmentedControl = function checkSegmentedControl() {
+  if (this.checked) {
+    var parent = $(this).closest('.segmented-control');
+    var thumb = parent.find('.segmented-control__color');
+
+    // Действие при выборе "Фото"
+    if (this.value == 'photos') {
+      var width = parent.find('label[for="tab-1"]').width() + 24; // width + padding
+      thumb.stop(true, true).animate({
+        left: 2,
+        width: width,
+      }, 300);
+      thumb.css('right', 'unset');
+
+      setTimeout(function () {
+        $('button[data-fancybox-close]').click();
+
+        setTimeout(function () {
+          $('a[data-fancybox="product"] img')[0].click();
+        }, 10);
+      }, 600);
+    }
+    // Действие при выборе "Сертификаты"
+    else if (this.value == 'certs') {
+      var width = parent.find('label[for="tab-2"]').width() + 24; // width + padding
+      thumb.css('left', 'unset');
+      thumb.stop(true, true).animate({
+        right: 2,
+        width: width,
+      }, 300);
+
+      setTimeout(function () {
+        $('button[data-fancybox-close]').click();
+
+        setTimeout(function () {
+          $('a[data-fancybox="cert"] img')[0].click();
+        }, 10);
+      }, 600);
+
+
+    }
+  }
+}
+
+var showSegmentedControl = function showSegmentedControl(fancybox) {
+  var trigger = $(fancybox.options.triggerEl);
+  var type = trigger.data('fancybox')
+  var parent = $('.segmented-control');
+  var thumb = parent.find('.segmented-control__color');
+  var segmentedControl = $('.js-segmented');
+
+  if (type == "product") {
+    segmentedControl.fadeIn(100);
+    var width = parent.find('label[for="tab-1"]').width() + 24; // width + padding
+    var input = $('input#tab-1')
+    input.prop('checked', true);
+    thumb.css('right', 'unset');
+    thumb.css('left', 2);
+    thumb.css('width', width);
+
+  } else if (type == "cert") {
+    segmentedControl.fadeIn(100);
+    var width = parent.find('label[for="tab-2"]').width() + 24; // width + padding
+    var input = $('input#tab-2')
+    input.prop('checked', true);
+    thumb.css('left', 'unset');
+    thumb.css('right', 2);
+    thumb.css('width', width);
+  }
+}
+
+var closeSegmentedControl = function closeSegmentedControl(fancybox) {
+  var segmentedControl = $('.js-segmented');
+  segmentedControl.fadeOut(100);
+}
+
+$(document).ready(function () {
+  $('input[name="segmented-control"][checked]').each(checkSegmentedControl);
+  $('input[type="radio"][name="segmented-control"]').change(checkSegmentedControl);
+});
+
+var fancybox = Fancybox.bind("[data-fancybox]", {
+  Toolbar: {
+    display: {
+      left: ["infobar"],
+      right: ["close"],
+    },
+  },
+  Thumbs: {
+    type: "classic",
+  },
+  contentClick: "iterateZoom",
+  Images: {
+    initialSize: "fit",
+    Panzoom: {
+      maxScale: 2,
+    },
+  },
+  Carousel: {
+    Navigation: false,
+  },
+  on: {
+    init: (fancybox, slide) => {
+      showSegmentedControl(fancybox);
+    },
+    close: (fancybox, slide) => {
+      closeSegmentedControl(fancybox);
+    },
+  },
+  touch: false
 });

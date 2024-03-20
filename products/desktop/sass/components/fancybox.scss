@@ -129,6 +129,10 @@
         user-select: none;
         transition: all .5s ease;
 
+        p {
+            margin: 0;
+        }
+
         &:hover {
             color: var(--primary);
         }
