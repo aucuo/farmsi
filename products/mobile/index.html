@@ -20,6 +20,7 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/ui@5.0/dist/fancybox/fancybox.css" />
+    <script src="https://api-maps.yandex.ru/2.1/?apikey=b603dd45-d3d4-4cc6-bc5e-3985d0624e53&lang=ru_RU"></script>
 
     <link rel="stylesheet" href="./css/pages/products.css">
 </head>
@@ -1319,16 +1320,33 @@
                 </div>
             </section>
 
-            <section class="section map">
+            <section class="section">
                 <div class="container">
                     <h2 class="subtitle" style="margin-bottom: 8px;">Доставка и заказ Бисопролол в Москве и Московской
                         области</h2>
                     <p style="margin-bottom: 26px;">Заказывая на ФАРМСИ.ru, можно выбрать удобную аптеку у дома или
                         возле работы.
                         В Москве и Московской области для получения доступно – 475 аптек.</p>
-
-                    <div class="map__image">
-                        <img src="./images/map/map_mobile.png" alt="Карта аптек">
+                </div>
+                <div class="map" id="map">
+                    <div class="map__controls">
+                        <div class="map__controls-top">
+                            <button class="map__button map__button--zoom-in js-map-zoom-in">
+                                <svg width="25" height="24" viewBox="0 0 25 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M12.5 5V19M5.5 12L19.5 12" stroke="#ABB6CC" stroke-width="2" stroke-linecap="round"/>
+                                </svg>
+                            </button>
+                            <button class="map__button map__button--zoom-out js-map-zoom-out">
+                                <svg width="25" height="24" viewBox="0 0 25 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M5.5 12H19.5" stroke="#ABB6CC" stroke-width="2" stroke-linecap="round"/>
+                                </svg>
+                            </button>
+                        </div>
+                        <button class="map__button map__button--navigation js-map-geolocation">
+                            <svg width="25" height="24" viewBox="0 0 25 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M14 21L19.5 5L3.5 10.5L10.2042 13.1817C10.7124 13.3849 11.1151 13.7876 11.3183 14.2958L14 21Z" stroke="#ABB6CC" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                            </svg>
+                        </button>
                     </div>
                 </div>
             </section>
