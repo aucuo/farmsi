@@ -1,6 +1,10 @@
 .slider {
     position: relative;
 
+    &-block {
+        height: 100%;
+    }
+
     .swiper-wrapper {
         box-sizing: border-box;
     }

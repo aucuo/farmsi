@@ -232,7 +232,6 @@ iframe {
   flex-direction: column;
   min-height: 100vh;
   min-height: var(--vh);
-  overflow: hidden;
 }
 
 .form-group {
