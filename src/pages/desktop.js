@@ -1,3 +1,4 @@
+import '@/desktop_template/header/header.html';
 import './desktop.html';
 import '@/styles/desktop/pages/products.scss';
 

@@ -79,7 +79,7 @@
   }
 
   &__loading {
-    //display: none;
+    display: none;
     position: absolute;
     width: 20px;
     height: 20px;
@@ -127,6 +127,7 @@
     &-icon {
       margin-right: 5px;
       margin-bottom: 4px;
+      transition: .1s;
     }
 
     &-loading {
@@ -146,14 +147,19 @@
   &__choosen {
     position: relative;
     display: flex;
+    align-items: center;
+    width: fit-content;
+    max-width: 100%;
     overflow-x: hidden;
     padding: 2px 0;
     padding-right: 20px;
     margin-bottom: 20px;
+    user-select: none;
 
     &-icon {
+      flex-shrink: 0;
       width: 20px;
-      height: 20px;
+      height: 24px;
       margin-right: 4px;
     }
 
@@ -168,7 +174,7 @@
         margin-right: 6px;
       }
 
-      &--location {
+      &--city {
         font-weight: 600;
         color: #000;
       }
@@ -237,10 +243,10 @@
   }
 
   &__cities {
-    width: calc(100% + 24px);
+    width: calc(100% + 36px);
+    height: 520px;
     margin-left: -12px;
-    max-height: 520px;
-    overflow-y: auto;
+    overflow-y: scroll;
 
     &::-webkit-scrollbar {
       width: 12px;
@@ -276,6 +282,37 @@
     }
   }
 
+  .city-change__cities-nf {
+    display: none;
+    padding: 0 12px;
+
+    &-title {
+      font-size: 18px;
+      font-weight: 400;
+      line-height: 24px;
+      padding: 10px 0;
+    }
+
+    &-query {
+      font-weight: 600;
+    }
+
+    &-info {
+      font-size: 16px;
+      font-weight: 400;
+      line-height: 22px;
+      color: var(--secondary-color);
+    }
+
+    &-suggest {
+      cursor: pointer;
+      color: var(--primary-color);
+      font-size: 16px;
+      font-weight: 600;
+      line-height: 22px;
+    }
+  }
+
   &__city {
     position: relative;
     display: flex;
@@ -284,6 +321,12 @@
     border-radius: 15px;
     cursor: pointer;
     transition: .3s;
+
+    &.hidden {
+      display: none;
+      visibility: hidden;
+      opacity: 0;
+    }
 
     &:hover {
       background-color: var(--bg-light);

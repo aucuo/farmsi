@@ -26,13 +26,14 @@
 
 <body>
 <div class="site">
+
     <!-- Header Start-->
     <!-- Header Top-->
     <div class="header__top">
         <div class="container">
             <div class="d-flex flex-wrap align-items-center justify-content-between">
                 <div class="d-flex align-items-center me-3">
-                    <div class="header__location location"><a class="location__current" href="javascript:void(0)">
+                    <div class="header__location location js-change-location"><a class="location__current" href="javascript:void(0)">
                         <svg class="location__icon">
                             <use xlink:href="../images/sprites.svg#pin"></use>
                         </svg>
@@ -65,10 +66,10 @@
                         от выбранного региона
                     </div>
                     <div class="city-popup__buttons">
-                        <button class="button button-primary" onclick="submitLocation();" type="button">
+                        <button class="button button-primary js-submit-location" type="button">
                             Да
                         </button>
-                        <button class="button button-secondary" onclick="changeLocation();" type="button">
+                        <button class="button button-secondary js-change-location" type="button">
                             Выбрать другой
                         </button>
                     </div>
@@ -3212,7 +3213,7 @@
                     Определить
                 </div>
             </div>
-            <div class="modal__body">
+            <div class="modal__body city-change__body">
                 <div class="city-change__choosen">
                     <svg class="city-change__choosen-icon" width="20" height="20" viewBox="0 0 20 20" fill="none"
                          xmlns="http://www.w3.org/2000/svg">
@@ -3224,10 +3225,10 @@
                         <div class="button--loading"></div>
                     </div>
                     <div class="city-change__choosen-text">Выбран:</div>
-                    <div class="city-change__choosen-text city-change__choosen-text--location js-city-choosen-location">
+                    <div class="city-change__choosen-text city-change__choosen-text--city">
                         Ростов-на-Дону
                     </div>
-                    <div class="city-change__choosen-text city-change__choosen-text--region js-city-choosen-region">
+                    <div class="city-change__choosen-text city-change__choosen-text--region">
                         Ростовская область, очень длинный текст рег
                     </div>
                 </div>
@@ -3261,57 +3262,14 @@
                     </button>
                 </div>
                 <div class="city-change__cities">
-                    <div class="city-change__city" data-city="Москва и область" data-region="">
-                        <div class="city-change__city-text">Москва и область</div>
-                    </div>
-                    <div class="city-change__city" data-city="Санкт-Петербург и область" data-region="">
-                        <div class="city-change__city-text">Санкт-Петербург и область</div>
-                    </div>
-                    <div class="city-change__city" data-city="Воронежская область" data-region="">
-                        <div class="city-change__city-text">Воронежская область</div>
-                    </div>
-                    <div class="city-change__city" data-city="Смоленская область" data-region="">
-                        <div class="city-change__city-text">Смоленская область</div>
-                    </div>
-                    <div class="city-change__city" data-city="Астрахань" data-region="Астраханская область">
-                        <div class="city-change__city-text">Астрахань</div>
-                        <div class="city-change__city-text city-change__city-region">Астраханская область</div>
-                    </div>
-                    <div class="city-change__city" data-city="Пермь" data-region="Пермский край">
-                        <div class="city-change__city-text">Пермь</div>
-                        <div class="city-change__city-text city-change__city-region">Астраханская область</div>
-                    </div>
-                    <div class="city-change__city" data-city="Белгород" data-region="Белгородская область">
-                        <div class="city-change__city-text">Белгород</div>
-                        <div class="city-change__city-text city-change__city-region">Астраханская область</div>
-                    </div>
-                    <div class="city-change__city" data-city="Липецк" data-region="Липецкая область">
-                        <div class="city-change__city-text">Липецк</div>
-                        <div class="city-change__city-text city-change__city-region">Астраханская область</div>
-                    </div>
-                    <div class="city-change__city" data-city="Астрахань" data-region="Астраханская область">
-                        <div class="city-change__city-text">Астрахань</div>
-                        <div class="city-change__city-text city-change__city-region">Астраханская область</div>
-                    </div>
-                    <div class="city-change__city" data-city="Астрахань" data-region="Астраханская область">
-                        <div class="city-change__city-text">Астрахань</div>
-                        <div class="city-change__city-text city-change__city-region">Астраханская область</div>
-                    </div>
-                    <div class="city-change__city" data-city="Астрахань" data-region="Астраханская область">
-                        <div class="city-change__city-text">Астрахань</div>
-                        <div class="city-change__city-text city-change__city-region">Астраханская область</div>
-                    </div>
-                    <div class="city-change__city" data-city="Пермь" data-region="Пермский край">
-                        <div class="city-change__city-text">Пермь</div>
-                        <div class="city-change__city-text city-change__city-region">Астраханская область</div>
-                    </div>
-                    <div class="city-change__city" data-city="Белгород" data-region="Белгородская область">
-                        <div class="city-change__city-text">Белгород</div>
-                        <div class="city-change__city-text city-change__city-region">Астраханская область</div>
-                    </div>
-                    <div class="city-change__city" data-city="Липецк" data-region="Липецкая область">
-                        <div class="city-change__city-text">Липецк</div>
-                        <div class="city-change__city-text city-change__city-region">Астраханская область</div>
+                    <div class="city-change__cities-nf">
+                        <div class="city-change__cities-nf-title">
+                            По запросу «<span class="city-change__cities-nf-query"></span>» ничего не найдено
+                        </div>
+                        <div class="city-change__cities-nf-info">
+                            Попробуйте выбрать ваш регион для отображения полного<br>
+                            количества аптек, например <span class="city-change__cities-nf-suggest">Московская область</span>
+                        </div>
                     </div>
                 </div>
             </div>
